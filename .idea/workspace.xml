@@ -4,141 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="499289ab-6742-4395-a664-410cde961a61" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/builds/client/_modules/common/header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/_modules/layout/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/_modules/layout/header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/js/libs/jquery-3.6.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/_main.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/_bootstrap-grid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/_containers.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/_functions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/_grid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/_helpers.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/_maps.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/_root.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/_utilities.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/helpers/_clearfix.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/helpers/_color-bg.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/helpers/_colored-links.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/helpers/_position.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/helpers/_ratio.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/helpers/_stacks.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/helpers/_stretched-link.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/helpers/_text-truncation.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/helpers/_visually-hidden.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/helpers/_vr.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_alert.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_backdrop.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_banner.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_border-radius.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_box-shadow.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_breakpoints.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_buttons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_caret.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_clearfix.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_color-scheme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_container.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_deprecate.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_forms.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_gradients.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_grid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_image.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_list-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_lists.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_pagination.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_reset-text.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_resize.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_table-variants.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_text-truncate.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_transition.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_utilities.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/mixins/_visually-hidden.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/utilities/_api.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/vendor/_rfs.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/_modules/common/lidro_footer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/_modules/common/lidro_header.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/_modules/layout/lidro_footer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/_modules/layout/lidro_footer_sub.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/_modules/layout/lidro_header.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/_modules/layout/lidro_header_sub.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/_modules/partials/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/_modules/partials/nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/js/libs/jquery-1.11.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/_custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/_modules/common/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/_fonts.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/_functions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/_reset.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/components/_board.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/components/_bullet.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/components/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/components/_hash.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/components/_responsive.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/components/_swiper.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/components/_title.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/config/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/config/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/layout/_common.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/layout/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/layout/_footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/layout/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/layout/_header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/layout/_nav.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/libs/_animate.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/libs/_fullpage.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/libs/_letters.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/mixins/_breakpoints.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/mixins/_image.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/pages/_business.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/pages/_ci.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/pages/_history.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/pages/_intro.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/pages/_location.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/pages/_partners.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/pages/_promote.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/pages/_recruit.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/utils/_display.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/utils/_font.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/utils/_spacer.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/utils/_text.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/business/droid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/business/lidar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/business/lidar_view1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/business/lidar_view2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/business/lidar_view3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/business/lidar_view4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/business/lidar_view5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/business/lidar_view6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/ci/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/intro/ci.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/intro/history.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/intro/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/intro/location.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/intro/partners.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/job/sales_expert.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/main/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/partners/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/promote/brochure.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/promote/notice.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/promote/notice_view.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/promote/press.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/promote/press_view.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/recruit/announce_list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/recruit/announce_view.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/recruit/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/controllers/Business.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/controllers/Ci.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/controllers/Intro.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/controllers/Job.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/controllers/Promote.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/controllers/Recruit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/controllers/index.html" beforeDir="false" />
+    <list default="true" id="499289ab-6742-4395-a664-410cde961a61" name="Changes" comment="feat: 파일 초기화 및 셋팅">
+      <change beforePath="$PROJECT_DIR$/roadwe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/roadwe.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669005459152</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: 파일 초기화 및 셋팅">
+      <created>1669013883499</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669013883499</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,7 +119,8 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Copy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Copy" />
+    <MESSAGE value="feat: 파일 초기화 및 셋팅" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 파일 초기화 및 셋팅" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
