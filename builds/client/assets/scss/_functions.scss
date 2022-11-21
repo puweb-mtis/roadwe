@@ -1,0 +1,7 @@
+@function em($value, $standard: 16) {
+  @return ($value/$standard)*1em;
+}
+
+@function vw($value, $standard: 360)  {
+  @return (($value*100)/$standard)*1vw;
+}

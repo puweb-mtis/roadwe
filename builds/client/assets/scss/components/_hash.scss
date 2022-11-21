@@ -1,0 +1,55 @@
+.hash-box {
+  display: flex;
+  gap: em(10);
+  margin-top: em(20);
+  padding-bottom: em(12);
+  overflow-x: auto;
+  
+  @include mdq-min(tab) {
+    display: block;
+    margin-top: em(60);
+    margin-left: em(-10);
+    margin-right: em(-10);
+    overflow: initial;
+    padding-bottom: 0;
+  }
+  
+  .hash-item {
+    display: inline-block;
+    color: #999;
+    font-size: em(18);
+    font-weight: 800;
+    line-height: 1;
+    white-space: nowrap;
+    
+    @include mdq-min(tab) {
+      padding: em(10, 18);
+    }
+    
+    &.active {
+      color: #333;
+    }
+  }
+  
+  &.hash--sm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: em(10);
+    margin: 0;
+    padding-bottom: 0;
+    
+    .hash-item {
+      padding: 0;
+      font-size: vw(14);
+      color: #333;
+      
+      @include mdq-min(sm) {
+        font-size: em(14);
+      }
+      
+      @include mdq-min(tab) {
+        font-size: em(14);
+      }
+    }
+  }
+}

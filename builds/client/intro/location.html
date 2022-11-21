@@ -1,0 +1,107 @@
+{ #layout_lidro_header_sub }
+
+<main class="main">
+  <section class="section">
+    <div class="container">
+      <div class="location-group">
+        <div class="location-box">
+          <div class="location-title-box">
+            <h2 class="title" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="0">라이드로 본사</h2>
+            <p class="address" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="100">경기도 성남시 분당구 판교로 255번길 9-22<br>W-City B동 8층</p>
+            <div class="tel-box">
+              <div class="tel" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="200">
+                <div class="tel__title">T</div>
+                <div class="tel__text">02.2039.9770</div>
+              </div>
+              <div class="tel" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="300">
+                <div class="tel__title">F</div>
+                <div class="tel__text">031.8023.9770</div>
+              </div>
+            </div>
+            <img src="/builds/client/assets/images/symbol_b.svg" alt="LIDRO" class="symbol">
+          </div>
+          <div class="location-map" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="400">
+            <div class="map" id="map1"></div>
+          </div>
+        </div>
+        <div class="location-box">
+          <div class="location-title-box">
+            <h2 class="title" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="0">R&D센터</h2>
+            <p class="address" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="100">경기도 안양시 동안구 흥안대로 439번길 8</p>
+            <div class="tel-box">
+              <div class="tel" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="200">
+                <div class="tel__title">T</div>
+                <div class="tel__text">031.425.7779</div>
+              </div>
+              <div class="tel" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="300">
+                <div class="tel__title">F</div>
+                <div class="tel__text">031.424.7779</div>
+              </div>
+            </div>
+            <img src="/builds/client/assets/images/symbol_b.svg" alt="LIDRO" class="symbol">
+          </div>
+          <div class="location-map" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="400">
+            <div class="map" id="map2"></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 지도를 표시할 div 입니다 -->
+      
+      <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=34b45160dc6351c8caf56412786f570f"></script>
+      <script>
+        var mapContainer1 = document.getElementById('map1'), // 지도를 표시할 div
+          mapOption1 = {
+            center: new kakao.maps.LatLng(37.4040237290805, 127.100089555162), // 지도의 중심좌표
+            level: 4 // 지도의 확대 레벨
+          };
+        
+        var map1 = new kakao.maps.Map(mapContainer1, mapOption1); // 지도를 생성합니다
+        
+        var imageSrc1 = '/builds/client/assets/images/icons/map_marker.svg', // 마커이미지의 주소입니다
+          imageSize1 = new kakao.maps.Size(48, 48), // 마커이미지의 크기입니다
+          imageOption1 = {offset: new kakao.maps.Point(24, 48)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+        
+        // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+        var markerImage1 = new kakao.maps.MarkerImage(imageSrc1, imageSize1, imageOption1),
+          markerPosition1 = new kakao.maps.LatLng(37.4040237290805, 127.100089555162); // 마커가 표시될 위치입니다
+        
+        // 마커를 생성합니다
+        var marker1 = new kakao.maps.Marker({
+          position: markerPosition1,
+          image: markerImage1 // 마커이미지 설정
+        });
+        
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker1.setMap(map1);
+        
+        var mapContainer2 = document.getElementById('map2'), // 지도를 표시할 div
+          mapOption2 = {
+            center: new kakao.maps.LatLng(37.393751289319, 126.973895372474), // 지도의 중심좌표
+            level: 4 // 지도의 확대 레벨
+          };
+        
+        var map2 = new kakao.maps.Map(mapContainer2, mapOption2); // 지도를 생성합니다
+        
+        var imageSrc2 = '/builds/client/assets/images/icons/map_marker.svg', // 마커이미지의 주소입니다
+          imageSize2 = new kakao.maps.Size(48, 48), // 마커이미지의 크기입니다
+          imageOption2 = {offset: new kakao.maps.Point(24, 48)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+        
+        // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+        var markerImage2 = new kakao.maps.MarkerImage(imageSrc2, imageSize2, imageOption2),
+          markerPosition2 = new kakao.maps.LatLng(37.393751289319, 126.973895372474); // 마커가 표시될 위치입니다
+        
+        // 마커를 생성합니다
+        var marker2 = new kakao.maps.Marker({
+          position: markerPosition2,
+          image: markerImage2 // 마커이미지 설정
+        });
+        
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker2.setMap(map2);
+      </script>
+    </div>
+  </section>
+</main>
+
+{ #layout_lidro_footer_sub }

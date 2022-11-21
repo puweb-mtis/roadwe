@@ -1,0 +1,44 @@
+{ #common_velzon_header }
+    {? rurl_string === "auth/sign_in" // velzon스킨-관리자 로그인용}
+    <div class="auth-page-wrapper pt-5">
+        <!-- velzon 관리자 로그인용 백그라운드 이미지 영역 시작 -->
+        <div class="auth-one-bg-position auth-one-bg"></div>
+        <!-- velzon 관리자 로그인용 백그라운드 이미지 영역 끝 -->
+
+        <!-- velzon 관리자 로그인용 컨텐츠 영역 시작 -->
+        <div class="auth-page-content">    
+    { : //velzon스킨-관리자 기본 레이아웃 용}
+    <!-- velzon 스킨 페이지 영역 시작 -->
+    <div id="layout-wrapper">
+        <!-- [velzon 스킨 topbar영역 시작] -->
+        { #partials_topbar }   
+        <!-- [velzon 스킨 topbar영역 끝] -->
+
+        <!-- [velzon 스킨 좌측 menu영역 시작] -->
+        { #partials_sidebar }
+        <!-- [velzon 스킨 좌측 menu영역 끝] -->
+
+        <!-- [velzon 스킨 우측 컨텐츠 영역 시작] -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+                    
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0">Pricing</h4>
+
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Pages</a></li>
+                                        <li class="breadcrumb-item active">Pricing</li>
+                                    </ol>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+    { / }                

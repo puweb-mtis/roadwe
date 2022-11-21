@@ -1,0 +1,278 @@
+.page-title {
+  // normal
+  &--normal {
+    margin-bottom: em(50);
+    
+    @include mdq-min(tab) {
+      margin-bottom: em(100);
+    }
+    
+    .title {
+      font-size: vw(32);
+      font-weight: 900;
+      letter-spacing: -1px;
+      
+      @include mdq-min(sm) {
+        font-size: em(36);
+      }
+      
+      @include mdq-min(tab) {
+        font-size: em(60);
+      }
+      
+      @include mdq-min(lg) {
+        font-size: em(78);
+      }
+    }
+  }
+  
+  // banner
+  &--banner {
+    padding-top: em(32);
+    padding-bottom: em(32);
+    margin-bottom: em(16);
+    background: {
+      image: url(/builds/client/assets/images/promote/top_bg.png);
+      repeat: no-repeat;
+      position: top -40px right;
+      size: em(130) auto;
+    };
+    
+    @include mdq-min(md) {
+      padding-top: em(60);
+      padding-bottom: em(60);
+      margin-bottom: em(32);
+    }
+    
+    @include mdq-min(tab) {
+      padding-top: em(120);
+      padding-bottom: em(120);
+      margin-bottom: em(68);
+      background-position: bottom right;
+      background-size: auto;
+    }
+    
+    .title {
+      font-size: vw(32);
+      font-weight: 800;
+      letter-spacing: -1px;
+      
+      @include mdq-min(sm) {
+        font-size: em(64);
+      }
+  
+      @include mdq-min(lg) {
+        font-size: em(78);
+      }
+    }
+  }
+  
+  // line
+  &--line {
+    .title {
+      color: #333;
+      font-size: vw(24);
+      font-weight: 800;
+  
+      @include mdq-min(sm) {
+        font-size: em(28);
+      }
+  
+      @include mdq-min(tab) {
+        font-size: em(40);
+      }
+  
+      @include mdq-min(lg) {
+        font-size: em(48);
+      }
+      
+      br {
+        display: none;
+        
+        @include mdq-min(lg) {
+          display: block;
+        }
+      }
+    }
+    
+    .title--lg {
+      font-size: vw(24);
+      font-weight: 800;
+      letter-spacing: -2px;
+      
+      @include mdq-min(sm) {
+        font-size: em(28);
+      }
+      
+      @include mdq-min(tab) {
+        font-size: em(40);
+      }
+  
+      @include mdq-min(lg) {
+        font-size: em(78);
+      }
+    }
+    
+    .line {
+      display: block;
+      width: 2px;
+      height: em(20);
+      margin: em(20) 0;
+      background-color: #333;
+      
+      @include mdq-min(tab) {
+        height: em(40);
+      }
+    }
+    
+    .sub-title {
+      font-family: 'Poppins', sans-serif;
+      color: #999;
+      font-size: vw(12);
+      font-weight: 600;
+      line-height: (26/20);
+      
+      @include mdq-min(sm) {
+        font-size: em(16);
+      }
+  
+      @include mdq-min(tab) {
+        color: #333;
+        font-size: em(20);
+      }
+      
+      br {
+        display: none;
+        
+        @include mdq-min(tab) {
+          display: block;
+        }
+      }
+    }
+    
+    .sub-title--2 {
+      font-family: 'Poppins', sans-serif;
+      color: #ccc;
+      font-size: vw(12);
+      font-weight: 600;
+      line-height: (26/20);
+      margin-top: em(10, 12);
+      
+      br {
+        display: none;
+      }
+      
+      @include mdq-min(sm) {
+        font-size: em(12);
+      }
+  
+      @include mdq-min(tab) {
+        font-size: em(20);
+        margin-top: em(24, 20);
+        
+        br {
+          display: block;
+        }
+      }
+    }
+    
+    .sub-title--lg {
+      font-family: 'Poppins', sans-serif;
+      color: #999;
+      font-size: vw(12);
+      line-height: 1.5;
+      font-weight: 600;
+      
+      br {
+        display: none;
+      }
+      
+      @include mdq-min(tab) {
+        color: #333;
+        font-size: em(40);
+        
+        br {
+          display: block;
+        }
+      }
+  
+      @include mdq-min(lg) {
+        font-size: em(48);
+      }
+    }
+    
+    .address-box {
+      font-size: vw(14);
+      font-weight: 900;
+      line-height: (24/20);
+      
+      @include mdq-min(tab) {
+        font-size: em(20);
+      }
+    }
+    
+    .address {
+      margin-bottom: em(10, 20);
+    }
+    
+    .tel-box {
+      display: flex;
+      
+      .tel {
+        display: flex;
+        
+        & + .tel {
+          padding-left: em(40, 20);
+        }
+        
+        &__title {
+          padding-right: em(17, 20);
+        }
+      }
+    }
+    
+    &.text-end {
+      .line {
+        margin-left: auto;
+        margin-right: 0;
+      }
+    }
+  }
+  
+  &--vertical {
+    .symbol {
+      height: em(40);
+    }
+    
+    .title {
+      font-size: vw(32);
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-top: em(20, 32);
+      
+      @include mdq-min(sm) {
+        font-size: em(32);
+      }
+  
+      @include mdq-min(tab) {
+        font-size: em(48);
+        margin-top: em(40, 48);
+      }
+    }
+    
+    .title--2 {
+      font-size: vw(24);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: (48/36);
+      
+      @include mdq-min(sm) {
+        font-size: em(24);
+      }
+  
+      @include mdq-min(tab) {
+        font-size: em(36);
+      }
+    }
+  }
+}

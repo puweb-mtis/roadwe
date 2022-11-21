@@ -1,0 +1,46 @@
+.DS_Store
+
+application/cache/*
+!application/cache/index.html
+
+application/logs/*
+!application/logs/index.html
+
+!application/*/.htaccess
+
+composer.lock
+tests/mocks/database/ci_test.sqlite
+
+user_guide_src/build/*
+user_guide_src/cilexer/build/*
+user_guide_src/cilexer/dist/*
+user_guide_src/cilexer/pycilexer.egg-info/*
+/vendor/
+
+# IDE Files
+#-------------------------
+/nbproject/
+.idea/*
+
+## Sublime Text cache files
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+/tests/tests/
+/tests/results/
+
+# User .gitignore Files
+#-------------------------
+# database 설정 파일 제외
+/engine/config/database.php
+# _compile, logs
+etc/_compile/**
+etc/logs/**
+
+## 디버깅 로그 경로 설정 없이 활성화 시 기본 폴더 제외
+engine/logs/**
+
+## 사용자 업로드 폴더 제외
+etc/uploads/**

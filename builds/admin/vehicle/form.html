@@ -1,0 +1,680 @@
+{ #layout_velzon_header }
+
+<div class="row">
+    <div class="col-12">
+        <form name="vdif_frm" id="vdif_frm" method="post"
+            action="/{admin_url}/{rseqments[0]}/crudproc/{crud_mode}{? crud_mode === 'update'}/{row.id}{/}{url_suffix}"
+            role="form" autocomplete="off" enctype="multipart/form-data">
+            <input type="hidden" name="referer" value="{referer}" />
+            {? crud_mode === 'update'}<input type="hidden" name="id" value="{row.id}" />{/}
+            <!-- 카드섹션 -->
+            <div class="card">
+                <!-- 카드제목 -->
+                <div class="card-header">
+                    <h5 class="fw-bold">차량정보</h5>
+                </div>
+                <!-- // 카드제목 -->
+
+                <div class="card-body">
+                    <table class="table table-bordered align-middle">
+                        <colgroup>
+                            <col class="col-1 bg-light">
+                            <col class="col-5">
+                            <col class="col-1 bg-light">
+                            <col class="col-5">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>단말기 고유 ID <span class="text-danger">*</span></th>
+                                <td>
+                                    <select name="device_unit_id" id="device_unit_id_areacd" class="form-select w-auto">
+                                        <option value="">선택해주세요</option>
+                                        { @ set_params.device_driver_list }
+                                        <option value="{.id}" { ? row.device_unit_id==.id} selected="selected" {/}>
+                                            {.serial_str}</option>
+                                        { / }
+                                    </select>
+                                </td>
+                                <th>차량명 <span class="text-danger">*</span></th>
+                                <td>
+                                    <div class="input-group">
+                                        <input type="text" name="car_name" class="form-control" placeholder="예) 카운티"
+                                            style="max-width: 240px;" {? crud_mode==='update' }value="{row.car_name}"
+                                            {/}>
+                                        <button type="button" class="btn btn-dark"
+                                            onclick="alert('등록 가능한 차량명입니다.');">중복확인</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>차량번호 <span class="text-danger">*</span></th>
+                                <td colspan="3">
+                                    <div class="input-group">
+                                        <input type="text" name="car_number" class="form-control"
+                                            placeholder="예) 123가 5678" style="max-width: 240px;" {? crud_mode==='update'
+                                            }value="{row.car_number}" {/}>
+                                        <button type="button" class="btn btn-dark"
+                                            onclick="alert('등록 가능한 차량번호입니다.');">중복확인</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>차종 <span class="text-danger">*</span></th>
+                                <td>
+                                    <select name="car_model_id" id="car_model_id_areacd" class="form-select w-auto">
+                                        <option value="">선택해주세요</option>
+                                        { @ set_params.car_model_list }
+                                        <option value="{.id}" { ? row.car_model_id==.id} selected="selected" {/}>
+                                            {.producer_name}&nbsp;{.car_name}</option>
+                                        { / }
+                                    </select>
+                                </td>
+                                <th>탑승가능 승객수</th>
+                                <td>
+                                    <div class="input-group">
+                                        <input type="text" name="personnel_limit" class="form-control"
+                                            style="max-width: 120px;" readonly {? crud_mode==='update'
+                                            }value="{row.personnel_limit}" {/}>
+                                        <span class="input-group-text">명</span>
+                                    </div>
+                                    <p class="text-info mt-2 mb-0">※ 차종 선택 시 자동으로 표기됩니다.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>종류</th>
+                                <td>
+                                    <input type="text" name="car_grade" class="form-control" style="max-width: 240px;"
+                                        readonly>
+                                    <p class="text-info mt-2 mb-0">※ 차종 선택 시 자동으로 표기됩니다.</p>
+                                </td>
+                                <th>연식</th>
+                                <td>
+                                    <div class="input-group">
+                                        <input type="text" name="year" class="form-control" style="max-width: 120px;"
+                                            maxlength="4" {? crud_mode==='update' }value="{row.year}" {/}>
+                                        <span class="input-group-text">년</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>차량소독여부</th>
+                                <td colspan="3">
+                                    <label class="form-check form-check-inline">
+                                        <input type="checkbox" name="disinfection_status" class="form-check-input">
+                                        <span class="form-check-label"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>차량사진</th>
+                                <td colspan="3">
+                                    <!-- 파일 첨부  -->
+                                    <div class="file-image-set">
+                                        <!-- 파일 추가 버튼 -->
+                                        <div class="file-image-title">
+                                            <button type="button" class="btn btn-primary"
+                                                onclick="addFileImage('.file-image-list');">첨부파일
+                                                추가</button>
+                                            <p class="text-info mb-0">첨부파일은 최대 10개까지 첨부 가능합니다.</p>
+                                        </div>
+
+                                        <!-- 파일 목록 -->
+                                        <div class="file-image-list row gx-2">
+                                            <div class="col-auto">
+                                                <!-- 파일 이미지 미리보기 -->
+                                                <label class="file-image">
+                                                    <input type="file" name="car_image[]"
+                                                        accept="image/gif, image/jpeg, image/png">
+                                                    <!-- 미리보기 영역 -->
+                                                    <div class="file-image-preview">
+                                                        <img src="/builds/admin/_theme/velzon/assets/images/blank.svg"
+                                                            alt="">
+                                                    </div>
+                                                    <!-- 첨부한 이미지 삭제 -->
+                                                    <button type="button"
+                                                        class="btn btn-danger btn-sm w-100 mt-1 d-none"
+                                                        data-btn-remove>파일삭제</button>
+                                                    <!-- 샘플보기 -->
+                                                    <button type="button" class="btn btn-dark btn-sm w-100 mt-1"
+                                                        data-btn-sample>샘플</button>
+                                                </label>
+                                                <!-- // 파일 이미지 미리보기 -->
+                                            </div>
+                                            <div class="col-auto">
+                                                <!-- 파일 이미지 미리보기 -->
+                                                <label class="file-image">
+                                                    <input type="file" name="car_image[]"
+                                                        accept="image/gif, image/jpeg, image/png">
+                                                    <!-- 미리보기 영역 -->
+                                                    <div class="file-image-preview">
+                                                        <img src="/builds/admin/_theme/velzon/assets/images/blank.svg"
+                                                            alt="">
+                                                    </div>
+                                                    <!-- 첨부한 이미지 삭제 -->
+                                                    <button type="button"
+                                                        class="btn btn-danger btn-sm w-100 mt-1 d-none"
+                                                        data-btn-remove>파일삭제</button>
+                                                    <!-- 샘플보기 -->
+                                                    <button type="button" class="btn btn-dark btn-sm w-100 mt-1"
+                                                        data-btn-sample>샘플</button>
+                                                </label>
+                                                <!-- // 파일 이미지 미리보기 -->
+                                            </div>
+                                            <div class="col-auto">
+                                                <!-- 파일 이미지 미리보기 -->
+                                                <label class="file-image">
+                                                    <input type="file" name="car_image[]"
+                                                        accept="image/gif, image/jpeg, image/png">
+                                                    <!-- 미리보기 영역 -->
+                                                    <div class="file-image-preview">
+                                                        <img src="/builds/admin/_theme/velzon/assets/images/blank.svg"
+                                                            alt="">
+                                                    </div>
+                                                    <!-- 첨부한 이미지 삭제 -->
+                                                    <button type="button"
+                                                        class="btn btn-danger btn-sm w-100 mt-1 d-none"
+                                                        data-btn-remove>파일삭제</button>
+                                                    <!-- 샘플보기 -->
+                                                    <button type="button" class="btn btn-dark btn-sm w-100 mt-1"
+                                                        data-btn-sample>샘플</button>
+                                                </label>
+                                                <!-- // 파일 이미지 미리보기 -->
+                                            </div>
+                                            <div class="col-auto">
+                                                <!-- 파일 이미지 미리보기 -->
+                                                <label class="file-image">
+                                                    <input type="file" name="car_image[]"
+                                                        accept="image/gif, image/jpeg, image/png">
+                                                    <!-- 미리보기 영역 -->
+                                                    <div class="file-image-preview">
+                                                        <img src="/builds/admin/_theme/velzon/assets/images/blank.svg"
+                                                            alt="">
+                                                    </div>
+                                                    <!-- 첨부한 이미지 삭제 -->
+                                                    <button type="button"
+                                                        class="btn btn-danger btn-sm w-100 mt-1 d-none"
+                                                        data-btn-remove>파일삭제</button>
+                                                    <!-- 샘플보기 -->
+                                                    <button type="button" class="btn btn-dark btn-sm w-100 mt-1"
+                                                        data-btn-sample>샘플</button>
+                                                </label>
+                                                <!-- // 파일 이미지 미리보기 -->
+                                            </div>
+                                            <div class="col-auto">
+                                                <!-- 파일 이미지 미리보기 -->
+                                                <label class="file-image">
+                                                    <input type="file" name="car_image[]"
+                                                        accept="image/gif, image/jpeg, image/png">
+                                                    <!-- 미리보기 영역 -->
+                                                    <div class="file-image-preview">
+                                                        <img src="/builds/admin/_theme/velzon/assets/images/blank.svg"
+                                                            alt="">
+                                                    </div>
+                                                    <!-- 첨부한 이미지 삭제 -->
+                                                    <button type="button"
+                                                        class="btn btn-danger btn-sm w-100 mt-1 d-none"
+                                                        data-btn-remove>파일삭제</button>
+                                                    <!-- 샘플보기 -->
+                                                    <button type="button" class="btn btn-dark btn-sm w-100 mt-1"
+                                                        data-btn-sample>샘플</button>
+                                                </label>
+                                                <!-- // 파일 이미지 미리보기 -->
+                                            </div>
+                                        </div>
+                                        <!-- // 파일 목록 -->
+                                    </div>
+                                    <!-- // 파일 첨부  -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>트렁크 크기</th>
+                                <td colspan="3">
+                                    <div class="d-flex align-items-center gap-2 fw-bold">
+                                        골프백
+                                        <input type="text" name="trunk_size" class="form-control"
+                                            style="max-width: 80px;" {? crud_mode==='update' }value="{row.trunk_size}"
+                                            {/}>
+                                        개
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>태그</th>
+                                <td colspan="3">
+                                    <input type="text" name="tag" class="form-control" style="max-width: 760px;" {?
+                                        crud_mode==='update' }value="{row.tag}" {/}>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- // 카드섹션 -->
+
+            <!-- 카드섹션 -->
+            <div class="card">
+                <!-- 카드제목 -->
+                <div class="card-header">
+                    <h5 class="fw-bold">견적가 포함 서비스</h5>
+                </div>
+                <!-- // 카드제목 -->
+
+                <!-- 카드내용 -->
+                <div class="card-body">
+                    <ul class="option-list">
+                        <li class="option-list__item">
+                            <div class="title"><i class="mdi mdi-parking"></i> 주차비</div>
+                            <div class="content">
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="parking_cost" class="form-check-input" value="YES"
+                                        checked>
+                                    <span class="form-check-label">견적가 포함</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="parking_cost" class="form-check-input" value="NO">
+                                    <span class="form-check-label">견적가 별도</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="option-list__item">
+                            <div class="title"><i class="mdi mdi-ticket-confirmation-outline"></i> 통행료</div>
+                            <div class="content">
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="toll_cost" class="form-check-input" value="YES" checked>
+                                    <span class="form-check-label">견적가 포함</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="toll_cost" class="form-check-input" value="NO">
+                                    <span class="form-check-label">견적가 별도</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="option-list__item">
+                            <div class="title"><i class="mdi mdi-food-outline"></i> 식사비</div>
+                            <div class="content">
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="meal_cost" class="form-check-input" value="YES" checked>
+                                    <span class="form-check-label">견적가 포함</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="meal_cost" class="form-check-input" value="NO">
+                                    <span class="form-check-label">견적가 별도</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="option-list__item">
+                            <div class="title"><i class="mdi mdi-food-outline"></i>숙박비</div>
+                            <div class="content">
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="room_cost" class="form-check-input" value="YES" checked>
+                                    <span class="form-check-label">견적가 포함</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="room_cost" class="form-check-input" value="NO">
+                                    <span class="form-check-label">견적가 별도</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="option-list__item">
+                            <div class="title"><i class="mdi mdi-credit-card-check-outline"></i>봉사료</div>
+                            <div class="content">
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="tip_cost" class="form-check-input" value="YES" checked>
+                                    <span class="form-check-label">견적가 포함</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="tip_cost" class="form-check-input" value="NO">
+                                    <span class="form-check-label">견적가 별도</span>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- // 카드내용 -->
+            </div>
+            <!-- // 카드섹션 -->
+
+            <!-- 카드섹션 -->
+            <div class="card">
+                <!-- 카드제목 -->
+                <div class="card-header">
+                    <h5 class="fw-bold">편의시설</h5>
+                </div>
+                <!-- // 카드제목 -->
+
+                <!-- 카드내용 -->
+                <div class="card-body">
+                    <ul class="option-list">
+                        <li class="option-list__item">
+                            <div class="title"><i class="mdi mdi-lotion-plus-outline"></i> 손소독제</div>
+                            <div class="content">
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="disinfectant_status" class="form-check-input" value="YES"
+                                        checked>
+                                    <span class="form-check-label">있음</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="disinfectant_status" class="form-check-input" value="NO">
+                                    <span class="form-check-label">없음</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="option-list__item">
+                            <div class="title"><i class="mdi mdi-alert-circle-outline"></i> 차선이탈경고장치</div>
+                            <div class="content">
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="lane_keeper_status" class="form-check-input" value="YES"
+                                        checked>
+                                    <span class="form-check-label">있음</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="lane_keeper_status" class="form-check-input" value="NO">
+                                    <span class="form-check-label">없음</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="option-list__item">
+                            <div class="title"><i class="mdi mdi-wifi"></i> WiFi</div>
+                            <div class="content">
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="wifi_status" class="form-check-input" value="YES" checked>
+                                    <span class="form-check-label">있음</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="wifi_status" class="form-check-input" value="NO">
+                                    <span class="form-check-label">없음</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="option-list__item">
+                            <div class="title"><i class="mdi mdi-usb"></i> 전좌석 USB</div>
+                            <div class="content">
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="usb_status" class="form-check-input" value="YES" checked>
+                                    <span class="form-check-label">있음</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="usb_status" class="form-check-input" value="NO">
+                                    <span class="form-check-label">없음</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="option-list__item">
+                            <div class="title"><i class="mdi mdi-fridge-outline"></i> 냉장고</div>
+                            <div class="content">
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="refrigerator_status" class="form-check-input" value="YES"
+                                        checked>
+                                    <span class="form-check-label">있음</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="refrigerator_status" class="form-check-input" value="NO">
+                                    <span class="form-check-label">없음</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="option-list__item">
+                            <div class="title"><i class="mdi mdi-television"></i> TV</div>
+                            <div class="content">
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="tv_status" class="form-check-input" value="YES" checked>
+                                    <span class="form-check-label">있음</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="tv_status" class="form-check-input" value="NO">
+                                    <span class="form-check-label">없음</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="option-list__item">
+                            <div class="title"><i class="mdi mdi-water-check-outline"></i> 냉온정수기</div>
+                            <div class="content">
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="purifier_status" class="form-check-input" value="YES"
+                                        checked>
+                                    <span class="form-check-label">있음</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="purifier_status" class="form-check-input" value="NO">
+                                    <span class="form-check-label">없음</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="option-list__item">
+                            <div class="title"><i class="mdi mdi-globe-light"></i> 조명시설</div>
+                            <div class="content">
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="lighting_status" class="form-check-input" value="YES"
+                                        checked>
+                                    <span class="form-check-label">있음</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="lighting_status" class="form-check-input" value="NO">
+                                    <span class="form-check-label">없음</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="option-list__item">
+                            <div class="title"><i class="mdi mdi-music-circle-outline"></i> 음향시설</div>
+                            <div class="content">
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="karaoke_status" class="form-check-input" value="YES"
+                                        checked>
+                                    <span class="form-check-label">있음</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="karaoke_status" class="form-check-input" value="NO">
+                                    <span class="form-check-label">없음</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="option-list__item">
+                            <div class="title"><i class="mdi mdi-desktop-mac"></i> 컴퓨터</div>
+                            <div class="content">
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="computer_status" class="form-check-input" value="YES"
+                                        checked>
+                                    <span class="form-check-label">있음</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="computer_status" class="form-check-input" value="NO">
+                                    <span class="form-check-label">없음</span>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- // 카드내용 -->
+            </div>
+            <!-- // 카드섹션 -->
+
+            <!-- 카드섹션 -->
+            <div class="card">
+                <!-- 카드제목 -->
+                <div class="card-header">
+                    <h5 class="fw-bold">기본정보</h5>
+                </div>
+                <!-- // 카드제목 -->
+
+                <!-- 카드내용 -->
+                <div class="card-body">
+                    <table class="table table-bordered align-middle">
+                        <colgroup>
+                            <col class="col-1 bg-light">
+                            <col class="col-5">
+                            <col class="col-1 bg-light">
+                            <col class="col-5">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>차량소유 <span class="text-danger">*</span></th>
+                                <td colspan="3">
+                                    <select name="car_owner_type" id="car_owner_type_areacd" class="form-select w-auto">
+                                        <option value="">선택해주세요</option>
+                                        <option value="TRANSPORT">운송회사</option>
+                                        <option value="DRIVER">기사님</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <!--
+                            ## 차량소유가 기사님인 경우에만 기사님 선택항목 노출
+                            -->
+                            <tr>
+                                <th>차량소유 기사님<span class="text-danger">*</span></th>
+                                <td colspan="3">
+                                    <select name="car_owner_driver_id" class="form-select w-auto" onchange="">
+                                        <option value="">선택해주세요</option>
+                                        { @ set_params.driver_list }
+                                        <option value="{.id}" { ? row.driver_id==.id} selected="selected" {/}>
+                                            {.member_name}</option>
+                                        { / }
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>운송회사 <span class="text-danger">*</span></th>
+                                <td>
+                                    <select name="transport_id" id="transport_id_areacd" class="form-select w-auto">
+                                        <option value="">선택해주세요</option>
+                                        { @ set_params.transport_company_list }
+                                        <option value="{.id}" { ? row.transport_id==.id} selected="selected" {/}>
+                                            {.company_name}</option>
+                                        { / }
+                                    </select>
+                                </td>
+                                <th>운송회사 대표전화</th>
+                                <td>
+                                    <input type="tel" name="transport_phone" class="form-control"
+                                        style="max-width: 240px;" readonly>
+                                    <p class="text-info mt-2 mb-0">※ 운송회사 선택 시 소속회사 담당자 자동으로 표기(수정불가)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>운송회사 담당자명</th>
+                                <td>
+                                    <input type="tel" name="transport_manager_name" class="form-control"
+                                        style="max-width: 240px;" readonly>
+                                    <p class="text-info mt-2 mb-0">※ 운송회사 선택 시 소속회사 담당자 자동으로 표기(수정불가)</p>
+                                </td>
+                                <th>운송회사 담당자연락처</th>
+                                <td>
+                                    <input type="tel" name="transport_manager_mobile_number" class="form-control"
+                                        style="max-width: 240px;" readonly>
+                                    <p class="text-info mt-2 mb-0">※ 운송회사 선택 시 소속회사 담당자 연락처가 자동으로 표기(수정불가)</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- // 카드내용 -->
+            </div>
+            <!-- // 카드섹션 -->
+
+            <!-- 카드섹션 -->
+            <div class="card">
+                <!-- 카드제목 -->
+                <div class="card-header">
+                    <h5 class="fw-bold">운행기사님</h5>
+                </div>
+                <!-- // 카드제목 -->
+
+                <!-- 카드내용 -->
+                <div class="card-body">
+                    <table class="table table-bordered align-middle">
+                        <colgroup>
+                            <col class="col-1 bg-light">
+                            <col class="col-5">
+                            <col class="col-1 bg-light">
+                            <col class="col-5">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>기사님선택 <span class="text-danger">*</span></th>
+                                <td>
+                                    <select name="driver_id" id="driver_id_areacd" class="form-select w-auto">
+                                        <option value="">선택해주세요</option>
+                                        { @ set_params.driver_list }
+                                        <option value="{.id}" { ? row.driver_id==.id} selected="selected" {/}>
+                                            {.member_name}</option>
+                                        { / }
+                                    </select>
+                                </td>
+                                <th>소속운송회사</th>
+                                <td>
+                                    <input type="tel" name="driver_transport_name" class="form-control"
+                                        style="max-width: 240px;" readonly>
+                                    <p class="text-info mt-2 mb-0">※ 차량소유 기사님 선택 시 자동으로 표기</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>기사님 소속<br>운송회사</th>
+                                <td>
+                                    <input type="tel" name="driver_company_name" class="form-control"
+                                        style="max-width: 240px;" readonly>
+                                    <p class="text-info mt-2 mb-0">※ 차량소유 기사님 선택 시 자동으로 표기</p>
+                                </td>
+                                <th>기사님 소속<br>운송회사 대표전화</th>
+                                <td>
+                                    <input type="tel" name="driver_phone" class="form-control" style="max-width: 240px;"
+                                        readonly>
+                                    <p class="text-info mt-2 mb-0">※ 차량소유 기사님 선택 시 자동으로 표기</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>기사님 소속<br>운송회사 담당자명</th>
+                                <td>
+                                    <input type="tel" name="driver_manager_name" class="form-control"
+                                        style="max-width: 240px;" readonly>
+                                    <p class="text-info mt-2 mb-0">※ 차량소유 기사님 선택 시 자동으로 표기</p>
+                                </td>
+                                <th>기사님 소속<br>운송회사 담당자연락처</th>
+                                <td>
+                                    <input type="tel" name="driver_manager_mobile_number" class="form-control"
+                                        style="max-width: 240px;" readonly>
+                                    <p class="text-info mt-2 mb-0">※ 차량소유 기사님 선택 시 자동으로 표기</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- // 카드내용 -->
+            </div>
+            <!-- // 카드섹션 -->
+
+            <!-- S : 버튼영역 -->
+            <div class="text-center mt-4 pb-5">
+                <button type="button" class="btn btn-lg btn-dark mx-1"
+                    onclick="window.location.href='/{admin_url}/{rseqments[0]}/index{url_suffix}'">취소하기</button>
+                <button type="submit" class="btn btn-lg btn-primary mx-1" data-role="submit">{? crud_mode ===
+                    'create'}저장하기{:}수정하기{/}</button>
+            </div>
+            <!-- E : 버튼영역 -->
+        </form>
+    </div>
+</div>
+<script>
+    let crud_mode = "{crud_mode}";
+
+    if (crud_mode === 'update') {
+        // 차량소독여부 체크 처리
+        if ("{row.disinfection_status}" === 'YES') {
+            $('input[name="disinfection_status"]').prop("checked", true);
+        }
+
+        // 기본정보 - 차량소요 표시 처리
+        $("#car_owner_type_areacd").val("{row.car_owner_type}").prop("selected", true);
+
+        // 편의시설 표시 처리
+        $('input[name="disinfectant_status"]:input[value="{row.disinfectant_status}"]').prop("checked", true);  //손소독제
+        $('input[name="lane_keeper_status"]:input[value="{row.lane_keeper_status}"]').prop("checked", true);    //차선이탈경고장치
+        $('input[name="wifi_status"]:input[value="{row.wifi_status}"]').prop("checked", true);                  //WiFi
+        $('input[name="usb_status"]:input[value="{row.usb_status}"]').prop("checked", true);                    //전좌석 USB
+        $('input[name="refrigerator_status"]:input[value="{row.refrigerator_status}"]').prop("checked", true);  //냉장고
+        $('input[name="tv_status"]:input[value="{row.tv_status}"]').prop("checked", true);                      //TV
+        $('input[name="purifier_status"]:input[value="{row.purifier_status}"]').prop("checked", true);          //냉온정수기
+        $('input[name="lighting_status"]:input[value="{row.lighting_status}"]').prop("checked", true);          //조명시설
+        $('input[name="karaoke_status"]:input[value="{row.karaoke_status}"]').prop("checked", true);            //음향시설
+        $('input[name="computer_status"]:input[value="{row.computer_status}"]').prop("checked", true);          //컴퓨터
+    }
+</script>
+{ #layout_velzon_footer }

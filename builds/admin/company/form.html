@@ -1,0 +1,646 @@
+{ #layout_velzon_header }
+
+<div class="row">
+    <div class="col-12">
+        <form name="vdmd_frm" id="vdmd_frm" method="post"
+            action="/{admin_url}/{rseqments[0]}/crudproc/{crud_mode}{? crud_mode === 'update'}/{row.id}{/}{url_suffix}"
+            role="form" autocomplete="off" enctype="multipart/form-data">
+            <input type="hidden" name="referer" value="{referer}" />
+            {? crud_mode === 'update'}<input type="hidden" name="id" value="{row.id}" />{/}
+            
+            <!-- [폼 html 영역 시작] -->
+            <!-- 기본정보 -->
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="fw-bold">기본정보</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered align-middle">
+                        <colgroup>
+                            <col class="col-1 bg-light">
+                            <col class="col-5">
+                            <col class="col-1 bg-light">
+                            <col class="col-5">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">계약진행상태</th>
+                                <td colspan="3">
+                                    <select name="" class="form-select w-auto" aria-label="계약진행상태 선택">
+                                        <option value="">계약진행중</option>
+                                        <option value="">계약완료</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">이메일</th>
+                                <td colspan="3">
+                                    <div class="input-group">
+                                        <input type="email" name="" class="form-control" placeholder="이메일을 입력해주세요." style="max-width: 360px;">
+                                        <button type="button" class="btn btn-dark" onclick="alert('사용 가능한 이메일입니다.');">중복확인</button>
+                                    </div>
+                                    
+                                    <p class="text-info mt-1">※ 입력하신 이메일은 아이디로 사용됩니다.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">비밀번호</th>
+                                <td colspan="3">
+                                    <button type="button" class="btn btn-primary">임시비밀번호 전송</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">거래처명 <span class="text-danger">*</span></th>
+                                <td>
+                                    <div class="input-group">
+                                        <input type="text" name="" class="form-control" placeholder="거래처명을 입력해주세요." style="max-width: 240px;">
+                                        <button type="button" class="btn btn-dark" onclick="alert('사용 가능한 회사명입니다.');">중복확인</button>
+                                    </div>
+                                </td>
+                                <th scope="row">사업자등록번호 <span class="text-danger">*</span></th>
+                                <td>
+                                    <label class="form-check form-check-inline">
+                                        <input type="radio" name="bno_type" class="form-check-input" value="개인" checked>
+                                        <span class="form-check-label">개인</span>
+                                    </label>
+                                    <label class="form-check form-check-inline">
+                                        <input type="radio" name="bno_type" class="form-check-input" value="법인">
+                                        <span class="form-check-label">법인</span>
+                                    </label>
+                                    <div class="input-group mt-1">
+                                        <input type="text" name="" class="form-control" placeholder="운송회사명을 입력해주세요." style="max-width: 240px;">
+                                        <button type="button" class="btn btn-dark" onclick="alert('사용 가능한 회사명입니다.');">중복확인</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">업태/업종 <span class="text-danger">*</span></th>
+                                <td>
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <input type="text" name="" placeholder="업태" class="form-control" style="max-width: 120px;">
+                                        <span>/</span>
+                                        <input type="text" name="" placeholder="업종" class="form-control" style="max-width: 120px;">
+                                    </div>
+                                </td>
+                                <th scope="row">대표자명 <span class="text-danger">*</span></th>
+                                <td>
+                                    <input type="text" name="" class="form-control" placeholder="대표자명을 입력해주세요." style="max-width: 240px;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">사업장소재지 <span class="text-danger">*</span></th>
+                                <td colspan="3">
+                                    <div data-address="box">
+                                        <div class="input-group">
+                                            <input type="text" name="" class="form-control" placeholder="우편번호" data-address="postcode" style="max-width: 120px;" readonly>
+                                            <button type="button" class="btn btn-dark" data-address="search">우편번호 검색</button>
+                                        </div>
+                
+                                        <input type="text" name="" class="form-control mt-1" placeholder="기본주소" data-address="line1" readonly>
+                                        <input type="text" name="" class="form-control mt-1" placeholder="상세주소" data-address="line2">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">대표연락처 <span class="text-danger">*</span></th>
+                                <td>
+                                    <input type="text" name="" class="form-control" placeholder="숫자만 입력해주세요." style="max-width: 240px;">
+                                </td>
+                                <th scope="row">대표팩스번호 <span class="text-danger">*</span></th>
+                                <td>
+                                    <input type="text" name="" class="form-control" placeholder="숫자만 입력해주세요." style="max-width: 240px;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">회사소개서</th>
+                                <td colspan="3">
+                                    <input type="file" name="" class="form-control">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- // 기본정보 -->
+    
+    
+            <!-- 첨부서류 -->
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="fw-bold">첨부서류</h5>
+                </div>
+                <div class="card-body">
+            
+                    <!-- 파일 첨부  -->
+                    <div class="file-image-set">
+                        <!-- 파일 목록 -->
+                        <div class="file-image-list row gx-2">
+                            <div class="col-auto">
+                                <!-- 파일 이미지 미리보기 -->
+                                <label class="file-image">
+                                    <input type="file" name="car_image[]"
+                                        accept="image/gif, image/jpeg, image/png">
+                                    <!-- 미리보기 영역 -->
+                                    <div class="file-image-preview">
+                                        <img src="/builds/admin/_theme/velzon/assets/images/blank.svg"
+                                            alt="">
+                                    </div>
+                                    <!-- 첨부한 이미지 삭제 -->
+                                    <button type="button"
+                                        class="btn btn-danger btn-sm w-100 mt-1 d-none"
+                                        data-btn-remove>파일삭제</button>
+                                    <!-- 샘플보기 -->
+                                    <button type="button" class="btn btn-dark btn-sm w-100 mt-1"
+                                        data-btn-sample>샘플</button>
+                                </label>
+                                <!-- // 파일 이미지 미리보기 -->
+                        
+                                <p class="text-center fw-bold mb-2">사업자등록증</p>
+                            </div>
+                            <div class="col-auto">
+                                <!-- 파일 이미지 미리보기 -->
+                                <label class="file-image">
+                                    <input type="file" name="car_image[]"
+                                        accept="image/gif, image/jpeg, image/png">
+                                    <!-- 미리보기 영역 -->
+                                    <div class="file-image-preview">
+                                        <img src="/builds/admin/_theme/velzon/assets/images/blank.svg"
+                                            alt="">
+                                    </div>
+                                    <!-- 첨부한 이미지 삭제 -->
+                                    <button type="button"
+                                        class="btn btn-danger btn-sm w-100 mt-1 d-none"
+                                        data-btn-remove>파일삭제</button>
+                                    <!-- 샘플보기 -->
+                                    <button type="button" class="btn btn-dark btn-sm w-100 mt-1"
+                                        data-btn-sample>샘플</button>
+                                </label>
+                                <!-- // 파일 이미지 미리보기 -->
+        
+                                <p class="text-center fw-bold mb-2">통신판매업<br>신고서</p>
+                            </div>
+                            <div class="col-auto">
+                                <!-- 파일 이미지 미리보기 -->
+                                <label class="file-image">
+                                    <input type="file" name="car_image[]"
+                                        accept="image/gif, image/jpeg, image/png">
+                                    <!-- 미리보기 영역 -->
+                                    <div class="file-image-preview">
+                                        <img src="/builds/admin/_theme/velzon/assets/images/blank.svg"
+                                            alt="">
+                                    </div>
+                                    <!-- 첨부한 이미지 삭제 -->
+                                    <button type="button"
+                                        class="btn btn-danger btn-sm w-100 mt-1 d-none"
+                                        data-btn-remove>파일삭제</button>
+                                    <!-- 샘플보기 -->
+                                    <button type="button" class="btn btn-dark btn-sm w-100 mt-1"
+                                        data-btn-sample>샘플</button>
+                                </label>
+                                <!-- // 파일 이미지 미리보기 -->
+                        
+                                <p class="text-center fw-bold mb-2">법인인감</p>
+                            </div>
+                        </div>
+                        <!-- // 파일 목록 -->
+                    </div>
+                    <!-- // 파일 첨부  -->
+                </div>
+            </div>
+            <!-- // 첨부서류 -->
+            
+            
+            <!-- 회사정보 -->
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="fw-bold">업체소개</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered align-middle">
+                        <colgroup>
+                            <col class="col-1 bg-light">
+                            <col class="col-5">
+                            <col class="col-1 bg-light">
+                            <col class="col-5">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">구분 <span class="text-danger">*</span></th>
+                                <td>
+                                    <select name="" class="form-select w-auto">
+                                        <option value="">구분을 선택하세요.</option>
+                                        <option value="">학교</option>
+                                        <option value="">학원</option>
+                                        <option value="">회사</option>
+                                        <option value="">어린이집</option>
+                                        <option value="">유치원</option>
+                                    </select>
+                                </td>
+                                <th scope="row">상세구분 <span class="text-danger">*</span></th>
+                                <td>
+                                    <select name="" class="form-select w-auto">
+                                        <option value="">상세구분을 선택하세요.</option>
+                                        <option value="">영어회화</option>
+                                        <option value="">수학학원</option>
+                                        <option value="">보습학원</option>
+                                        <option value="">태권도</option>
+                                        <option value="">초등학교</option>
+                                        <option value="">중학교</option>
+                                        <option value="">고등학교</option>
+                                        <option value="">대학교</option>
+                                        <option value="">대학원</option>
+                                        <option value="">유치원</option>
+                                        <option value="">어린이집</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">홈페이지</th>
+                                <td colspan="3">
+                                    <input type="text" name="" id="" class="form-control" placeholder="홈페이지 주소를 입력해주세요. ( http:// 또는 https:// 를 포함하여 입력해주세요. )">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"></th>
+                                <td colspan="3">
+                                    <table class="table table-bordered align-middle">
+                                        <colgroup>
+                                            <col class="col-1 bg-light">
+                                            <col class="col-11">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>월</th>
+                                                <td>
+                                                    <div class="d-flex gap-2 align-items-center">
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>시</span>
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>분</span>
+                                                        <span>~</span>
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>시</span>
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>분</span>
+                                                        
+                                                        <label class="form-check">
+                                                          <input type="checkbox" name="" class="form-check-input" value="">
+                                                          <span class="form-check-label">영업종료</span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>화</th>
+                                                <td>
+                                                    <div class="d-flex gap-2 align-items-center">
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>시</span>
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>분</span>
+                                                        <span>~</span>
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>시</span>
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>분</span>
+                
+                                                        <label class="form-check">
+                                                            <input type="checkbox" name="" class="form-check-input" value="">
+                                                            <span class="form-check-label">영업종료</span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>수</th>
+                                                <td>
+                                                    <div class="d-flex gap-2 align-items-center">
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>시</span>
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>분</span>
+                                                        <span>~</span>
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>시</span>
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>분</span>
+                
+                                                        <label class="form-check">
+                                                            <input type="checkbox" name="" class="form-check-input" value="">
+                                                            <span class="form-check-label">영업종료</span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>목</th>
+                                                <td>
+                                                    <div class="d-flex gap-2 align-items-center">
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>시</span>
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>분</span>
+                                                        <span>~</span>
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>시</span>
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>분</span>
+                
+                                                        <label class="form-check">
+                                                            <input type="checkbox" name="" class="form-check-input" value="">
+                                                            <span class="form-check-label">영업종료</span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>금</th>
+                                                <td>
+                                                    <div class="d-flex gap-2 align-items-center">
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>시</span>
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>분</span>
+                                                        <span>~</span>
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>시</span>
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>분</span>
+                
+                                                        <label class="form-check">
+                                                            <input type="checkbox" name="" class="form-check-input" value="">
+                                                            <span class="form-check-label">영업종료</span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>토</th>
+                                                <td>
+                                                    <div class="d-flex gap-2 align-items-center">
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>시</span>
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>분</span>
+                                                        <span>~</span>
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>시</span>
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>분</span>
+                
+                                                        <label class="form-check">
+                                                            <input type="checkbox" name="" class="form-check-input" value="">
+                                                            <span class="form-check-label">영업종료</span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>일</th>
+                                                <td>
+                                                    <div class="d-flex gap-2 align-items-center">
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>시</span>
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>분</span>
+                                                        <span>~</span>
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>시</span>
+                                                        <select name="" class="form-select w-auto">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                        <span>분</span>
+                
+                                                        <label class="form-check">
+                                                            <input type="checkbox" name="" class="form-check-input" value="">
+                                                            <span class="form-check-label">영업종료</span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+    
+                                    <input type="text" name="" class="form-control" placeholder="영업시간과 관련된 기타내용을 입력해주세요. (예. 법정공휴일 휴무)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">SNS 등록</th>
+                                <td colspan="3">
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <i class="lab la-facebook fs-2"></i>
+                                        <input type="text" name="" class="form-control" placeholder="SNS 주소를 입력해주세요." style="max-width: 480px;">
+                                        <label class="form-check form-check-inline">
+                                          <input type="checkbox" name="" class="form-check-input" value="">
+                                          <span class="form-check-label">공개</span>
+                                        </label>
+                                        <label class="form-check form-check-inline">
+                                            <input type="checkbox" name="" class="form-check-input" value="">
+                                            <span class="form-check-label">비공개</span>
+                                        </label>
+                                    </div>
+                                    <div class="d-flex gap-2 align-items-center mt-1">
+                                        <i class="lab la-instagram fs-2"></i>
+                                        <input type="text" name="" class="form-control" placeholder="SNS 주소를 입력해주세요." style="max-width: 480px;">
+                                        <label class="form-check form-check-inline">
+                                            <input type="checkbox" name="" class="form-check-input" value="">
+                                            <span class="form-check-label">공개</span>
+                                        </label>
+                                        <label class="form-check form-check-inline">
+                                            <input type="checkbox" name="" class="form-check-input" value="">
+                                            <span class="form-check-label">비공개</span>
+                                        </label>
+                                    </div>
+                                    <div class="d-flex gap-2 align-items-center mt-1">
+                                        <i class="lab la-blogger-b fs-2"></i>
+                                        <input type="text" name="" class="form-control" placeholder="SNS 주소를 입력해주세요." style="max-width: 480px;">
+                                        <label class="form-check form-check-inline">
+                                            <input type="checkbox" name="" class="form-check-input" value="">
+                                            <span class="form-check-label">공개</span>
+                                        </label>
+                                        <label class="form-check form-check-inline">
+                                            <input type="checkbox" name="" class="form-check-input" value="">
+                                            <span class="form-check-label">비공개</span>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">업체소개</th>
+                                <td colspan="3">
+                                    <textarea name="" rows="5" class="form-control" placeholder="업체소개 내용을 입력해주세요."></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- // 회사정보 -->
+            
+            
+            <!-- 담당자정보 -->
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="fw-bold">담당자정보</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered align-middle">
+                        <colgroup>
+                            <col class="col-1 bg-light">
+                            <col class="col-5">
+                            <col class="col-1 bg-light">
+                            <col class="col-5">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">담당자이름 <span class="text-danger">*</span></th>
+                                <td>
+                                    <input type="text" name="" class="form-control" placeholder="담당자 이름을 입력해주세요." style="max-width: 480px;">
+                                </td>
+                                <th scope="row">담당자연락처 <span class="text-danger">*</span></th>
+                                <td>
+                                    <input type="text" name="" class="form-control" placeholder="숫자만 입력해주세요." style="max-width: 480px;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">담당자이메일 <span class="text-danger">*</span></th>
+                                <td>
+                                    <input type="email" name="" class="form-control" placeholder="이메일을 입력해주세요." style="max-width: 480px;">
+                                    
+                                    <div class="input-group mt-1">
+                                        <div class="input-group-text">내선번호</div>
+                                        <input type="text" name="" class="form-control" placeholder="선택사항" style="max-width: 120px;">
+                                    </div>
+                                </td>
+                                <th scope="row">담당자<br>휴대폰번호 <span class="text-danger">*</span></th>
+                                <td>
+                                    <input type="text" name="" class="form-control" placeholder="숫자만 입력해주세요." style="max-width: 480px;">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- // 담당자정보 -->
+            
+            
+            <!-- 관리자 로그인 페이지 설정 -->
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="fw-bold">관리자 로그인페이지 설정</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered align-middle">
+                        <colgroup>
+                            <col class="col-1 bg-light">
+                            <col class="col-5">
+                            <col class="col-1 bg-light">
+                            <col class="col-5">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">대문 COPYRIGHT <span class="text-danger">*</span></th>
+                                <td colspan="3">
+                                    <textarea name="" rows="5" class="form-control" placeholder="카피문구를 입력해주세요."></textarea>
+                                    <p class="text-info mt-1">※ 최대 3줄까지 작성을 할수 있습니다.</p>
+                                    <p class="text-info mt-1">※ Enter를 치시면 줄 바꿈이 되어, 로그인페이지 대문에 표기 됩니다.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">대문이미지(BG) <span class="text-danger">*</span></th>
+                                <td colspan="3">
+                                    <input type="file" name="" class="form-control" accept="image/gif, image/jpeg, image/png">
+                                    <p class="text-info mt-1">※ 이미지 확장자 : jpg, gif, png</p>
+                                    <p class="text-info mt-1">※ 이미지 사이즈 : 000px * 000px</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">아이콘 이미지 <span class="text-danger">*</span></th>
+                                <td colspan="3">
+                                    <input type="file" name="" class="form-control" accept="image/gif, image/jpeg, image/png">
+                                    <p class="text-info mt-1">※ 이미지 확장자 : jpg, gif, png</p>
+                                    <p class="text-info mt-1">※ 이미지 사이즈 : 000px * 000px</p>
+                                    <p class="text-info mt-1">※ 관리자페이지 및 사용자/관리자페이지의 리스트, 상세페이지등의 대표이미지로 사용됩니다.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- // 관리자 로그인 페이지 설정 -->
+            
+            
+            <!-- 버튼영역 -->
+            <div class="text-center mt-4 pb-5">
+                <button type="button" class="btn btn-lg btn-dark mx-1"
+                    onclick="window.location.href='/{admin_url}/{rseqments[0]}/index{url_suffix}'">취소하기
+                </button>
+                <button type="submit" class="btn btn-lg btn-primary mx-1" data-role="submit">{? crud_mode ===
+                    'create'}저장하기{:}수정하기{/}
+                </button>
+            </div>
+            <!-- // 버튼영역 -->
+            <!-- [폼 html 영역 끝] -->
+        </form>
+    </div>
+</div>
+
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+    let crud_mode = "{crud_mode}";
+</script>
+{ #layout_velzon_footer }

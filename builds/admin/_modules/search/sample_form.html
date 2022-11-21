@@ -1,0 +1,76 @@
+<article>
+    <h3>검색 폼 영역</h3>
+    <fieldset>
+        <form name="{rseqments[0]}_search_frm" id="{rseqments[0]}_search_frm" method="{? search_params_type === 'segments'}post{:}get{/}" action="/{admin_url}/{rseqments[0]}/{rseqments[1]}{url_suffix}" role="form">
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            기간
+                        </th>
+
+                        <td>
+                            <select name="sec_date_type" id="sec_date_type">
+                                <option value="comm_reg_date" { ? sec_params.sec_date_type == "comm_reg_date"} selected="selected"{/}>가입일</option>
+                                <option value="spmg_last_date" { ? sec_params.sec_date_type == "spmg_last_date"} selected="selected"{/}>최종로그인</option>
+                            </select>
+                            {*기본 형태의 jquery-ui만 사용할 경우(사용)*}
+                            <input name="sec_st_date" id="sc_startdt" type="text" placeholder="시작일" value="{sec_params['sec_st_date']}" maxlength="10" autocomplete="off"> ~ <input name="sec_ed_date" id="sc_enddt" type="text" placeholder="종료일" value="{sec_params['sec_ed_date']}" maxlength="10" autocomplete="off">
+							<button type="button" class="select_date" data-datetype="yesterday">어제</button>
+                            <button type="button" class="select_date" data-datetype="today">오늘</button>
+                            {*<button type="button" class="select_date" data-datetype="3day">3일간</button>*}
+                            <button type="button" class="select_date" data-datetype="1week">일주일</button>
+                            <button type="button" class="select_date" data-datetype="1month">1개월</button>
+                            <button type="button" class="select_date" data-datetype="3month">3개월</button>
+                            {*<button type="button" class="select_date" data-datetype="6month">6개월</button>*}
+							<button type="button" class="select_date" data-datetype="prevmonth">-1개월</button>
+							<button type="button" class="select_date" data-datetype="nextmonth">+1개월</button>
+                            {*전체는 사용안함
+                            <button type="button" class="select_date" data-datetype="all">전체</button>
+                            *}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            검색
+                        </th>
+
+                        <td>
+                            <select name="sec_spmg_permit_cd" id="sec_spmg_permit_cd">
+                                <option value="">유형</option>
+                                { @ set_params.spmg_permit_cd }
+                                <option value="{.key_}" { ? sec_params.sec_spmg_permit_cd == .key_}selected="selected"{/}>{.value_}</option>
+                                { / }
+                            </select>
+                            <select name="sec_column" id="sec_column">
+                                <option value="">전체</option>
+                                <option value="spmg_id" { ? sec_params.sec_column == "spmg_id" }selected="selected"{/}>운영자아이디</option>
+                                <option value="spmg_name" { ? sec_params.sec_column == "spmg_name" }selected="selected"{/}>운영자명</option>
+                                <option value="spmg_email" { ? sec_params.sec_column == "spmg_email" }selected="selected"{/}>이메일</option>
+                            </select>
+                            <span>
+                                <input name="sec_keyword" id="sec_keyword" type="text" placeholder="검색어 입력" value="{sec_params['sec_keyword']}">
+                                <button type="submit">검색</button>
+                                <button class="btn" id="btn_reset">초기화</button>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            상세검색
+                        </th>
+
+                        <td>
+                            <select name="sec_spmg_status_cd" id="sec_spmg_status_cd">
+                                <option value="">상태</option>
+                                { @ set_params.spmg_status_cd }
+                                <option value="{.key_}" { ? sec_params.sec_spmg_status_cd == .key_}selected="selected"{/}>{.value_}</option>
+                                { / }
+                            </select>
+                        </td>
+                    </tr>
+                </thead>
+            </table>
+        </form>
+    </fieldset>
+</article>

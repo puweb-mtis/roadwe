@@ -1,0 +1,581 @@
+{ #layout_velzon_header }
+
+<!-- 플랫폼 계정 폼 시작 -->
+<form name="acmg_frm" id="acmg_frm" method="post"
+    action="/{admin_url}/{rseqments[0]}/crudproc/{crud_mode}{? crud_mode === 'update'}/{row.id}{/}{url_suffix}"
+    role="form">
+    <!-- S : 기본 입력 영역 -->
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title mb-0">기본정보</h5>
+        </div>
+        <div class="card-body">
+            <table class="table align-middle">
+                <colgroup>
+                    <col class="col-1 table-light">
+                    <col class="col-5">
+                    <col class="col-1 table-light">
+                    <col class="col-5">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">접속허용여부 <span class="text-danger">*</span></th>
+                        <td colspan="3">
+                            <label class="form-check form-check-inline">
+                                <input type="radio" name="use_status" class="form-check-input" value="YES" checked>
+                                <span class="form-check-label">접속허용</span>
+                            </label>
+                            <label class="form-check form-check-inline">
+                                <input type="radio" name="use_status" class="form-check-input" value="NO">
+                                <span class="form-check-label">접속차단</span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">관리자구분 <span class="text-danger">*</span></th>
+                        <td colspan="3">
+                            <label class="form-check form-check-inline">
+                                <input type="radio" name="super_status" class="form-check-input" value="YES">
+                                <span class="form-check-label">대표관리자</span>
+                            </label>
+                            <label class="form-check form-check-inline">
+                                <input type="radio" name="super_status" class="form-check-input" value="NO" checked>
+                                <span class="form-check-label">부관리자</span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">근무부서 <span class="text-danger">*</span></th>
+                        <td colspan="3">
+                            <select name="business_team_id" id="business_team_id_areacd" class="form-select"
+                                style="max-width: 320px;" placeholder="근무부서" required>
+                                <option value="">근무부서를 선택해주세요.</option>
+                                { @ set_params.business_team_list }
+                                <option value="{.id}" { ? row.business_team_id==.id} selected="selected" {/}>
+                                    {.team_name}</option>
+                                { / }
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">직책 <span class="text-danger">*</span></th>
+                        <td>
+                            <input type="text" name="position" id="position" class="form-control" placeholder="직책"
+                                style="max-width: 200px;" required {? crud_mode==='update' }value="{row.position}" {/}>
+                        </td>
+                        <th scope="row">직급 <span class="text-danger">*</span></th>
+                        <td>
+                            <input type="text" name="class" id="class" class="form-control" placeholder="직급"
+                                style="max-width: 200px;" required {? crud_mode==='update' }value="{row.class}" {/}>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">아이디(이메일) <span class="text-danger">*</span></th>
+                        <td colspan="3">
+                            <div class="d-flex gap-2">
+                                <input type="email" name="account" id="account" class="form-control"
+                                    placeholder="아이디(이메일)" style="max-width: 320px;" required {? crud_mode==='update'
+                                    }value="{row.account}" {/}>
+                                <button type="button" class="btn btn-primary" onclick="">중복확인</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">이름 <span class="text-danger">*</span></th>
+                        <td colspan="3">
+                            <input type="text" name="admin_name" id="admin_name" class="form-control" placeholder="이름"
+                                style="max-width: 320px;" required {? crud_mode==='update' }value="{row.admin_name}"
+                                {/}>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">비밀번호 <span class="text-danger">*</span></th>
+                        <td>
+                            <input type="password" name="password" id="password" class="form-control" placeholder="비밀번호"
+                                style="max-width: 320px;" required>
+
+                            <div class="fs-12 text-info mt-1">
+                                <i class="las la-info-circle"></i>
+                                비밀번호는 영문, 숫자, 특수문자를 모두 조합하여 최소 8~15자로 입력해주세요.
+                            </div>
+                        </td>
+                        <th scope="row">비밀번호 확인 <span class="text-danger">*</span></th>
+                        <td>
+                            <input type="password" name="re_password" id="re_password" class="form-control"
+                                placeholder="비밀번호 확인" style="max-width: 320px;" required>
+                            <div class="invalid-feedback">비밀번호가 일치하지 않습니다.</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">연락처 <span class="text-danger">*</span></th>
+                        <td>
+                            <input type="tel" name="tel" id="tel" class="form-control" placeholder="연락처"
+                                style="max-width: 320px;" required {? crud_mode==='update' }value="{row.tel}" {/}>
+                        </td>
+                        <th scope="row">내선번호 <span class="text-danger">*</span></th>
+                        <td>
+                            <input type="tel" name="tel_did" id="tel_did" class="form-control" placeholder="내선번호"
+                                style="max-width: 320px;" required {? crud_mode==='update' }value="{row.tel_did}" {/}>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">휴대폰번호 <span class="text-danger">*</span></th>
+                        <td colspan="3">
+                            <input type="tel" name="phone" id="phone" class="form-control" placeholder="휴대폰번호"
+                                style="max-width: 320px;" required {? crud_mode==='update' }value="{row.phone}" {/}>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- E : 기본 입력 영역 -->
+
+    <!-- S : 권한설정 영역 -->
+    {* 나중에 처리
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title mb-0">권한설정</h5>
+        </div>
+        <div class="card-body">
+            <div class="sitemap">
+                <ul class="depth depth1">
+                    <li class="depth-item depth1-item">
+                        <div class="cell">
+                            플랫폼 관리
+                            <label class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" name="" value="">
+                            </label>
+                        </div>
+
+                        <ul class="depth depth2">
+                            <li class="depth-item depth2-item">
+                                <div class="cell">
+                                    플랫폼 운영관리
+                                    <label class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" name="" value="">
+                                    </label>
+                                </div>
+
+                                <ul class="depth depth3">
+                                    <li class="depth-item depth3-item">
+                                        <div class="cell">
+                                            기본정보설정
+                                            <label class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" name="" value="">
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="depth-item depth3-item">
+                                        <div class="cell">
+                                            이용약관설정
+                                            <label class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" name="" value="">
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="depth-item depth3-item">
+                                        <div class="cell">
+                                            긴급알림설정
+                                            <label class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" name="" value="">
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="depth-item depth3-item">
+                                        <div class="cell">
+                                            템플릿설정
+                                            <label class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" name="" value="">
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="depth-item depth2-item">
+                                <div class="cell">
+                                    플랫폼 계정관리
+                                    <label class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" name="" value="">
+                                    </label>
+                                </div>
+
+                                <ul class="depth depth3">
+                                    <li class="depth-item depth3-item">
+                                        <div class="cell">
+                                            계정설정
+                                            <label class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" name="" value="">
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="depth-item depth3-item">
+                                        <div class="cell">
+                                            근무부서설정
+                                            <label class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" name="" value="">
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="depth-item depth1-item">
+                        <div class="cell">
+                            고객사 관리
+                            <label class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" name="" value="">
+                            </label>
+                        </div>
+
+                        <ul class="depth depth3">
+                            <li class="depth-item depth2-item">
+                                <div class="cell">
+                                    운송회사 리스트
+                                    <label class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" name="" value="">
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="depth-item depth2-item">
+                                <div class="cell">
+                                    거래처 리스트
+                                    <label class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" name="" value="">
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="depth-item depth1-item">
+                        <div class="cell">
+                            회원관리
+                            <label class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" name="" value="">
+                            </label>
+                        </div>
+
+                        <ul class="depth depth3">
+                            <li class="depth-item depth2-item">
+                                <div class="cell">
+                                    회원리스트
+                                    <label class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" name="" value="">
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="depth-item depth2-item">
+                                <div class="cell">
+                                    탈퇴회원
+                                    <label class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" name="" value="">
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="depth-item depth2-item">
+                                <div class="cell">
+                                    휴면회원
+                                    <label class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" name="" value="">
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="depth-item depth1-item">
+                        <div class="cell">
+                            운영관리
+                            <label class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" name="" value="">
+                            </label>
+                        </div>
+
+                        <ul class="depth depth2">
+                            <li class="depth-item depth2-item">
+                                <div class="cell">
+                                    게시판관리
+                                    <label class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" name="" value="">
+                                    </label>
+                                </div>
+
+                                <ul class="depth depth3">
+                                    <li class="depth-item depth3-item">
+                                        <div class="cell">
+                                            공지사항
+                                            <label class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" name="" value="">
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="depth-item depth3-item">
+                                        <div class="cell">
+                                            팝업관리
+                                            <label class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" name="" value="">
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="depth-item depth3-item">
+                                        <div class="cell">
+                                            FAQ관리
+                                            <label class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" name="" value="">
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="depth-item depth3-item">
+                                        <div class="cell">
+                                            배너관리
+                                            <label class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" name="" value="">
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="depth-item depth3-item">
+                                        <div class="cell">
+                                            동행 사용가이드
+                                            <label class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" name="" value="">
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="depth-item depth2-item">
+                                <div class="cell">
+                                    탈퇴회원
+                                    <label class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" name="" value="">
+                                    </label>
+                                </div>
+
+                                <ul class="depth depth3">
+                                    <li class="depth-item depth3-item">
+                                        <div class="cell">
+                                            1:1 문의
+                                            <label class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" name="" value="">
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="depth-item depth3-item">
+                                        <div class="cell">
+                                            개선요청사항
+                                            <label class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" name="" value="">
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="depth-item depth1-item">
+                        <div class="cell">
+                            운행관리
+                            <label class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" name="" value="">
+                            </label>
+                        </div>
+
+                        <ul class="depth depth3">
+                            <li class="depth-item depth3-item">
+                                <div class="cell">
+                                    차량관리
+                                    <label class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" name="" value="">
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="depth-item depth3-item">
+                                <div class="cell">
+                                    차종관리
+                                    <label class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" name="" value="">
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="depth-item depth3-item">
+                                <div class="cell">
+                                    노선관리
+                                    <label class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" name="" value="">
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="depth-item depth3-item">
+                                <div class="cell">
+                                    배차관리
+                                    <label class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" name="" value="">
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="depth-item depth1-item">
+                        <div class="cell">
+                            현황 및 통계
+                            <label class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" name="" value="">
+                            </label>
+                        </div>
+
+                        <ul class="depth depth2">
+                            <li class="depth-item depth2-item">
+                                <ul class="depth depth3">
+                                    <li class="depth-item depth3-item">
+                                        <div class="cell">
+                                            운행현황
+                                            <label class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" name="" value="">
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="depth-item depth3-item">
+                                        <div class="cell">
+                                            위치관제
+                                            <label class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" name="" value="">
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="depth-item depth3-item">
+                                        <div class="cell">
+                                            탑승현황
+                                            <label class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" name="" value="">
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="depth-item depth3-item">
+                                        <div class="cell">
+                                            배차현황
+                                            <label class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" name="" value="">
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="depth-item depth2-item">
+                                <div class="cell">
+                                    운행내역
+                                    <label class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" name="" value="">
+                                    </label>
+                                </div>
+
+                                <ul class="depth depth3">
+                                    <li class="depth-item depth3-item">
+                                        <div class="cell">
+                                            운행궤적조회
+                                            <label class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" name="" value="">
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="depth-item depth3-item">
+                                        <div class="cell">
+                                            운행일지
+                                            <label class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" name="" value="">
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="depth-item depth3-item">
+                                        <div class="cell">
+                                            탑승내역
+                                            <label class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" name="" value="">
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="depth-item depth2-item">
+                                <div class="cell">
+                                    운행통계
+                                    <label class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" name="" value="">
+                                    </label>
+                                </div>
+
+                                <ul class="depth depth3">
+                                    <li class="depth-item depth3-item">
+                                        <div class="cell">
+                                            탑승자통계
+                                            <label class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" name="" value="">
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="depth-item depth3-item">
+                                        <div class="cell">
+                                            차량별 운행현황
+                                            <label class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" name="" value="">
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="depth-item depth1-item">
+                        <div class="cell">
+                            단말기 관리
+                            <label class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" name="" value="">
+                            </label>
+                        </div>
+
+                        <ul class="depth depth3">
+                            <li class="depth-item depth3-item">
+                                <div class="cell">
+                                    단말기 정보
+                                    <label class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" name="" value="">
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="depth-item depth3-item">
+                                <div class="cell">
+                                    단말기 위치
+                                    <label class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" name="" value="">
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="depth-item depth3-item">
+                                <div class="cell">
+                                    단말기 상태
+                                    <label class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" name="" value="">
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    *}
+    <!-- E : 권한설정 영역 -->
+
+    <!-- S : 버튼영역 -->
+    <div class="text-center mt-4 pb-5">
+        <button type="button" class="btn btn-lg btn-dark mx-1"
+            onclick="window.location.href='/{admin_url}/{rseqments[0]}/index{url_suffix}'">취소하기</button>
+        <button type="submit" class="btn btn-lg btn-primary mx-1 btn-submit">등록하기</button>
+    </div>
+    <!-- E : 버튼영역 -->
+</form>
+<!-- 플랫폼 계정 폼 끝 -->
+<script>
+    let crud_mode = "{crud_mode}";
+</script>
+{ #layout_velzon_footer }

@@ -1,0 +1,366 @@
+{ #layout_velzon_header }
+
+<!--검색 영역 시작-->
+<form action="">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="fw-bold">검색</h5>
+        </div>
+        <div class="card-body">
+            <!-- 검색 항목 -->
+            <table class="table align-middle">
+                <colgroup>
+                    <col class="col-1 bg-light">
+                    <col class="col-11">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">검색</th>
+                        <td>
+                            <div class="row g-2">
+                                <div class="col-1">
+                                    <select name="" class="form-select">
+                                        <option value="" selected>차량소유</option>
+                                        <option value="">거래처</option>
+                                        <option value="">사업장</option>
+                                        <option value="">운행기사님</option>
+                                        <option value="">차량고유번호</option>
+                                        <option value="">차량명</option>
+                                        <option value="">차량번호</option>
+                                        <option value="">차종</option>
+                                        <option value="">연식</option>
+                                        <option value="">단말기 고유 ID</option>
+                                        <option value="">차량차고지위치</option>
+                                        <option value="">차량소속운송회사</option>
+                                        <option value="">최초등록자</option>
+                                        <option value="">최종수정자</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <input type="text" name="" class="form-control" placeholder="검색어를 입력해주세요.">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">기간검색</th>
+                        <td>
+                            <div class="row g-2">
+                                <div class="col-1">
+                                    <select name="" class="form-select">
+                                        <option value="" selected>차량소유</option>
+                                        <option value="">거래처</option>
+                                        <option value="">사업장</option>
+                                        <option value="">운행기사님</option>
+                                        <option value="">차량고유번호</option>
+                                        <option value="">차량명</option>
+                                        <option value="">차량번호</option>
+                                        <option value="">차종</option>
+                                        <option value="">연식</option>
+                                        <option value="">단말기 고유 ID</option>
+                                        <option value="">차량차고지위치</option>
+                                        <option value="">차량소속운송회사</option>
+                                        <option value="">최초등록자</option>
+                                        <option value="">최종수정자</option>
+                                    </select>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="row align-items-center g-2">
+                                        <div class="col-auto">
+                                            <input type="text" name="" class="form-control datepicker">
+                                        </div>
+                                        <div class="col-auto">~</div>
+                                        <div class="col-auto">
+                                            <input type="text" name="" class="form-control datepicker">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-outline-dark active">오늘</button>
+                                    <button type="button" class="btn btn-outline-dark">1주일</button>
+                                    <button type="button" class="btn btn-outline-dark">1개월</button>
+                                    <button type="button" class="btn btn-outline-dark">2개월</button>
+                                    <button type="button" class="btn btn-outline-dark">3개월</button>
+                                    <button type="button" class="btn btn-outline-dark">6개월</button>
+                                    <button type="button" class="btn btn-outline-dark">12개월</button>
+                                    <button type="button" class="btn btn-outline-dark">전체</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- // 검색 항목 -->
+    
+            <!-- 상세검색 -->
+            <div class="collapse" id="search_detail">
+                <table class="table align-middle">
+                    <colgroup>
+                        <col class="col-1 bg-light">
+                        <col class="col">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">차량 소속 운송회사</th>
+                            <td>
+                                <select name="company" class="form-select w-auto">
+                                    <option value="">운송회사를 선택해주세요.</option>
+                                    <option value="">운송회사A</option>
+                                    <option value="">운송회사B</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">거래처</th>
+                            <td>
+                                <select name="company" class="form-select w-auto">
+                                    <option value="">거래처를 선택해주세요.</option>
+                                    <option value="">거래처A</option>
+                                    <option value="">거래처B</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">종류</th>
+                            <td>
+                                <label class="form-check form-check-inline">
+                                    <input type="checkbox" name="car_grade[]" class="form-check-input" value="">
+                                    <span class="form-check-label">전체</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="checkbox" name="car_grade[]" class="form-check-input" value="">
+                                    <span class="form-check-label">대형</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="checkbox" name="car_grade[]" class="form-check-input" value="">
+                                    <span class="form-check-label">대형우등</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="checkbox" name="car_grade[]" class="form-check-input" value="">
+                                    <span class="form-check-label">중형</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="checkbox" name="car_grade[]" class="form-check-input" value="">
+                                    <span class="form-check-label">중형우등</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="checkbox" name="car_grade[]" class="form-check-input" value="">
+                                    <span class="form-check-label">미니버스</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="checkbox" name="car_grade[]" class="form-check-input" value="">
+                                    <span class="form-check-label">미니썬롱</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="checkbox" name="car_grade[]" class="form-check-input" value="">
+                                    <span class="form-check-label">미니우등</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="checkbox" name="car_grade[]" class="form-check-input" value="">
+                                    <span class="form-check-label">밴</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="checkbox" name="car_grade[]" class="form-check-input" value="">
+                                    <span class="form-check-label">대형프리미엄</span>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">차량소유</th>
+                            <td>
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="has_car" class="form-check-input" value="">
+                                    <span class="form-check-label">전체</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="has_car" class="form-check-input" value="">
+                                    <span class="form-check-label">운송회사</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input type="radio" name="has_car" class="form-check-input" value="">
+                                    <span class="form-check-label">기사님</span>
+                                </label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- // 상세검색 -->
+    
+            <!-- 검색 버튼 영역 -->
+            <div class="d-flex align-items-center justify-content-end gap-2">
+                <label class="form-check">
+                    <input type="checkbox" class="form-check-input" data-collapse-checkbox="search_detail">
+                    <span class="form-check-label">항상 상세검색</span>
+                </label>
+                <button type="button" class="btn btn-ghost-primary" data-bs-toggle="collapse" data-bs-target="#search_detail">상세검색</button>
+                <button type="submit" class="btn btn-primary">검색</button>
+                <button type="button" class="btn btn-dark" onclick="">초기화</button>
+            </div>
+            <!-- // 검색 버튼 영역 -->
+        </div>
+    </div>
+</form>
+<!--검색 영역 끝-->
+
+<!-- 버튼 영역 -->
+<div class="card">
+    <div class="card-body">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-auto">
+                <span class="fw-bold">00</span>건의 게시물이 검색되었습니다.
+            </div>
+            <div class="col-auto d-flex justify-content-end gap-2">
+                <button type="button" class="btn btn-primary" onclick="window.location.href='form'">차량등록</button>
+                <button type="button" class="btn btn-secondary" onclick="window.location.href=''">차종관리</button>
+                <select name="" class="form-select w-auto">
+                    <option value="10">10개</option>
+                    <option value="20">20개</option>
+                    <option value="30">30개</option>
+                    <option value="60">60개</option>
+                    <option value="80">80개</option>
+                    <option value="100">100개</option>
+                    <option value="500">500개</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 버튼 영역 -->
+
+<!--검색 리스트 영역 시작-->
+<div class="card">
+    <div class="card-body">
+        <!-- 배차현황 -->
+        <div class="row mb-3">
+            <div class="col-auto">
+                <div class="d-flex align-items-center gap-2 text-success">
+                    <i class="mdi mdi-bus-multiple fs-20"></i> 배차 <span class="fw-bold">30</span>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="d-flex align-items-center gap-2 text-danger">
+                    <i class="mdi mdi-bus-multiple fs-20"></i> 미배차 <span class="fw-bold">30</span>
+                </div>
+            </div>
+        </div>
+        <!-- // 배차현황 -->
+        
+        <!-- 리스트 (횡스크롤) -->
+        <div class="table-responsive">
+            <table class="table table-bordered table-nowrap align-middle text-center">
+                <thead class="bg-light">
+                    <tr>
+                        <th scope="col">
+                            <input type="checkbox" name="" class="form-check-input">
+                        </th>
+                        <th scope="col">번호</th>
+                        <th scope="col">현재운행여부</th>
+                        <th scope="col">차량현재위치</th>
+                        <th scope="col">차량고유번호</th>
+                        <th scope="col">차량명</th>
+                        <th scope="col">차량소유</th>
+                        <th scope="col">차량 소속 운송회사</th>
+                        <th scope="col">운행기사님</th>
+                        <th scope="col">차종</th>
+                        <th scope="col">종류</th>
+                        <th scope="col">차량번호</th>
+                        <th scope="col">연식</th>
+                        <th scope="col">탑승가능 인원수</th>
+                        <th scope="col">단말기 고유 ID</th>
+                        <th scope="col">거래처</th>
+                        <th scope="col">사업장</th>
+                        <th scope="col">고객사 연락처</th>
+                        <th scope="col">차량 운행중인 건수</th>
+                        <th scope="col">차량 총 운행건수</th>
+                        <th scope="col">마지막 운행일시</th>
+                        <th scope="col">최초등록일시</th>
+                        <th scope="col">최초등록자</th>
+                        <th scope="col">최종수정일시</th>
+                        <th scope="col">최종수정자</th>
+                        <th scope="col">수정/삭제</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="" class="form-check-input">
+                        </td>
+                        <td>1</td>
+                        <td>운행중</td>
+                        <td>
+                            <span class="fw-bold">차고지</span><br>
+                            <a href="">이수역 4번출구</a>
+                        </td>
+                        <td>
+                            9590
+                        </td>
+                        <td>
+                            메르세데스-벤츠 O 302
+                        </td>
+                        <td>
+                            <a href="">오종신</a>
+                        </td>
+                        <td>
+                            <a href="">제로쿨투어</a>
+                        </td>
+                        <td>
+                            <a href="">오종신</a>
+                        </td>
+                        <td>
+                            대형
+                        </td>
+                        <td>
+                            대형
+                        </td>
+                        <td>
+                            375더 1597
+                        </td>
+                        <td>
+                            2021년식
+                        </td>
+                        <td>
+                            28명
+                        </td>
+                        <td>
+                            RW 12538
+                        </td>
+                        <td>
+                            <a href="">정상어학원</a>
+                        </td>
+                        <td>
+                            <a href="">양주연구소</a>
+                        </td>
+                        <td>
+                            02-123-4567
+                        </td>
+                        <td>
+                            통학/통근 : <span class="fw-bold">20</span><br>
+                        </td>
+                        <td>
+                            통학/통근 : <span class="fw-bold">20</span><br>
+                            <button type="button" class="btn btn-sm btn-outline-dark">운행일지</button>
+                        </td>
+                        <td>2022.01.01 00:00:00</td>
+                        <td>2022.01.01 00:00:00</td>
+                        <td>
+                            <a href="">홍길동 (example@example.com)</a>
+                        </td>
+                        <td>2022.01.01 00:00:00</td>
+                        <td>
+                            <a href="">홍길동 (example@example.com)</a>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-dark">수정</button>
+                            <button type="button" class="btn btn-sm btn-danger">삭제</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- 리스트 (횡스크롤) -->
+    </div>
+</div>
+<!--검색 리스트 영역 끝-->
+
+{ #layout_velzon_footer }

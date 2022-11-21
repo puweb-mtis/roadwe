@@ -1,0 +1,100 @@
+{ #layout_sample_header }
+<article>
+    <h3>메타데이타 {? crud_mode === 'create'}등록{:}수정{/} & 폼 검증 샘플 영역</h3>
+    <fieldset>
+        <form name="{frm_name_string}" id="{frm_name_string}" method="post" action="/{admin_url}/samplecrud/crudproc/{crud_mode}{url_suffix}" enctype="multipart/form-data">
+            <input type="hidden" name="referer" value="{referer}" />
+            <input type="hidden" name="meta_group" value="siteinfo" />
+            <div>
+                <label>관리자 타이틀</label>
+                <div>
+                    <input type="text" name="title" id="title" placeholder="관리자 타이틀" {? crud_mode === 'update'}value="{siteinfo.title}"{/} />
+                </div>
+            </div>
+
+            <div>
+                <label>이메일주소</label>
+                <div>
+                    <input type="text" name="email_addr" id="email_addr" placeholder="이메일주소" {? crud_mode === 'update'}value="{siteinfo.email_addr}"{/} />
+                </div>
+            </div>
+
+            <div>
+                <label>추가 설명</label>
+                <div class="col-sm-9">
+                    <input type="text" name="add_desc" id="add_desc" placeholder="추가 설명" {? crud_mode === 'update'}value="{siteinfo.add_desc}"{/} />
+                </div>
+            </div>
+
+            <div>
+                <label>전체 메일 발송 여부</label>
+                <div class="col-sm-9">
+                    { @ set_params.def_yn_txt_cd }
+                    <label><input type="radio" name="all_send_mail" value="{.key_}" {? crud_mode === 'update'}{ ? siteinfo.all_send_mail == .key_}checked="checked"{/}{/}>{.value_}</label>
+                    { / }
+                </div>
+            </div>
+        
+            <div>
+                <label>관심 분야</label>
+                <div class="col-sm-9">
+                    { @ set_params.interest_cd }
+                    {*  Undefined array key 에러 부분 다시 확인 예정 *}
+                    <label><input type="checkbox" name="interest_list[{.key_}]" value="{.value_}" {*{? crud_mode === 'update'}{ ? siteinfo.interest_list[.key_] == .value_}checked="checked"{/}{/}*}>{.value_}</label>
+                    { / }
+                </div>
+            </div>
+
+            <div>
+                <label>첨부 파일</label>
+                <div class="col-sm-9">
+                    {? crud_mode === 'update' //수정일 경우}
+                        { @files}
+                        <label>
+                            <img src="{.cmmtf_path}/{.cmmtf_file}" width="50" height="50">
+                            <input type="hidden" name="filekey[]" value="{.cmmtf_idx}"> <!--첨부파일일련번호(삭제용)-->
+                            <input type="hidden" name="filedelyn[]" value="N">          <!--첨부파일삭제여부(삭제용)-->
+                            <span class="btn_image_remove">삭제</span>                            
+                        </label><br />
+                        { / }
+                    { / }
+                    { ? files_cnt > 0}
+                        { @ range(1,files_cnt) }
+                        <input type="file" name="userfile[]" id="id_input_file_{.index_ + 1}"><br />
+                        { / }
+                    { / }
+                </div>
+            </div>            
+
+            <div>
+                <div>
+                    <button type="submit" {* id="btn_submit"*}>
+                        {? crud_mode === 'create'}저장{:}수정{/}
+                    </button>
+                    <button class="btn" type="reset">
+                        Reset
+                    </button>
+                </div>
+            </div>
+        </form>
+    </fieldset>
+</article>
+<article>
+    <h3>ajax호출 샘플 영역</h3>
+    <fieldset>
+        <button type="button" id="btn_ajax_submit">ajax호출</button>
+    </fieldset>
+</article>
+<article>
+    <h3>윈도우 팝업 호출 샘플 영역</h3>
+    <fieldset>
+        <button type="button" id="btn_win_popup_open">윈도우 팝업 호출</button>
+    </fieldset>
+</article>
+<article>
+    <h3>즐겨찾기 샘플 영역</h3>
+    <fieldset>
+        <button type="button" class="addFavorite">즐겨찾기 호출</button>
+    </fieldset>
+</article>
+{ #layout_sample_footer }

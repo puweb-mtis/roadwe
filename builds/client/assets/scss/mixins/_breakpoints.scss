@@ -1,0 +1,25 @@
+$breakpoints: (
+  xs: 0,
+  sm: 576,
+  md: 768,
+  tab: 1024,
+  lg: 1440,
+  xl: 1660,
+  xxl: 1920
+);
+
+@mixin mdq-min($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+  
+  @media all and (min-width: #{$value + 0.2}) {
+    @content
+  }
+}
+
+@mixin mdq-max($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+  
+  @media all and (max-width: #{$value}) {
+    @content
+  }
+}

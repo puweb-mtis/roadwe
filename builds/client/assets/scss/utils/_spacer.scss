@@ -1,0 +1,36 @@
+@use "sass:map";
+
+$spacer-units: (
+  t: top,
+  b: bottom,
+  s: left,
+  e: right
+);
+$spacer: 1em;
+$spacers: () !default;
+
+@for $i from 0 through 5 {
+  $spacers: map-merge($spacers, (
+    $i: $i/4
+  ));
+}
+
+@each $key, $value in $spacers {
+  @each $prefix, $unit in $spacer-units {
+    .m#{$prefix}-#{$key} {
+      @if ( $value != 0 ) {
+        margin-#{$unit}: $value * $spacer !important;
+      } @else {
+        margin-#{$unit}: $value !important;
+      }
+    }
+  
+    .p#{$prefix}-#{$key} {
+      @if ( $value != 0 ) {
+        padding-#{$unit}: $value * $spacer !important;
+      } @else {
+        padding-#{$unit}: $value !important;
+      }
+    }
+  }
+}

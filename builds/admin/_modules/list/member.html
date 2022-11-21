@@ -1,0 +1,171 @@
+      <!-- S : 요약정보
+        TODO: 총 인원 dataTable로 카운팅 가능한지 확인 필요함.
+      -->
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex align-items-center">
+            <span class="fw-bold d-flex align-items-center me-3">총 회원: {=number_format(member_statistics.cnt_total)}명 <i class="ri-user-line"></i></span>
+            <span class="d-flex align-items-center me-3"><i class="ri-user-5-line"></i>일반회원:
+              <a href="javascript:void(0);">{=number_format(member_statistics.cnt_pu)}명</a>
+            </span>
+            <span class="d-flex align-items-center me-3"><i class="ri-user-location-line"></i>기사님:
+              <a href="javascript:void(0);">{=number_format(member_statistics.cnt_dv)}명</a>
+            </span>
+            <span class="d-flex align-items-center me-3"><i class="ri-parent-line"></i>동승매니저:
+              <a href="javascript:void(0);">{=number_format(member_statistics.cnt_rm)}명</a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!-- E : 요약정보 -->
+      
+      <!-- S : 리스트 -->
+      <div class="card">
+        <div class="card-body">
+          <div class="row align-items-center justify-content-between mb-3">
+            <div class="col-auto">
+              <p class="text-muted mb-0">
+                <span class="text-danger" id="rows_total">{=number_format(cntall)}</span>
+                건의 게시물이 검색되었습니다.
+              </p>
+            </div>
+            <div class="col-auto">
+              <!-- S : Buttons -->
+              <div class="d-inline-block me-2 buttons">
+                <a href="/{admin_url}/{rseqments[0]}/form{url_suffix}" class="btn btn-primary">일반회원 등록</a>
+                <a href="/{admin_url}/{rseqments[0]}/form{url_suffix}" class="btn btn-primary">기사님 등록</a>
+                <a href="/{admin_url}/{rseqments[0]}/form{url_suffix}" class="btn btn-primary">동승매니저 등록</a>
+                <button type="button" class="btn btn-light btn-label">
+                  <i class="ri-file-excel-2-line label-icon align-middle fs-16 me-2"></i> 다운받을 항목 선택
+                </button>
+                <button type="button" class="btn btn-light btn-label">
+                  <i class="ri-file-excel-2-line label-icon align-middle fs-16 me-2"></i> 전체 엑셀다운로드
+                </button>
+                <button type="button" class="btn btn-light btn-label">
+                  <i class="ri-file-excel-2-line label-icon align-middle fs-16 me-2"></i> 선택 엑셀다운로드
+                </button>
+                <button type="button" class="btn btn-light btn-label">
+                  <i class="ri-file-excel-2-line label-icon align-middle fs-16 me-2"></i> 검색 엑셀다운로드
+                </button>
+              </div>
+              <!-- E : Buttons -->
+
+              <select id="list-limit" class="form-select d-inline-block w-auto length-select" aria-label="페이지 노출 수">
+                <option value="10" { ? sec_params.limit == "10"} selected="selected"{/}>10개</option>
+                <option value="20" { ? sec_params.limit == "20"} selected="selected"{/}>20개</option>
+                <option value="30" { ? sec_params.limit == "30"} selected="selected"{/}>30개</option>
+                <option value="60" { ? sec_params.limit == "60"} selected="selected"{/}>60개</option>
+                <option value="80" { ? sec_params.limit == "80"} selected="selected"{/}>80개</option>
+                <option value="100" { ? sec_params.limit == "100"} selected="selected"{/}>100개</option>
+                <option value="500" { ? sec_params.limit == "500"} selected="selected"{/}>500개</option>
+              </select>
+              
+              <!--<select class="form-select me-2 d-inline-block w-auto" aria-label="Default select example">
+                <option selected>정렬순서를 선택하세요</option>
+                <option value="1">탑승횟수 많은순</option>
+                <option value="2">탑승횟수 적은순</option>
+                <option value="3">동승중인 건수 많은순</option>
+                <option value="4">동승중인 건수 적은순</option>
+                <option value="5">보유 총 차량 많은순</option>
+                <option value="6">보유 총 차량 적은순</option>
+                <option value="7">차량운행중인 건수 많은순</option>
+                <option value="8">차량운행중인 건수 적은순</option>
+              </select>
+              
+              
+              -->
+            </div>
+          </div>
+          
+          <div class="table-responsive">
+            <!-- <table id="member_list" class="display table table-bordered nowrap align-middle w-100"> -->
+            <table id="{rseqments[0]}-table" class="display table table-bordered nowrap align-middle w-100">
+              <thead class="table-light align-middle text-center">
+                <tr>
+                  <th scope="col">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="checkAll">
+                    </div>
+                  </th>
+                  <th scope="col">번호</th>
+                  <th scope="col">회원고유번호</th>
+                  <th scope="col">회원구분</th>
+                  <th scope="col">거래처/운송회사</th>
+                  <th scope="col">사업장</th>
+                  <th scope="col">근무부서</th>
+                  <th scope="col">이메일</th>
+                  <th scope="col">이름</th>
+                  <th scope="col">휴대폰번호</th>
+                  <th scope="col">보유차량</th>
+                  <th scope="col">탑승횟수</th>
+                  <th scope="col">동승중인 건수</th>
+                  <th scope="col">총 동승 건수</th>
+                  <th scope="col">차량 운행중인 건수</th>
+                  <th scope="col">차량 총 운행 건수</th>
+                  <th scope="col">신규가입일시</th>
+                  <th scope="col">최종접속일시</th>
+                  <th scope="col">최종수정일시</th>
+                  <th scope="col">최종수정자</th>
+                  <th scope="col">전환요청일시</th>
+                  <th scope="col">최종전환승인여부</th>
+                  <th scope="col">최종승인/반려자</th>
+                  <th scope="col">최종승인/반려일시</th>
+                  <th scope="col">정상회원으로 복구사유</th>
+                  <th scope="col">개인정보수정/탈퇴</th>
+                </tr>
+              </thead>
+              <tbody>
+                { ? list // 리스트가 있는 경우 }
+                { @list }
+                    <tr class="{? .index_ % 2}even{:}odd{/}">
+                        <td class="dt-body-center"><input class="form-check-input fs-15" type="checkbox" name="id[]" id="all_check{.index_}" value="{.id}"></td>
+                        <td class="dt-body-center sorting_1">{page_index - .index_}</td>
+                        <td class="dt-body-center">{.member_code}</td>
+                        <td class="dt-body-center">{=set_params.acmb_member_type_cd[.member_type]}</td>
+                        <td class="dt-body-center"><a href="">-</a></td>
+                        <td class="dt-body-center"><a href="">-</a></td>
+                        <td class="dt-body-center"><a href="">-</a></td>
+                        <td class="dt-body-center">{.account}</td>
+                        <td class="dt-body-center">{.member_name}</td>
+                        <td class="dt-body-center">{.phone}</td>
+                        <td class="dt-body-center"><a href="">-</a></td>
+                        <td class="dt-body-center"><a href="">00</a></td>
+                        <td class="dt-body-center"><a href="">00</a></td>
+                        <td class="dt-body-center"><a href="">00</a></td>
+                        <td class="dt-body-center"><a href="">00</a></td>
+                        <td class="dt-body-center"><a href="">00</a></td>
+                        <td class="dt-body-center">{.c_datetime}</td>
+                        <td class="dt-body-center">{.login_datetime}</td>
+                        <td class="dt-body-center">{.m_datetime}</td>
+                        <td class="dt-body-center"><a href="">{.m_name}<br>({.m_user})</a></td>
+                        <td class="dt-body-center">-</td>
+                        <td class="dt-body-center">-</td>
+                        <td class="dt-body-center"><a href="">홍길동<br>(hong@donghaeng.com)</a></td>
+                        <td class="dt-body-center">-</td>
+                        <td class="dt-body-center">-</td>
+                        <td class="dt-body-center">
+                          <button type="button" class="btn btn-dark btn-sm" onclick="location.href='/{admin_url}/{rseqments[0]}/form/{.id}{url_suffix}'">개인정보수정</button>
+                          <button type="button" class="btn btn-sm btn-danger">탈퇴요청</button>
+                        </td>
+                    </tr>
+                { / }
+                { : //리스트가 없는 경우}
+                <tr>
+                  <td colspan="26" style="text-align: center; line-height:100px;">{page_title} 리스트 내역이 없습니다.
+                  </td>
+                </tr>
+                { / }
+              </tbody>
+            </table>
+            <!-- 테이블 하단 버튼 영역 -->
+            <div class="d-flex gap-2">
+            </div>
+            <!-- // 테이블 하단 버튼 영역 -->
+              
+            <!-- 테이블 페이징 -->
+            {pager}
+            <!-- // 테이블 페이징 -->
+          </div>
+        </div>
+      </div>
+      <!-- E : 리스트 -->

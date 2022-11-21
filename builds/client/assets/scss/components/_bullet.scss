@@ -1,0 +1,43 @@
+.bullet-list--number {
+  .bullet-list__item {
+    display: flex;
+    font-size: vw(14);
+    font-weight: 700;
+    color: #999;
+    
+    @include mdq-min(sm) {
+      font-size: em(18);
+    }
+    
+    @include mdq-min(tab) {
+      font-size: em(22);
+    }
+    
+    &::before {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: -0.5px;
+      font-size: em(10, 14);
+      font-weight: 800;
+      color: #fff;
+      border-radius: 100%;
+      background-color: #999;
+      flex: 0 0 em(14, 10);
+      width: em(14, 10);
+      height: em(14, 10);
+      margin-right: em(6, 10);
+      margin-top: calc(1em * 0.2);
+    }
+    
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i})::before {
+        content: '#{$i}';
+      }
+    }
+    
+    & + .bullet-list__item {
+      margin-top: em(12, 14);
+    }
+  }
+}

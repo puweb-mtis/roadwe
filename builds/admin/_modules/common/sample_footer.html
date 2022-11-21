@@ -1,0 +1,12 @@
+    <script> const ADMIN_URL = "{admin_url}"; const URL_SUFFIX="{url_suffix}"; const CONTROLLER_NAME ="{rseqments[0]}"; const METHOD_NAME ="{rseqments[1]}" </script>
+    { @scripts }
+        { ? preg_match("/(http|https|)(\:|)\/\//", .value_) // 절대경로가 들어오는 경우를 대비합니다}
+        <script src="{.value_}"></script>
+        { : preg_match("/\/etc\//", .value_) }
+        <script src="{.value_}"></script>
+        { : }
+        <script src="/builds/admin/assets/js/{.value_}"></script>
+        { / }
+    { / }    
+    </body>
+</html>
