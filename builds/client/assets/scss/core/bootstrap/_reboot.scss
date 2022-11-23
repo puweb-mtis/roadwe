@@ -57,6 +57,7 @@ body {
   background-color: var(--#{$prefix}body-bg); // 2
   -webkit-text-size-adjust: 100%; // 3
   -webkit-tap-highlight-color: rgba($black, 0); // 4
+  overflow-x: hidden;
 }
 // scss-docs-end reboot-body-rules
 
