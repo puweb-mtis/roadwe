@@ -4434,17 +4434,17 @@ progress {
 .section--index.active.fp-completely .cloud-1 {
   opacity: 1;
   transform: translateX(0);
-  animation: cloudAnimation 4s linear 1s infinite alternate both;
+  animation: cloudAnimation 4s linear 0.5s infinite alternate both;
 }
 .section--index.active.fp-completely .cloud-2 {
   opacity: 1;
   transform: translateX(0);
-  animation: cloudAnimation 4s linear 2s infinite alternate both;
+  animation: cloudAnimation 4s linear 1s infinite alternate both;
 }
 .section--index.active.fp-completely .cloud-3 {
   opacity: 1;
   transform: translateX(0);
-  animation: cloudAnimation 4s linear 3s infinite alternate both;
+  animation: cloudAnimation 4s linear 1.5s infinite alternate both;
 }
 .section--index.active.fp-completely [class^=deco] {
   animation: decoAnimation 1s linear 0s 1 alternate both;
@@ -4728,7 +4728,6 @@ progress {
   left: 0;
   transform: translateX(80%);
   background-color: rgba(222, 226, 25, 0.6);
-  animation: circleTop1 1s linear 0.5s 1 alternate both;
 }
 .section--intro--1 .circle-wrap .top .circle--2 {
   position: absolute;
@@ -4736,7 +4735,6 @@ progress {
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(189, 212, 255, 0.6);
-  animation: circleTop2 1s linear 0.5s 1 alternate both;
 }
 .section--intro--1 .circle-wrap .top .circle--3 {
   position: absolute;
@@ -4744,8 +4742,17 @@ progress {
   right: 0;
   transform: translateX(-80%);
   background-color: rgba(255, 190, 142, 0.6);
-  animation: circleTop3 1s linear 0.5s 1 alternate both;
 }
+.section--intro--1.fp-completely .circle-wrap .circle--1 {
+  animation: circleTop1 1s linear 0.2s 1 alternate both;
+}
+.section--intro--1.fp-completely .circle-wrap .circle--2 {
+  animation: circleTop2 1s linear 0s 1 alternate both;
+}
+.section--intro--1.fp-completely .circle-wrap .circle--3 {
+  animation: circleTop3 1s linear 0.2s 1 alternate both;
+}
+
 .section--intro--1 .circle-wrap .center {
   position: absolute;
   width: 100%;

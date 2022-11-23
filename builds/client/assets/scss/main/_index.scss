@@ -183,7 +183,7 @@
         .cloud-#{$i} {
           opacity: 1;
           transform: translateX(0);
-          animation: cloudAnimation 4s linear #{$i*1}s infinite alternate both;
+          animation: cloudAnimation 4s linear #{$i*0.5}s infinite alternate both;
         }
       }
       

@@ -4,99 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="499289ab-6742-4395-a664-410cde961a61" name="Changes" comment="feat: Boostrap ./config/_variables.scss 적용 가능하도록 수정">
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/advantage/deco0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/advantage/deco1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/advantage/deco2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/advantage/deco3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/advantage/deco4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/advantage/deco5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/advantage/img1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/advantage/img2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/advantage/img3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/advantage/img4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/advantage/img5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/cs/icon1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/cs/icon2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/icons/apple_logo_gray.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/icons/apple_store.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/icons/facebook.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/icons/google_play.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/icons/google_play_logo_gray.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/icons/instagram.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/icons/kakao.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/icons/nav_button_next.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/icons/nav_button_prev.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/icons/notification.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/index/cloud1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/index/cloud2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/index/cloud3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/index/deco1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/index/deco10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/index/deco2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/index/deco3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/index/deco4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/index/deco5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/index/deco6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/index/deco7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/index/deco8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/index/deco9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/intro/arrow1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/intro/icon1_1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/intro/icon1_2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/intro/icon1_3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/intro/icon1_4.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/intro/icon2_1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/intro/icon2_2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/intro/icon2_3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/intro/intro4_img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/intro/intro4_terminal1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/intro/intro4_terminal2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/intro/intro_bg1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/intro/intro_bg2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/intro/intro_bg3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/intro/intro_bg4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/logo_gray.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/bubble_deco.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/emoji1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/emoji2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/emoji3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/emoji4.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/emoji5.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service1_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service1_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service1_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service1_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service2_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service2_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service2_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service2_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/symbol.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/components/_buttons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/components/_letter.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/config/_functions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/layout/_common.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/main/_advantage.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/main/_cs.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/main/_index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/main/_intro.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/main/_service.scss" afterDir="false" />
+    <list default="true" id="499289ab-6742-4395-a664-410cde961a61" name="Changes" comment="feat: 메인 작업 1차 일괄 커밋&#10;&#10;- PC 작업 일부 완료&#10;- 헤더 및 로드위 메뉴 클릭 시 팝업 작업 예정&#10;- 모바일 반응형 작업 예정">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/_modules/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/_modules/common/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/_modules/layout/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/_modules/layout/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/_main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/_main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/config/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/config/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/_reboot.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/_reboot.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/layout/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/layout/_footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/layout/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/layout/_header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/main/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/main/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/main/_index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/main/_intro.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/main/_intro.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +73,7 @@
       <workItem from="1669001310804" duration="5243000" />
       <workItem from="1669070822971" duration="42782000" />
       <workItem from="1669192596951" duration="8000" />
-      <workItem from="1669192842981" duration="344000" />
+      <workItem from="1669192842981" duration="1076000" />
     </task>
     <task id="LOCAL-00001" summary="Copy">
       <created>1669005347184</created>
@@ -209,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669015100479</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: 메인 작업 1차 일괄 커밋&#10;&#10;- PC 작업 일부 완료&#10;- 헤더 및 로드위 메뉴 클릭 시 팝업 작업 예정&#10;- 모바일 반응형 작업 예정">
+      <created>1669193363575</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669193363575</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +169,8 @@
     <MESSAGE value="feat: 이미지파일 제거" />
     <MESSAGE value="feat: Boostrap _reboot.scss 적용" />
     <MESSAGE value="feat: Boostrap ./config/_variables.scss 적용 가능하도록 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Boostrap ./config/_variables.scss 적용 가능하도록 수정" />
+    <MESSAGE value="feat: 메인 작업 1차 일괄 커밋&#10;&#10;- PC 작업 일부 완료&#10;- 헤더 및 로드위 메뉴 클릭 시 팝업 작업 예정&#10;- 모바일 반응형 작업 예정" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 메인 작업 1차 일괄 커밋&#10;&#10;- PC 작업 일부 완료&#10;- 헤더 및 로드위 메뉴 클릭 시 팝업 작업 예정&#10;- 모바일 반응형 작업 예정" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

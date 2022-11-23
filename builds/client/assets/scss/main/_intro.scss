@@ -221,7 +221,6 @@
         left: 0;
         transform: translateX(80%);
         background-color: rgba(#dee219, 0.6);
-        animation: circleTop1 1s linear 0.5s 1 alternate both;
       }
       
       .circle--2 {
@@ -230,7 +229,6 @@
         left: 50%;
         transform: translateX(-50%);
         background-color: rgba(#bdd4ff, 0.6);
-        animation: circleTop2 1s linear 0.5s 1 alternate both;
       }
       
       .circle--3 {
@@ -239,7 +237,22 @@
         right: 0;
         transform: translateX(-80%);
         background-color: rgba(#ffbe8e, 0.6);
-        animation: circleTop3 1s linear 0.5s 1 alternate both;
+      }
+  
+      @at-root {
+        .section--intro--1.fp-completely {
+          .circle-wrap .circle--1 {
+            animation: circleTop1 1s linear .2s 1 alternate both;
+          }
+  
+          .circle-wrap .circle--2 {
+            animation: circleTop2 1s linear 0s 1 alternate both;
+          }
+  
+          .circle-wrap .circle--3 {
+            animation: circleTop3 1s linear .2s 1 alternate both;
+          }
+        }
       }
     }
     
