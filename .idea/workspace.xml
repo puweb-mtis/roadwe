@@ -5,13 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="499289ab-6742-4395-a664-410cde961a61" name="Changes" comment="feat: 메인 작업 1차 일괄 커밋&#10;&#10;- PC 작업 일부 완료&#10;- 헤더 및 로드위 메뉴 클릭 시 팝업 작업 예정&#10;- 모바일 반응형 작업 예정">
+      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service3_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service3_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service3_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service3_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service4_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service4_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service4_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service4_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service5_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service5_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service5_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service5_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/main/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/main/_index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/main/_intro.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/main/_intro.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/_reboot.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/_reboot.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/main/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,20 +51,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/roadwe/builds/client/assets/scss/core/bootstrap&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/roadwe/builds/client/assets/scss/core/bootstrap",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "editing.templates",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\roadwe\builds\client\assets\scss\core\bootstrap" />
@@ -74,6 +89,7 @@
       <workItem from="1669070822971" duration="42782000" />
       <workItem from="1669192596951" duration="8000" />
       <workItem from="1669192842981" duration="1076000" />
+      <workItem from="1669244606921" duration="2233000" />
     </task>
     <task id="LOCAL-00001" summary="Copy">
       <created>1669005347184</created>
@@ -163,6 +179,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Copy" />
     <MESSAGE value="feat: 파일 초기화 및 셋팅" />
     <MESSAGE value="feat: 비디오파일 제거" />
