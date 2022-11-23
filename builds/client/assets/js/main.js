@@ -56,7 +56,7 @@ const serviceSwiper1 = new Swiper('.service-swiper--1 .swiper', {
     loop: true,
     allowTouchMove: false,
     slidesPerView: 2,
-    spaceBetween: 20,
+    spaceBetween: 25,
     navigation: {
         prevEl: '.service-swiper--1 .swiper-button--prev',
         nextEl: '.service-swiper--1 .swiper-button--next'
@@ -68,7 +68,7 @@ const serviceSwiper2 = new Swiper('.service-swiper--2 .swiper', {
     loop: true,
     allowTouchMove: false,
     slidesPerView: 2,
-    spaceBetween: 20,
+    spaceBetween: 25,
     navigation: {
         prevEl: '.service-swiper--2 .swiper-button--prev',
         nextEl: '.service-swiper--2 .swiper-button--next'
@@ -80,7 +80,7 @@ const serviceSwiper3 = new Swiper('.service-swiper--3 .swiper', {
     loop: true,
     allowTouchMove: false,
     slidesPerView: 2,
-    spaceBetween: 20,
+    spaceBetween: 25,
     navigation: {
         prevEl: '.service-swiper--3 .swiper-button--prev',
         nextEl: '.service-swiper--3 .swiper-button--next'
@@ -92,7 +92,7 @@ const serviceSwiper4 = new Swiper('.service-swiper--4 .swiper', {
     loop: true,
     allowTouchMove: false,
     slidesPerView: 2,
-    spaceBetween: 20,
+    spaceBetween: 25,
     navigation: {
         prevEl: '.service-swiper--4 .swiper-button--prev',
         nextEl: '.service-swiper--4 .swiper-button--next'
@@ -104,7 +104,7 @@ const serviceSwiper5 = new Swiper('.service-swiper--5 .swiper', {
     loop: true,
     allowTouchMove: false,
     slidesPerView: 2,
-    spaceBetween: 20,
+    spaceBetween: 25,
     navigation: {
         prevEl: '.service-swiper--5 .swiper-button--prev',
         nextEl: '.service-swiper--5 .swiper-button--next'
