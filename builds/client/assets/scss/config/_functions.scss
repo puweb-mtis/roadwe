@@ -1,0 +1,7 @@
+@function rem($value, $base-pixel:16) {
+  @return $value/$base-pixel * 1rem;
+}
+
+@function em($value, $base-pixel:16) {
+  @return $value/$base-pixel * 1em;
+}

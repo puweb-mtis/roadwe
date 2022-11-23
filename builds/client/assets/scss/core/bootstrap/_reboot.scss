@@ -333,6 +333,7 @@ figure {
 
 img,
 svg {
+  max-width: 100%;
   vertical-align: middle;
 }
 
@@ -388,6 +389,8 @@ label {
 
 button {
   // stylelint-disable-next-line property-disallowed-list
+  background: none;
+  border: 0;
   border-radius: 0;
 }
 

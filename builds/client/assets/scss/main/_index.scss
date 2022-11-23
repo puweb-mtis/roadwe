@@ -1,0 +1,195 @@
+.section--index {
+  position: relative;
+  color: #fff;
+  background-color: $primary;
+  overflow: hidden;
+  
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: em(14);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #333;
+    z-index: 3;
+  }
+  
+  .text-box {
+    .title {
+      letter-spacing: -1px;
+      font-size: em(110);
+      line-height: (100/110);
+      font-weight: 900;
+    }
+    
+    .text {
+      margin-top: em(60, 30);
+      font-size: em(30);
+      font-weight: 900;
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+  }
+  
+  .btn-box {
+    display: flex;
+    gap: 14px;
+    margin-top: em(94);
+  }
+  
+  @keyframes cloudDisplay {
+    0% {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes cloudAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    
+    50% {
+      transform: translateY(-20px);
+    }
+    
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .cloud {
+    @for $i from 1 through 3 {
+      &-#{$i} {
+        position: absolute;
+        opacity: 0;
+        transform: translateX(4px);
+        background: {
+          image: url(/builds/client/assets/images/index/cloud#{$i}.png);
+          repeat: no-repeat;
+          position: center;
+          size: auto 100%;
+        };
+        
+        @if ($i == 1) {
+          width: em(288);
+          height: em(232);
+          top: em(261);
+          right: em(100);
+        } @else if ($i == 2) {
+          width: em(325);
+          height: em(255);
+          top: em(458);
+          left: 0;
+        } @else {
+          width: em(206);
+          height: em(167);
+          top: em(663);
+          left: percentage(860/1920);
+        }
+      }
+    }
+  }
+  
+  @keyframes decoAnimation {
+    0% {
+      transform: translateY(100%) scale(0.5);
+    }
+    
+    100% {
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  .deco {
+    @for $i from 1 through 10 {
+      &-#{$i} {
+        display: block;
+        position: absolute;
+        bottom: em(14);
+        width: em(60);
+        transform: translateY(100%) scale(0.5);
+        background: {
+          image: url(/builds/client/assets/images/index/deco#{$i}.png);
+          repeat: no-repeat;
+          position: center;
+          size: cover;
+        };
+        
+        &::after {
+          content: '';
+          display: block;
+          padding-bottom: 100%;
+        }
+        
+        @if ($i == 1) {
+          left: percentage(21/1920);
+          z-index: 1;
+        } @else if ($i == 2) {
+          left: percentage(63/1920);
+        } @else if ($i == 3) {
+          left: percentage(156/1920);
+          width: em(70);
+        } @else if ($i == 4) {
+          left: percentage(1146/1920);
+          width: em(70);
+        } @else if ($i == 5) {
+          left: percentage(1279/1920);
+          width: em(54);
+        } @else if ($i == 6) {
+          left: percentage(1313/1920);
+          width: em(70);
+        } @else if ($i == 7) {
+          left: percentage(1386/1920);
+          width: em(48);
+        } @else if ($i == 8) {
+          left: percentage(1561/1920);
+          width: em(56);
+        } @else if ($i == 9) {
+          left: percentage(1626/1920);
+        } @else if ($i == 10) {
+          left: percentage(1767/1920);
+        }
+      }
+    }
+  }
+  
+  &.active {
+    @for $i from 1 through 3 {
+      .cloud-#{$i} {
+        animation: cloudDisplay .5s linear 0s 1 alternate both;
+      }
+    }
+    
+    &.fp-completely {
+      .text-box {
+        .title {
+          @include letterActive(2, 1.5, .6);
+        }
+        
+        .text {
+          @include letterActive(11, .5, .1);
+        }
+      }
+      
+      @for $i from 1 through 3 {
+        .cloud-#{$i} {
+          opacity: 1;
+          transform: translateX(0);
+          animation: cloudAnimation 4s linear #{$i*1}s infinite alternate both;
+        }
+      }
+      
+      [class^="deco"] {
+        animation: decoAnimation 1s linear 0s 1 alternate both;
+      }
+    }
+  }
+}

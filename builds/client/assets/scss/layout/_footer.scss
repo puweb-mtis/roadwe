@@ -1,0 +1,111 @@
+.footer {
+  background-color: #333;
+  font-size: em(11);
+  font-weight: 700;
+  color: #777;
+  padding: em(40, 11) 0 em(30, 11);
+  
+  &-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  &-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: em(62);
+  }
+  
+  .terms-link {
+    display: flex;
+    align-items: center;
+    margin-left: em(-15, 12);
+    margin-right: em(-15, 12);
+    font-size: em(12, 11);
+    font-weight: 700;
+    line-height: 1;
+    
+    .link {
+      color: #999;
+      padding-left: em(15, 12);
+      padding-right: em(15, 12);
+      
+      & + .link {
+        border-left: 1px solid #444;
+      }
+    }
+  }
+  
+  .footer-info {
+    display: flex;
+    gap: em(8, 11);
+  }
+  
+  .footer-link {
+    display: flex;
+    gap: em(100, 11);
+  }
+  
+  .app-link {
+    display: flex;
+    gap: em(20, 11);
+    
+    .link {
+      display: inline-flex;
+      align-items: center;
+      color: #777;
+      gap: em(4, 11);
+      
+      &::before {
+        content: '';
+        display: block;
+        width: em(24, 11);
+        height: em(24, 11);
+        background: {
+          repeat: no-repeat;
+          position: center;
+          size: cover;
+        };
+      }
+      
+      &--apple::before {
+        background-image: url(/builds/client/assets/images/icons/apple_logo_gray.svg);
+      }
+      
+      &--google::before {
+        background-image: url(/builds/client/assets/images/icons/google_play_logo_gray.svg);
+      }
+    }
+  }
+  
+  .sns-link {
+    display: flex;
+    gap: em(10, 11);
+    
+    .link {
+      display: block;
+      flex: 0 0 em(24, 11);
+      width: em(24, 11);
+      height: em(24, 11);
+      background: {
+          repeat: no-repeat;
+          position: center;
+          size: cover;
+      };
+      
+      &--kakao {
+        background-image: url(/builds/client/assets/images/icons/kakao.svg);
+      }
+  
+      &--facebook {
+        background-image: url(/builds/client/assets/images/icons/facebook.svg);
+      }
+  
+      &--instagram {
+        background-image: url(/builds/client/assets/images/icons/instagram.svg);
+      }
+    }
+  }
+}

@@ -1,0 +1,197 @@
+.section--cs {
+  &.active.fp-completely {
+    .title {
+      @include letterActive(5, 1.2, .2);
+    }
+    
+    .sub-title {
+      @include letterActive(8, .5, .1);
+    }
+    
+    .text {
+      @include letterActive(20, .5, .1);
+    }
+  }
+}
+
+.cs-wrap {
+  display: flex;
+  
+  .cs-content {
+    flex: 1 1 auto;
+    
+    .sub-title {
+      color: $primary;
+      font-size: em(24);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    
+    .title {
+      color: #333;
+      font-size: em(64);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+    
+    .text {
+      color: #aaa;
+      font-size: em(24);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1;
+      margin-top: em(32, 24);
+    }
+  }
+  
+  .cs-link-box {
+    display: flex;
+    align-items: flex-start;
+    flex: 0 0 percentage(700/1200);
+    gap: em(60);
+    
+    .cs-link {
+      flex: 0 0 percentage(320/700);
+      display: block;
+      text-align: center;
+      box-shadow: 10px 10px 40px rgba(#000, 0.1);
+      border-radius: em(40);
+      overflow-x: hidden;
+      transition: all .3s ease-in-out;
+      transform-origin: bottom center;
+      
+      @keyframes csLink {
+        0% {
+          transform: rotate(0);
+        }
+        
+        20% {
+          transform: rotate(0.5deg);
+        }
+        
+        40% {
+          transform: rotate(-0.5deg);
+        }
+        
+        60% {
+          transform: rotate(0.5deg);
+        }
+        
+        80% {
+          transform: rotate(-0.5deg);
+        }
+        
+        100% {
+          transform: rotate(0);
+        }
+        
+      }
+      
+      @at-root {
+        .section--cs.active.fp-completely {
+          .cs-link {
+            animation: csLink .5s linear 0s 1 alternate both;
+          }
+        }
+      }
+      
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 10px 10px 40px rgba(#000, 0.2);
+      }
+      
+      .icon {
+        display: block;
+        width: em(100);
+        height: em(100);
+        margin-left: auto;
+        margin-right: auto;
+        background: {
+          repeat: no-repeat;
+          position: center;
+          size: cover;
+        };
+        
+        @for $i from 1 through 2 {
+          &.icon--#{$i} {
+            background-image: url(/builds/client/assets/images/cs/icon#{$i}.svg);
+          }
+        }
+      }
+      
+      .thumb {
+        display: block;
+        padding: em(50) em(20) em(44) em(20);
+        background-color: #fff;
+      }
+      
+      .title {
+        display: block;
+        color: #333;
+        font-size: em(24);
+        font-weight: 800;
+        line-height: (34/24);
+        letter-spacing: -0.5px;
+        margin-top: em(50, 24);
+      }
+      
+      .text {
+        display: block;
+        color: #ccc;
+        font-size: em(14);
+        font-weight: 800;
+        line-height: (18/14);
+        margin-top: em(16, 14);
+      }
+      
+      .desc {
+        display: block;
+        text-align: center;
+        color: #fff;
+        font-size: em(18);
+        font-weight: 800;
+        line-height: 1;
+        padding: em(26, 18) em(12, 18);
+        background-color: $primary;
+      }
+    }
+  }
+}
+
+.cs-info {
+  position: absolute;
+  bottom: em(66);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  .item {
+    flex: 0 0 auto;
+    padding: 0 em(50);
+    
+    & + .item {
+      border-left: 1px solid #e5e5e5;
+    }
+    
+    .title {
+      color: #aaa;
+      display: block;
+      text-align: center;
+      font-size: 1em;
+      font-weight: 500;
+      letter-spacing: -0.5px;
+    }
+    
+    .link {
+      color: #333;
+      display: block;
+      font-size: em(30);
+      line-height: 1;
+      font-weight: 500;
+      margin-top: em(12, 30);
+    }
+  }
+}

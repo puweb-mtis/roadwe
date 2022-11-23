@@ -1,19 +1,20 @@
 // Boostrap v5.2.2
+@import "config/functions";
+@import "core/bootstrap/functions";
 @import "config/variables";
 @import "core/bootstrap/bootstrap-grid";
-
-// Configuration
-@import "config/variables";
 
 // Fonts
 @import "fonts";
 
 // Layout
+@import "layout/common";
 @import "layout/header";
 @import "layout/footer";
 
 // Components
-// @import "components";
+@import "components/buttons";
+@import "components/letter";
 
 // Main
 @import "main";

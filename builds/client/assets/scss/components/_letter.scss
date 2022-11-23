@@ -1,0 +1,31 @@
+.letter-wrap {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin-top: -0.16em;
+  
+  @keyframes letterAnimation {
+    0% {
+      transform: translateY(100%);
+    }
+    
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .letter {
+    display: inline-block;
+    transform: translateY(100%);
+    line-height: 1.15;
+    padding-bottom: 0.16em;
+  }
+}
+
+@mixin letterActive($count, $duration, $delay) {
+  @for $i from 1 through $count {
+    .letter-wrap .letter:nth-child(#{$i}) {
+      animation: letterAnimation #{$duration}s cubic-bezier(0.215, 0.610, 0.355, 1.000) #{($i - 1)*$delay}s 1 alternate both;
+    }
+  }
+}
