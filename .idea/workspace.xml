@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="499289ab-6742-4395-a664-410cde961a61" name="Changes" comment="feat: 인트로 및 서비스 섹션 모바일 작업 완료">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/main/_service.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/main/_service.scss" afterDir="false" />
+    <list default="true" id="499289ab-6742-4395-a664-410cde961a61" name="Changes" comment="feat: 서비스 섹션 모바일 미작업분 작업완료">
       <change beforePath="$PROJECT_DIR$/builds/client/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/main/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +70,7 @@
       <workItem from="1669070822971" duration="42782000" />
       <workItem from="1669192596951" duration="8000" />
       <workItem from="1669192842981" duration="1076000" />
-      <workItem from="1669244606921" duration="24238000" />
+      <workItem from="1669244606921" duration="24420000" />
     </task>
     <task id="LOCAL-00001" summary="Copy">
       <created>1669005347184</created>
@@ -217,7 +212,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669274925671</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="feat: 메인화면 1024 이하 사이즈에서만 스크롤 active 먹도록 수정">
+      <created>1669275400493</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1669275400493</updated>
+    </task>
+    <task id="LOCAL-00022" summary="feat: 서비스장점 swiper autoHeight 적용">
+      <created>1669275422761</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1669275422761</updated>
+    </task>
+    <task id="LOCAL-00023" summary="feat: 서비스 섹션 모바일 미작업분 작업완료">
+      <created>1669275452248</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1669275452248</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +284,10 @@
     <MESSAGE value="feat: .gitignore 수정" />
     <MESSAGE value="feat: PC 수정사항 반영" />
     <MESSAGE value="feat: 인트로 및 서비스 섹션 모바일 작업 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 인트로 및 서비스 섹션 모바일 작업 완료" />
+    <MESSAGE value="feat: 메인화면 1024 이하 사이즈에서만 스크롤 active 먹도록 수정" />
+    <MESSAGE value="feat: 서비스장점 swiper autoHeight 적용" />
+    <MESSAGE value="feat: 서비스 섹션 모바일 미작업분 작업완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 서비스 섹션 모바일 미작업분 작업완료" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
