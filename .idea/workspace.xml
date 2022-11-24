@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="499289ab-6742-4395-a664-410cde961a61" name="Changes" comment="feat: 서비스장점 섹션 PC 이미지 깨지는 부분 및 모바일 작업">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="499289ab-6742-4395-a664-410cde961a61" name="Changes" comment="feat: PC 메인 수정사항 반영">
       <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/main/_intro.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/main/_intro.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +70,7 @@
       <workItem from="1669070822971" duration="42782000" />
       <workItem from="1669192596951" duration="8000" />
       <workItem from="1669192842981" duration="1076000" />
-      <workItem from="1669244606921" duration="25324000" />
+      <workItem from="1669244606921" duration="25346000" />
     </task>
     <task id="LOCAL-00001" summary="Copy">
       <created>1669005347184</created>
@@ -248,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669276069325</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="feat: PC 메인 수정사항 반영">
+      <created>1669276441345</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1669276441345</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +310,8 @@
     <MESSAGE value="feat: 서비스 섹션 모바일 미작업분 작업완료" />
     <MESSAGE value="feat: 서비스 섹션 4 모바일 텍스트 수정" />
     <MESSAGE value="feat: 서비스장점 섹션 PC 이미지 깨지는 부분 및 모바일 작업" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 서비스장점 섹션 PC 이미지 깨지는 부분 및 모바일 작업" />
+    <MESSAGE value="feat: PC 메인 수정사항 반영" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: PC 메인 수정사항 반영" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
