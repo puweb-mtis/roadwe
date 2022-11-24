@@ -188,6 +188,7 @@ const serviceSwiper5 = new Swiper('.service-swiper--5 .swiper', {
 });
 
 const advantageTextSwiper = new Swiper('.advantage-text-swiper .swiper', {
+    autoHeight: true,
     effect: 'fade',
     fadeEffect: {
         crossFade: true
