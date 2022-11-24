@@ -98,6 +98,7 @@
   .intro-wrap {
     .intro-thumb {
       position: relative;
+      margin-top: em(50);
     }
     
     @include media-breakpoint-up(lg) {
@@ -112,6 +113,7 @@
       .intro-thumb {
         flex: 0 0 percentage(520/1200);
         width: percentage(520/1200);
+        margin-top: 0;
       }
     }
   }
@@ -447,19 +449,24 @@
 }
 
 .section--intro--2 {
+  padding-top: em(130);
+  padding-bottom: em(100);
+  
   .intro-wrap {
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-    
-    .intro-content {
-      flex: 1 1 auto;
-      padding-left: em(60);
-    }
-    
-    .intro-thumb {
-      flex: 0 0 50%;
-      width: 50%;
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+  
+      .intro-content {
+        flex: 1 1 auto;
+        padding-left: em(60);
+      }
+  
+      .intro-thumb {
+        flex: 0 0 50%;
+        width: 50%;
+      }
     }
   }
   
@@ -504,14 +511,24 @@
       
       .icon {
         display: block;
-        width: em(40);
-        height: em(40);
+        width: em(20);
+        height: em(20);
         margin: 0 auto;
         background: {
           repeat: no-repeat;
           position: center;
           size: cover;
         };
+        
+        @include media-breakpoint-up(sm) {
+          width: em(30);
+          height: em(30);
+        }
+        
+        @include media-breakpoint-up(lg) {
+          width: em(40);
+          height: em(40);
+        }
         
         @for $i from 1 through 3 {
           &.icon--#{$i} {
@@ -524,10 +541,15 @@
         color: #333;
         display: block;
         text-align: center;
-        font-size: em(18);
+        font-size: vw(12);
         font-weight: 900;
         line-height: 1;
-        margin-top: em(10, 18);
+        margin-top: em(4, 12);
+        
+        @include media-breakpoint-up(sm) {
+          font-size: em(18);
+          margin-top: em(10, 18);
+        }
       }
       
       @keyframes intro2circleInner {
@@ -674,28 +696,64 @@
 }
 
 .section--intro--3 {
+  padding-top: em(130);
+  padding-bottom: em(70);
+  
+  @include media-breakpoint-up(lg) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
   .intro-wrap {
+    position: relative;
+    
     .intro-content {
-      text-align: center;
+      position: absolute;
+      top: percentage(388/800);
+      right: 0;
+      text-align: left;
+      width: percentage(260/360);
+      
+      @include media-breakpoint-up(lg) {
+        position: static;
+        width: 100%;
+        text-align: center;
+      }
       
       .title {
-        font-size: em(150);
-        letter-spacing: -6px;
+        font-size: vw(50);
+        letter-spacing: -1px;
+        
+        @include media-breakpoint-up(sm) {
+          font-size: em(75);
+        }
+        
+        @include media-breakpoint-up(lg) {
+          font-size: em(150);
+          letter-spacing: -6px;
+        }
       }
     }
   }
   
   .intro-thumb {
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-top: em(50);
+    width: percentage(1/3);
+    
+    @include media-breakpoint-up(lg) {
+      width: 100%;
+      margin-top: em(50);
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
   
   .circle-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: em(-40);
-    margin-right: em(-40);
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: em(-40);
+      margin-right: em(-40);
+    }
     
     .circle {
       mix-blend-mode: multiply;
@@ -704,24 +762,34 @@
     .circle-left,
     .circle-center,
     .circle-right {
-      padding-left: em(40);
-      padding-right: em(40);
       max-width: 100%;
+      
+      @include media-breakpoint-up(lg) {
+        padding-left: em(40);
+        padding-right: em(40);
+      }
     }
     
     .circle-left {
-      flex: 0 0 auto;
-      width: percentage(660/1260);
-      display: flex;
+      @include media-breakpoint-up(lg) {
+        flex: 0 0 auto;
+        width: percentage(660/1260);
+        display: flex;
+      }
       
       .circle {
-        flex: 0 0 auto;
-        width: percentage(220/580);
         opacity: 0;
-        transform: translateX(20%);
+        
+        @include media-breakpoint-up(lg) {
+          flex: 0 0 auto;
+          width: percentage(220/580);
+          transform: translateX(20%);
+        }
         
         & + .circle {
-          margin-left: percentage(-40/580);
+          @include media-breakpoint-up(lg) {
+            margin-left: percentage(-40/580);
+          }
         }
         
         &.circle--1 {
@@ -754,22 +822,41 @@
           .circle--1 {
             animation: intro3CircleLeftIn 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) .6s 1 alternate both;
           }
-          
+  
           .circle--2 {
             animation: intro3CircleLeftIn 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) .4s 1 alternate both;
           }
-          
+  
           .circle--3 {
             animation: intro3CircleLeftIn 1.4s cubic-bezier(0.215, 0.610, 0.355, 1.000) .2s 1 alternate both;
+          }
+          
+          @include media-breakpoint-up(lg) {
+            .circle--1 {
+              animation: intro3CircleLeftIn 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) .6s 1 alternate both;
+            }
+  
+            .circle--2 {
+              animation: intro3CircleLeftIn 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) .4s 1 alternate both;
+            }
+  
+            .circle--3 {
+              animation: intro3CircleLeftIn 1.4s cubic-bezier(0.215, 0.610, 0.355, 1.000) .2s 1 alternate both;
+            }
           }
         }
       }
     }
     
     .circle-center {
-      flex: 0 0 auto;
-      width: percentage(300/1260);
-      display: flex;
+      margin: em(30) 0;
+      
+      @include media-breakpoint-up(lg) {
+        flex: 0 0 auto;
+        width: percentage(300/1260);
+        display: flex;
+        margin: 0;
+      }
       
       .circle {
         background-color: rgba(#f4f4f4, 1);
@@ -777,10 +864,13 @@
     }
     
     .circle-right {
-      flex: 0 0 auto;
-      width: percentage(300/1260);
       opacity: 0;
-      transform: translateX(-40px);
+      
+      @include media-breakpoint-up(lg) {
+        flex: 0 0 auto;
+        width: percentage(300/1260);
+        transform: translateX(-40px);
+      }
       
       .circle {
         background-color: rgba(#ffbe8e, 1);
@@ -801,6 +891,12 @@
       @at-root {
         .section--intro--3.active.fp-completely .circle-right {
           animation: intro3CircleRight 1s linear 0s 1 alternate both;
+        }
+        
+        @include media-breakpoint-up(lg) {
+          .section--intro--3.active.fp-completely .circle-right {
+            animation: intro3CircleRight 1s linear 0s 1 alternate both;
+          }
         }
       }
     }
@@ -828,16 +924,37 @@
       .text {
         display: block;
         text-align: center;
-        font-size: 1em;
+        font-size: vw(12);
         font-weight: 900;
         line-height: (20/16);
         letter-spacing: -0.5px;
+        word-break: keep-all;
+        
+        br {
+          display: none;
+        }
+        
+        @include media-breakpoint-up(sm) {
+          font-size: 1em;
+          
+          br {
+            display: block;
+          }
+        }
       }
     }
   }
 }
 
 .section--intro--4 {
+  padding-top: em(165);
+  padding-bottom: em(117);
+  
+  @include media-breakpoint-up(lg) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
   .intro-wrap {
     display: flex;
     flex-direction: row-reverse;
@@ -914,14 +1031,18 @@
   }
   
   .terminal {
+    display: none;
     position: absolute;
     top: 0;
     right: 0;
-    display: flex;
     justify-content: flex-end;
     gap: em(30);
     opacity: 0;
     transform: translateY(-32px);
+    
+    @include media-breakpoint-up(lg) {
+      display: flex;
+    }
     
     @keyframes terminal {
       0% {

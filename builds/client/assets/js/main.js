@@ -89,12 +89,19 @@ $bubbles.forEach($bubble => {
 const serviceSwiper1 = new Swiper('.service-swiper--1 .swiper', {
     speed: 700,
     loop: true,
-    allowTouchMove: false,
-    slidesPerView: 2,
+    allowTouchMove: true,
+    slidesPerView: 1,
     spaceBetween: 25,
     navigation: {
         prevEl: '.service-swiper--1 .swiper-button--prev',
         nextEl: '.service-swiper--1 .swiper-button--next'
+    },
+    breakpoints: {
+        1024: {
+            allowTouchMove: false,
+            slidesPerView: 2,
+            spaceBetween: 25
+        }
     }
 });
 
@@ -102,11 +109,18 @@ const serviceSwiper2 = new Swiper('.service-swiper--2 .swiper', {
     speed: 700,
     loop: true,
     allowTouchMove: false,
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 25,
     navigation: {
         prevEl: '.service-swiper--2 .swiper-button--prev',
         nextEl: '.service-swiper--2 .swiper-button--next'
+    },
+    breakpoints: {
+        1024: {
+            allowTouchMove: false,
+            slidesPerView: 2,
+            spaceBetween: 25
+        }
     }
 });
 
@@ -114,11 +128,18 @@ const serviceSwiper3 = new Swiper('.service-swiper--3 .swiper', {
     speed: 700,
     loop: true,
     allowTouchMove: false,
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 25,
     navigation: {
         prevEl: '.service-swiper--3 .swiper-button--prev',
         nextEl: '.service-swiper--3 .swiper-button--next'
+    },
+    breakpoints: {
+        1024: {
+            allowTouchMove: false,
+            slidesPerView: 2,
+            spaceBetween: 25
+        }
     }
 });
 
@@ -126,11 +147,18 @@ const serviceSwiper4 = new Swiper('.service-swiper--4 .swiper', {
     speed: 700,
     loop: true,
     allowTouchMove: false,
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 25,
     navigation: {
         prevEl: '.service-swiper--4 .swiper-button--prev',
         nextEl: '.service-swiper--4 .swiper-button--next'
+    },
+    breakpoints: {
+        1024: {
+            allowTouchMove: false,
+            slidesPerView: 2,
+            spaceBetween: 25
+        }
     }
 });
 
@@ -138,11 +166,18 @@ const serviceSwiper5 = new Swiper('.service-swiper--5 .swiper', {
     speed: 700,
     loop: true,
     allowTouchMove: false,
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 25,
     navigation: {
         prevEl: '.service-swiper--5 .swiper-button--prev',
         nextEl: '.service-swiper--5 .swiper-button--next'
+    },
+    breakpoints: {
+        1024: {
+            allowTouchMove: false,
+            slidesPerView: 2,
+            spaceBetween: 25
+        }
     }
 });
 
