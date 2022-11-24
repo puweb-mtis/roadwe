@@ -6273,8 +6273,16 @@ body {
 }
 
 .section--advantage {
+  padding-top: 7.5em;
+  padding-bottom: 2.25em;
   background-color: #3174f5;
   color: #fff;
+}
+@media (min-width: 1024px) {
+  .section--advantage {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 .section--advantage.active.fp-completely .advantage-wrap {
   opacity: 1;
@@ -6315,31 +6323,58 @@ body {
 }
 
 .advantage-wrap {
-  display: flex;
-  align-items: center;
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.5s ease-in-out;
 }
-.advantage-wrap .advantage-content,
+.advantage-wrap .advantage-content {
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .advantage-wrap {
+    display: flex;
+    align-items: center;
+  }
+  .advantage-wrap .advantage-content,
 .advantage-wrap .advantage-swiper {
-  flex: 1 0 50%;
-  max-width: 50%;
+    flex: 1 0 50%;
+    max-width: 50%;
+  }
+  .advantage-wrap .advantage-content {
+    text-align: left;
+  }
 }
 
 .advantage-text-swiper .sub-title {
   color: #acc8ff;
-  font-size: 1.5em;
+  font-size: 4.4444444444vw;
   font-weight: 800;
   letter-spacing: -0.5px;
   line-height: 1.3333333333;
 }
+@media (min-width: 576px) {
+  .advantage-text-swiper .sub-title {
+    font-size: 1.5em;
+  }
+}
 .advantage-text-swiper .title {
-  font-size: 4em;
+  font-size: 9.4444444444vw;
   font-weight: 800;
   line-height: 1;
   letter-spacing: -1px;
-  margin-top: 0.3125em;
+  margin-top: 0.4705882353em;
+}
+@media (min-width: 576px) {
+  .advantage-text-swiper .title {
+    font-size: 3.1875em;
+    margin-top: 0.3137254902em;
+  }
+}
+@media (min-width: 1024px) {
+  .advantage-text-swiper .title {
+    font-size: 4em;
+    margin-top: 0.3125em;
+  }
 }
 .advantage-text-swiper .text {
   display: flex;
@@ -6484,6 +6519,7 @@ body {
   transition: width 0.3s ease-in-out;
 }
 .advantage-swiper .swiper-slide .thumb img {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -6527,6 +6563,9 @@ body {
 }
 .advantage-swiper .swiper-slide.swiper-slide-active .thumb {
   width: 37.5em;
+}
+.advantage-swiper .swiper-slide.swiper-slide-active .thumb img {
+  display: block;
 }
 .advantage-swiper .swiper-slide.swiper-slide-active .thumb::before {
   opacity: 0;

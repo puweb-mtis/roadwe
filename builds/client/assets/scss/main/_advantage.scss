@@ -1,6 +1,13 @@
 .section--advantage {
+  padding-top: em(120);
+  padding-bottom: em(36);
   background-color: $primary;
   color: #fff;
+  
+  @include media-breakpoint-up(lg) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   
   &.active {
     &.fp-completely {
@@ -23,34 +30,59 @@
 }
 
 .advantage-wrap {
-  display: flex;
-  align-items: center;
   opacity: 0;
   transform: translateY(20px);
   transition: all .5s ease-in-out;
   
-  .advantage-content,
-  .advantage-swiper {
-    flex: 1 0 50%;
-    max-width: 50%;
+  .advantage-content {
+    text-align: center;
+  }
+  
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    align-items: center;
+  
+    .advantage-content,
+    .advantage-swiper {
+      flex: 1 0 50%;
+      max-width: 50%;
+    }
+  
+    .advantage-content {
+      text-align: left;
+    }
   }
 }
 
 .advantage-text-swiper {
   .sub-title {
     color: #acc8ff;
-    font-size: em(24);
+    font-size: vw(16);
     font-weight: 800;
     letter-spacing: -0.5px;
     line-height: (32/24);
+    
+    @include media-breakpoint-up(sm) {
+      font-size: em(24);
+    }
   }
   
   .title {
-    font-size: em(64);
+    font-size: vw(34);
     font-weight: 800;
     line-height: 1;
     letter-spacing: -1px;
-    margin-top: em(20, 64);
+    margin-top: em(16, 34);
+    
+    @include media-breakpoint-up(sm) {
+      font-size: em(51);
+      margin-top: em(16, 51);
+    }
+    
+    @include media-breakpoint-up(lg) {
+      font-size: em(64);
+      margin-top: em(20, 64);
+    }
   }
   
   .text {
@@ -146,6 +178,7 @@
       transition: width .3s ease-in-out;
       
       img {
+        display: none;
         position: absolute;
         top: 0;
         left: 0;
@@ -196,6 +229,10 @@
       
       .thumb {
         width: em(600);
+        
+        img {
+          display: block;
+        }
         
         &::before {
           opacity: 0;
