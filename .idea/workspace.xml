@@ -4,27 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="499289ab-6742-4395-a664-410cde961a61" name="Changes" comment="feat: 메인 작업 1차 일괄 커밋&#10;&#10;- PC 작업 일부 완료&#10;- 헤더 및 로드위 메뉴 클릭 시 팝업 작업 예정&#10;- 모바일 반응형 작업 예정">
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service3_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service3_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service3_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service3_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service4_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service4_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service4_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service4_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service5_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service5_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service5_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service5_4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="499289ab-6742-4395-a664-410cde961a61" name="Changes" comment="feat: 주요기능 swiper 슬라이드 간격 수정">
+      <change afterPath="$PROJECT_DIR$/builds/client/_modules/partials/popup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/icons/lang.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/components/_popup.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/_modules/layout/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/_modules/layout/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/_modules/partials/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/_modules/partials/nav.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.min.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/_reboot.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/core/bootstrap/_reboot.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/layout/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/layout/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/main/_intro.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/main/_intro.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/main/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +85,7 @@
       <workItem from="1669070822971" duration="42782000" />
       <workItem from="1669192596951" duration="8000" />
       <workItem from="1669192842981" duration="1076000" />
-      <workItem from="1669244606921" duration="2233000" />
+      <workItem from="1669244606921" duration="12471000" />
     </task>
     <task id="LOCAL-00001" summary="Copy">
       <created>1669005347184</created>
@@ -147,7 +143,35 @@
       <option name="project" value="LOCAL" />
       <updated>1669193363575</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: .gitignore 에 .idea 폴더 추가">
+      <created>1669247225550</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669247225550</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: 모바일 디바이스를 위해 hidden 처리">
+      <created>1669247253782</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1669247253782</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: 주요기능 섹션 이미지 추가">
+      <created>1669247287396</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1669247287396</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: 주요기능 swiper 슬라이드 간격 수정">
+      <created>1669247302470</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669247302470</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,7 +211,11 @@
     <MESSAGE value="feat: Boostrap _reboot.scss 적용" />
     <MESSAGE value="feat: Boostrap ./config/_variables.scss 적용 가능하도록 수정" />
     <MESSAGE value="feat: 메인 작업 1차 일괄 커밋&#10;&#10;- PC 작업 일부 완료&#10;- 헤더 및 로드위 메뉴 클릭 시 팝업 작업 예정&#10;- 모바일 반응형 작업 예정" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 메인 작업 1차 일괄 커밋&#10;&#10;- PC 작업 일부 완료&#10;- 헤더 및 로드위 메뉴 클릭 시 팝업 작업 예정&#10;- 모바일 반응형 작업 예정" />
+    <MESSAGE value="feat: .gitignore 에 .idea 폴더 추가" />
+    <MESSAGE value="feat: 모바일 디바이스를 위해 hidden 처리" />
+    <MESSAGE value="feat: 주요기능 섹션 이미지 추가" />
+    <MESSAGE value="feat: 주요기능 swiper 슬라이드 간격 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 주요기능 swiper 슬라이드 간격 수정" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

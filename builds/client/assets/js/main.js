@@ -32,6 +32,27 @@ $(window).on('resize', function (e) {
     }, 100);
 });
 
+document.querySelector('.popup-dimmed').addEventListener('scroll', e => {
+    e.stopPropagation();
+});
+
+// Popup
+const popupOpen = () => {
+    const popupDimmed = document.querySelector('.popup-dimmed');
+    const popup = document.querySelector('.popup');
+    
+    popupDimmed.classList.add('active');
+    popup.classList.add('active');
+}
+
+const popupClose = () => {
+    const popupDimmed = document.querySelector('.popup-dimmed');
+    const popup = document.querySelector('.popup');
+    
+    popupDimmed.classList.remove('active');
+    popup.classList.remove('active');
+}
+
 // Bubble Text
 const $bubbles = document.querySelectorAll('.bubble');
 

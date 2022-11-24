@@ -3,4 +3,73 @@
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 2;
+  padding: em(40) 0;
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  @at-root {
+    .fp-viewing-advantage,
+    .fp-viewing-index {
+      .header .logo svg path:last-child {
+        fill: #fff;
+      }
+    }
+  }
+  
+  .nav-list {
+    display: flex;
+    align-items: center;
+    gap: em(60);
+    
+    &__item {
+      a {
+        display: block;
+        color: #333;
+        font-size: em(18);
+        font-weight: 900;
+        
+        &.active,
+        &:hover {
+          color: $primary;
+  
+          svg path {
+            fill: $primary;
+          }
+        }
+        
+        @at-root {
+          .fp-viewing-advantage,
+          .fp-viewing-index {
+            .header .nav-list__item a {
+              color: #fff;
+    
+              &.active,
+              &:hover {
+                color: #303030;
+      
+                svg path {
+                  fill: #303030;
+                }
+              }
+    
+              svg path {
+                fill: #fff;
+              }
+            }
+          }
+        }
+        
+        svg {
+          display: block;
+        }
+      }
+    }
+  }
+  
+  
 }
