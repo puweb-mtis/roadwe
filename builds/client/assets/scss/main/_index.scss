@@ -37,6 +37,37 @@
     }
     
     .text-box {
+      @keyframes titleBoxAfter {
+        0% {
+          width: 0;
+        }
+        
+        100% {
+          width: em(250);
+        }
+      }
+  
+      @keyframes titleBoxAfterMobile {
+        0% {
+          height: 0;
+        }
+    
+        100% {
+          height: em(40);
+        }
+      }
+  
+      .title-box::after {
+        animation: titleBoxAfterMobile 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1.5s 1 alternate both;
+      }
+      
+      @include media-breakpoint-up(lg) {
+        .title-box::after {
+          animation: titleBoxAfter 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1.5s 1 alternate both;
+        }
+      }
+      
+      
       .title {
         @include letterActive(2, 1.5, .6);
       }
@@ -96,6 +127,39 @@
       padding-left: 0;
       padding-right: 0;
     }
+  
+    .title-box {
+      &::after {
+        content: '';
+        display: block;
+        width: em(6);
+        height: 0;
+        border-radius: em(6);
+        background-color: #fff;
+        margin-bottom: em(14);
+      }
+      
+      @include media-breakpoint-up(lg) {
+        display: flex;
+        align-items: flex-end;
+        gap: em(24);
+  
+        .title {
+          flex: 0 0 auto;
+        }
+  
+        &::after {
+          content: '';
+          display:block;
+          flex: 0 0 auto;
+          width: 0;
+          height: em(16);
+          border-radius: em(16);
+          background-color: #fff;
+          margin-bottom: em(50);
+        }
+      }
+    }
     
     .title {
       letter-spacing: -1px;
@@ -113,7 +177,6 @@
     }
     
     .text {
-      margin-top: em(60, 30);
       font-size: vw(20);
       font-weight: 900;
       letter-spacing: -1px;
@@ -121,6 +184,7 @@
       
       @include media-breakpoint-up(lg) {
         font-size: em(30);
+        margin-top: em(60, 30);
       }
     }
   }
