@@ -973,22 +973,22 @@
         
         .guide {
           position: absolute;
-          top: em(4, 12);
-          left: em(354, 12);
-          font-size: em(12, 80);
+          top: em(4, 13);
+          left: em(354, 13);
+          font-size: em(13, 80);
           line-height: 1;
           color: #ccc;
           font-weight: 900;
           display: flex;
           align-items: center;
           letter-spacing: -0.5px;
-          gap: em(4, 12);
+          gap: em(4, 13);
           
           &::before {
             content: '';
             display: block;
-            width: em(12, 12);
-            height: em(12, 12);
+            width: em(13, 13);
+            height: em(13, 13);
             background: {
               image: url(/builds/client/assets/images/icons/notification_gray.svg);
               repeat: no-repeat;
