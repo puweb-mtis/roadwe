@@ -36,9 +36,11 @@ $(window).on('resize', function (e) {
 const $sections = document.querySelectorAll('.section');
 
 const scrollActive = () => {
-    for (let i = 0; i < $sections.length; i++) {
-        if ( $sections[i].offsetTop + $sections[i].clientHeight/2 < window.scrollY + window.innerHeight ) {
-            $sections[i].classList.add('active', 'fp-completely');
+    if ( window.innerWidth < 1025 ) {
+        for (let i = 0; i < $sections.length; i++) {
+            if ( $sections[i].offsetTop + $sections[i].clientHeight/3 < window.scrollY + window.innerHeight ) {
+                $sections[i].classList.add('active', 'fp-completely');
+            }
         }
     }
 }
@@ -46,6 +48,10 @@ const scrollActive = () => {
 scrollActive();
 
 document.addEventListener('scroll', e => {
+    scrollActive();
+});
+
+window.addEventListener('resize', e => {
     scrollActive();
 });
 
