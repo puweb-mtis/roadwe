@@ -3,6 +3,7 @@
   color: #fff;
   background-color: $primary;
   overflow: hidden;
+  height: 100vh;
   
   &::after {
     content: '';
@@ -16,52 +17,121 @@
     z-index: 3;
   }
   
+  &.active.fp-completely {
+    @keyframes cloudDisplay {
+      0% {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @for $i from 1 through 3 {
+      .cloud-#{$i} {
+        animation: cloudDisplay .5s linear 0s 1 alternate both;
+      }
+    }
+    
+    .text-box {
+      .title {
+        @include letterActive(2, 1.5, .6);
+      }
+      
+      .text {
+        @include letterActive(11, .5, .1);
+      }
+    }
+    
+    @keyframes cloudAnimation {
+      0% {
+        transform: translateY(0);
+      }
+      
+      50% {
+        transform: translateY(-20px);
+      }
+      
+      100% {
+        transform: translateY(0);
+      }
+    }
+    
+    @for $i from 1 through 3 {
+      .cloud-#{$i} {
+        opacity: 1;
+        transform: translateX(0);
+        animation: cloudAnimation 4s linear #{$i*0.5}s infinite alternate both;
+      }
+    }
+    
+    @keyframes decoAnimation {
+      0% {
+        transform: translateY(100%) scale(0.5);
+      }
+      
+      100% {
+        transform: translateY(0) scale(1);
+      }
+    }
+    
+    [class^="deco"] {
+      animation: decoAnimation 1s linear 0s 1 alternate both;
+    }
+  }
+  
   .text-box {
+    position: absolute;
+    top: percentage(170/700);
+    left: 0;
+    width: 100%;
+    padding-left: em(27);
+    padding-right: em(27);
+  
+    @include media-breakpoint-up(xl) {
+      position: static;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    
     .title {
       letter-spacing: -1px;
-      font-size: em(110);
+      font-size: vw(50);
       line-height: (100/110);
       font-weight: 900;
+  
+      @include media-breakpoint-up(sm) {
+        font-size: em(75);
+      }
+      
+      @include media-breakpoint-up(lg) {
+        font-size: em(110);
+      }
     }
     
     .text {
       margin-top: em(60, 30);
-      font-size: em(30);
+      font-size: vw(20);
       font-weight: 900;
       letter-spacing: -1px;
       line-height: 1;
+      
+      @include media-breakpoint-up(lg) {
+        font-size: em(30);
+      }
     }
   }
   
   .btn-box {
-    display: flex;
+    display: none;
     gap: 14px;
     margin-top: em(94);
-  }
-  
-  @keyframes cloudDisplay {
-    0% {
-      opacity: 0;
-      transform: translateX(20px);
-    }
     
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes cloudAnimation {
-    0% {
-      transform: translateY(0);
-    }
-    
-    50% {
-      transform: translateY(-20px);
-    }
-    
-    100% {
-      transform: translateY(0);
+    @include media-breakpoint-up(lg) {
+      display: flex;
     }
   }
   
@@ -79,32 +149,43 @@
         };
         
         @if ($i == 1) {
-          width: em(288);
-          height: em(232);
-          top: em(261);
-          right: em(100);
+          width: em(195);
+          height: em(159);
+          top: percentage(311/700);
+          right: em(-98);
+          
+          @include media-breakpoint-up(lg) {
+            width: em(288);
+            height: em(232);
+            top: em(261);
+            right: em(100);
+          }
         } @else if ($i == 2) {
-          width: em(325);
-          height: em(255);
-          top: em(458);
-          left: 0;
+          width: em(205);
+          height: em(165);
+          top: percentage(487/700);
+          left: em(-102);
+          
+          @include media-breakpoint-up(lg) {
+            width: em(325);
+            height: em(255);
+            top: em(458);
+            left: 0;
+          }
         } @else {
-          width: em(206);
-          height: em(167);
-          top: em(663);
-          left: percentage(860/1920);
+          width: em(173);
+          height: em(147);
+          top: percentage(84/700);
+          left: percentage(85/360);
+          
+          @include media-breakpoint-up(lg) {
+            width: em(206);
+            height: em(167);
+            top: em(663);
+            left: percentage(860/1920);
+          }
         }
       }
-    }
-  }
-  
-  @keyframes decoAnimation {
-    0% {
-      transform: translateY(100%) scale(0.5);
-    }
-    
-    100% {
-      transform: translateY(0) scale(1);
     }
   }
   
@@ -130,65 +211,79 @@
         }
         
         @if ($i == 1) {
-          left: percentage(21/1920);
+          left: percentage(-12/360);
           z-index: 1;
+          
+          @include media-breakpoint-up(lg) {
+            left: percentage(21/1920);
+          }
         } @else if ($i == 2) {
-          left: percentage(63/1920);
+          left: percentage(30/360);
+  
+          @include media-breakpoint-up(lg) {
+            left: percentage(63/1920);
+          }
         } @else if ($i == 3) {
+          display: none;
           left: percentage(156/1920);
           width: em(70);
+          
+          @include media-breakpoint-up(lg) {
+            display: block;
+          }
         } @else if ($i == 4) {
-          left: percentage(1146/1920);
+          left: percentage(115/360);
           width: em(70);
+          
+          @include media-breakpoint-up(lg) {
+            left: percentage(1146/1920);
+          }
         } @else if ($i == 5) {
-          left: percentage(1279/1920);
+          left: percentage(221/360);
           width: em(54);
+          z-index: 1;
+          
+          @include media-breakpoint-up(lg) {
+            left: percentage(1279/1920);
+            z-index: 0;
+          }
         } @else if ($i == 6) {
-          left: percentage(1313/1920);
+          left: percentage(255/360);
           width: em(70);
+          
+          @include media-breakpoint-up(lg) {
+            left: percentage(1313/1920);
+          }
         } @else if ($i == 7) {
-          left: percentage(1386/1920);
+          left: percentage(328/360);
           width: em(48);
+          
+          @include media-breakpoint-up(lg) {
+            left: percentage(1386/1920);
+          }
         } @else if ($i == 8) {
+          display: none;
           left: percentage(1561/1920);
           width: em(56);
+          
+          @include media-breakpoint-up(lg) {
+            display: block;
+          }
         } @else if ($i == 9) {
+          display: none;
           left: percentage(1626/1920);
+          
+          @include media-breakpoint-up(lg) {
+            display: block;
+          }
         } @else if ($i == 10) {
+          display: none;
           left: percentage(1767/1920);
+          
+          @include media-breakpoint-up(lg) {
+            display: block;
+          }
         }
-      }
-    }
-  }
-  
-  &.active {
-    @for $i from 1 through 3 {
-      .cloud-#{$i} {
-        animation: cloudDisplay .5s linear 0s 1 alternate both;
-      }
-    }
-    
-    &.fp-completely {
-      .text-box {
-        .title {
-          @include letterActive(2, 1.5, .6);
-        }
-        
-        .text {
-          @include letterActive(11, .5, .1);
-        }
-      }
-      
-      @for $i from 1 through 3 {
-        .cloud-#{$i} {
-          opacity: 1;
-          transform: translateX(0);
-          animation: cloudAnimation 4s linear #{$i*0.5}s infinite alternate both;
-        }
-      }
-      
-      [class^="deco"] {
-        animation: decoAnimation 1s linear 0s 1 alternate both;
       }
     }
   }

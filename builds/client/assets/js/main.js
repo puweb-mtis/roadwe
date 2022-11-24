@@ -32,9 +32,23 @@ $(window).on('resize', function (e) {
     }, 100);
 });
 
-document.querySelector('.popup-dimmed').addEventListener('scroll', e => {
-    e.stopPropagation();
+// Mobile Scroll Active
+const $sections = document.querySelectorAll('.section');
+
+const scrollActive = () => {
+    for (let i = 0; i < $sections.length; i++) {
+        if ( $sections[i].offsetTop + $sections[i].clientHeight/2 < window.scrollY + window.innerHeight ) {
+            $sections[i].classList.add('active', 'fp-completely');
+        }
+    }
+}
+
+scrollActive();
+
+document.addEventListener('scroll', e => {
+    scrollActive();
 });
+
 
 // Popup
 const popupOpen = () => {
@@ -62,7 +76,7 @@ $bubbles.forEach($bubble => {
     $bubble.innerHTML = '';
     
     for (let i = 0; i < textArray.length; i++) {
-        if ( textArray[i] !== ' ' ) {
+        if (textArray[i] !== ' ') {
             $bubble.innerHTML += `<span class="bubble-text">${textArray[i]}</span>`;
         } else {
             $bubble.innerHTML += ' ';

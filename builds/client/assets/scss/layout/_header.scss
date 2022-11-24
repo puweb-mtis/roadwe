@@ -4,7 +4,11 @@
   left: 0;
   width: 100%;
   z-index: 2;
-  padding: em(40) 0;
+  padding: em(30) em(18);
+  
+  @include media-breakpoint-up(lg) {
+    padding: em(40) 0;
+  }
   
   .container {
     display: flex;
@@ -18,6 +22,14 @@
       .header .logo svg path:last-child {
         fill: #fff;
       }
+    }
+  }
+  
+  .nav {
+    display: none;
+    
+    @include media-breakpoint-up(lg) {
+      display: block;
     }
   }
   
@@ -47,7 +59,7 @@
           .fp-viewing-index {
             .header .nav-list__item a {
               color: #fff;
-    
+              
               &.active,
               &:hover {
                 color: #303030;

@@ -5,3 +5,7 @@
 @function em($value, $base-pixel:16) {
   @return $value/$base-pixel * 1em;
 }
+
+@function vw($value, $base-width: 360) {
+  @return $value/($base-width/100) * 1vw;
+}

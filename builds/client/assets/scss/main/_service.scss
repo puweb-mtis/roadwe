@@ -1,35 +1,35 @@
 .section--service {
-  &.active {
-    &.fp-completely {
+  @include media-breakpoint-up(lg) {
+    &.active.fp-completely {
       .title {
         @include letterActive(5, 1, .2);
       }
-  
+    
       .sub-title {
         @include letterActive(4, .5, .1);
       }
-  
+    
       .text {
         @include letterActive(11, .5, .1);
       }
-      
+    
       .emoji {
         opacity: 1;
         transform: translateY(0);
       }
-      
+    
       @keyframes bubbleTextAnimation {
         0% {
           opacity: 0;
           visibility: hidden;
         }
-        
+      
         100% {
           opacity: 1;
           visibility: visible;
         }
       }
-      
+    
       @for $i from 1 through 20 {
         .bubble-text:nth-child(#{$i}) {
           animation: bubbleTextAnimation 0s linear #{$i * 0.1}s 1 alternate both;
@@ -105,7 +105,7 @@
     .text {
       color: #aaa;
       font-size: em(24);
-      font-weight: 800;
+      font-weight: 700;
       line-height: (34/24);
       letter-spacing: -0.5px;
       margin-top: em(30, 24);
