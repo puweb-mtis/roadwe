@@ -3,6 +3,7 @@
   padding-bottom: em(36);
   background-color: $primary;
   color: #fff;
+  overflow: hidden;
   
   @include media-breakpoint-up(lg) {
     padding-top: 0;
@@ -86,15 +87,19 @@
   }
   
   .text {
-    display: flex;
+    display: none;
     align-items: center;
     color: #fff;
-    font-size: em(12);
-    font-weight: 900;
+    font-size: em(13);
+    font-weight: 800;
     letter-spacing: -0.5px;
     opacity: 0.5;
     gap: 4px;
     margin-top: em(40, 12);
+    
+    @include media-breakpoint-up(lg) {
+      display: flex;
+    }
     
     &::before {
       content: '';
@@ -114,10 +119,15 @@
 
 .advantage-swiper {
   position: relative;
+  padding-top: em(88);
+  
+  @include media-breakpoint-up(lg) {
+    padding-top: 0;
+  }
   
   &::before {
     content: '';
-    display: block;
+    display: none;
     width: em(100);
     height: em(100);
     position: absolute;
@@ -131,10 +141,19 @@
       position: center;
       size: cover;
     };
+    
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
   }
   
   .swiper {
-    margin-right: em(-200);
+    overflow: visible;
+    
+    @include media-breakpoint-up(lg) {
+      overflow: hidden;
+      margin-right: em(-200);
+    }
   }
   
   .swiper-slide {
@@ -143,19 +162,23 @@
     &::before {
       content: '';
       display: block;
-      padding-top: 100%;
+      padding-top: percentage(400/300);
+      
+      @include media-breakpoint-up(lg) {
+        padding-top: 100%;
+      }
     }
     
     @for $i from 1 through 5 {
       &--#{$i}::after {
         content: '';
         display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
         width: em(100);
         height: em(100);
-        position: absolute;
-        top: 50%;
-        right: em(-200);
-        transform: translate(50%, -40%);
         opacity: 0;
         transition: all .5s ease-in-out;
         background: {
@@ -164,6 +187,13 @@
           position: center;
           size: auto 100%;
         };
+        
+        @include media-breakpoint-up(lg) {
+          position: absolute;
+          top: 50%;
+          right: em(-200);
+          transform: translate(50%, -40%);
+        }
       }
     }
     
@@ -190,7 +220,7 @@
       
       &::before {
         content: '';
-        display: block;
+        display: none;
         position: absolute;
         top: 0;
         left: 0;
@@ -200,22 +230,10 @@
         z-index: 2;
         opacity: 1;
         transition: opacity .3s ease-in-out;
-      }
-      
-      &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translate(50%, -50%);
-        width: em(100);
-        height: em(100);
-        background: {
-          repeat: no-repeat;
-          position: center;
-          size: cover;
-        };
+        
+        @include media-breakpoint-up(lg) {
+          display: block;
+        }
       }
     }
     
@@ -223,12 +241,18 @@
       z-index: 3;
       
       &::after {
-        transform: translate(50%, -50%);
+        transform: translate(-50%, -50%);
         opacity: 1;
+        
+        @include media-breakpoint-up(lg) {
+          transform: translate(50%, -50%);
+        }
       }
       
       .thumb {
-        width: em(600);
+        @include media-breakpoint-up(lg) {
+          width: em(600);
+        }
         
         img {
           display: block;

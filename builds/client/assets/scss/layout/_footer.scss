@@ -1,9 +1,24 @@
 .footer {
+  position: relative;
   background-color: #333;
   font-size: em(11);
   font-weight: 700;
   color: #777;
-  padding: em(40, 11) 0 em(30, 11);
+  padding: em(74, 11) 0 em(26, 11);
+  
+  @include media-breakpoint-up(lg) {
+    padding: em(40, 11) 0 em(30, 11);
+  }
+  
+  &-logo {
+    position: absolute;
+    top: em(140, 11);
+    left: em(30, 11);
+    
+    @include media-breakpoint-up(lg) {
+      position: static;
+    }
+  }
   
   &-top {
     display: flex;
@@ -12,25 +27,42 @@
   }
   
   &-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: em(62);
+    margin-top: em(88, 11);
+    
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: em(62, 11);
+    }
   }
   
   .terms-link {
     display: flex;
     align-items: center;
-    margin-left: em(-15, 12);
-    margin-right: em(-15, 12);
+    justify-content: center;
+    margin-left: em(-6, 12);
+    margin-right: em(-6, 12);
     font-size: em(12, 11);
     font-weight: 700;
     line-height: 1;
+  
+    @include media-breakpoint-up(lg) {
+      justify-content: flex-start;
+      margin-left: em(-15, 12);
+      margin-right: em(-15, 12);
+    }
     
     .link {
       color: #999;
-      padding-left: em(15, 12);
-      padding-right: em(15, 12);
+      padding-left: em(6, 12);
+      padding-right: em(6, 12);
+      letter-spacing: -0.5px;
+      
+      @include media-breakpoint-up(lg) {
+        padding-left: em(15, 12);
+        padding-right: em(15, 12);
+      }
       
       & + .link {
         border-left: 1px solid #444;
@@ -40,12 +72,31 @@
   
   .footer-info {
     display: flex;
-    gap: em(8, 11);
+    flex-wrap: wrap;
+    white-space: nowrap;
+    
+    @include media-breakpoint-up(lg) {
+      gap: em(8, 11);
+    }
+    
+    .item {
+      margin-left: em(6, 11);
+      
+      &:nth-child(2n) {
+        flex: 1 1 auto;
+      }
+    }
   }
   
   .footer-link {
     display: flex;
-    gap: em(100, 11);
+    justify-content: center;
+    margin-top: em(32);
+    
+    @include media-breakpoint-up(lg) {
+      margin-top: 0;
+      justify-content: flex-start;
+    }
   }
   
   .app-link {
@@ -81,6 +132,10 @@
   }
   
   .sns-link {
+    position: absolute;
+    top: em(30);
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     gap: em(10, 11);
     

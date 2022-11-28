@@ -22,19 +22,25 @@
   left: 50%;
   transform: translate(-30%, -50%);
   width: 1000px;
-  max-width: calc(100% - 40px);
+  max-width: calc(100% - 60px);
   background-color: #fff;
-  padding: em(66) em(54);
+  padding: em(48) em(30) em(30);
   border-radius: em(40);
   box-shadow: 20px 20px 40px rgba(#000, 0.1);
   z-index: 5;
   opacity: 0;
   visibility: hidden;
   
+  @include media-breakpoint-up(lg) {
+    padding: em(66) em(54);
+  }
+  
   .popup-header {
-    display: flex;
-    align-items: flex-end;
-    gap: em(28);
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      align-items: flex-end;
+      gap: em(28);
+    }
     
     .title {
       position: relative;
@@ -43,73 +49,190 @@
       align-items: flex-end;
       gap: em(24, 100);
       color: $primary;
-      font-size: em(100);
+      font-size: vw(34);
       font-weight: 900;
       line-height: 1;
-      letter-spacing: -4px;
+      letter-spacing: -1px;
+      
+      @include media-breakpoint-up(sm) {
+        font-size: em(51);
+      }
+      
+      @include media-breakpoint-up(lg) {
+        font-size: em(100);
+        letter-spacing: -4px;
+      }
       
       &::after {
         content: '';
-        display: block;
+        display: none;
         flex: 1 0 auto;
         width: percentage(340/779);
         height: em(12, 100);
         border-radius: em(12, 100);
         background-color: $primary;
         margin-bottom: em(8, 100);
+  
+        @include media-breakpoint-up(lg) {
+          display: block;
+        }
       }
     }
     
     .sub-title {
+      display: flex;
+      align-items: center;
       flex: 0 0 auto;
       color: $primary;
       font-size: em(18);
       font-weight: 900;
       letter-spacing: -1px;
+      gap: em(10, 18);
+      white-space: nowrap;
+      margin-top: em(10, 18);
+      
+      @include media-breakpoint-up(lg) {
+        display: block;
+        margin-top: 0;
+      }
+      
+      &::after {
+        content: '';
+        display: block;
+        flex: 1 1 auto;
+        width: 100%;
+        height: 3px;
+        background-color: $primary;
+        border-radius: 3px;
+        
+        @include media-breakpoint-up(lg) {
+          display: none;
+        }
+      }
     }
     
     .text {
       position: absolute;
-      top: em(78);
-      right: em(54);
+      top: em(35);
+      right: em(30);
+      
+      svg {
+        display: block;
+        width: 50px;
+        height: 8px;
+      }
+      
+      @include media-breakpoint-up(lg) {
+        width: 82px;
+        height: 12px;
+        top: em(78);
+        right: em(54);
+      }
     }
   }
   
   .popup-body {
-    padding-top: em(98);
+    padding-top: em(40);
+    
+    @include media-breakpoint-up(lg) {
+      padding-top: em(98);
+    }
   }
   
   .company-info {
+    word-break: break-all;
+    
     + .company-info {
-      margin-top: em(44);
+      @include media-breakpoint-up(lg) {
+        margin-top: em(44);
+      }
+    }
+  
+    &.row {
+      margin-left: em(-15);
+      margin-right: em(-15);
+    }
+  
+    &.row > * {
+      padding-left: em(15);
+      padding-right: em(15);
+    }
+    
+    @include media-breakpoint-down(lg) {
+      &:nth-child(1) {
+        [class*="col-"]:nth-child(1) {
+          order: 1;
+        }
+  
+        [class*="col-"]:nth-child(2) {
+          order: 3;
+        }
+  
+        [class*="col-"]:nth-child(3) {
+          order: 2;
+        }
+  
+        [class*="col-"]:nth-child(4) {
+          order: 4;
+        }
+      }
+      
+      &:nth-child(2) {
+        [class*="col-"]:nth-child(1) {
+          order: 1;
+        }
+  
+        [class*="col-"]:nth-child(2) {
+          order: 3;
+        }
+  
+        [class*="col-"]:nth-child(3) {
+          order: 2;
+        }
+      }
     }
     
     .title {
-      font-size: em(12);
+      font-size: vw(11);
       font-weight: 700;
       color: #aaa;
       line-height: 1;
+      
+      @include media-breakpoint-up(sm) {
+        font-size: em(12);
+      }
     }
     
     .text {
       margin-top: em(8);
       color: #333;
       font-weight: 700;
+      font-size: vw(13);
+      
+      @include media-breakpoint-up(sm) {
+        font-size: em(16);
+      }
     }
   }
   
   .popup-close {
     position: absolute;
-    top: 30%;
+    top: em(104);
     right: 0;
     transform: translate(50%, -50%) rotate(-360deg);
-    width: em(60);
-    height: em(60);
+    width: em(40);
+    height: em(40);
     border-radius: 100%;
     background-color: $primary;
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    @include media-breakpoint-up(lg) {
+      top: 30%;
+      width: em(60);
+      height: em(60);
+    }
     
     .wave {
       display: block;
@@ -197,7 +320,9 @@
     }
     
     .popup-close {
-      animation: popupCloseShow .7s linear .3s 1 alternate both;
+      @include media-breakpoint-up(lg) {
+        animation: popupCloseShow .7s linear .3s 1 alternate both;
+      }
     }
   }
 }

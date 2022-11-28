@@ -956,20 +956,36 @@
   }
   
   .intro-wrap {
-    display: flex;
-    flex-direction: row-reverse;
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      flex-direction: row-reverse;
+    }
     
     .intro-content {
       position: relative;
       flex: 1 1 auto;
-      padding-top: em(320);
-      margin-left: em(-60);
       z-index: 2;
+      text-align: center;
+      
+      @include media-breakpoint-up(lg) {
+        padding-top: em(320);
+        margin-left: em(-60);
+        text-align: left;
+      }
       
       .title {
         position: relative;
-        font-size: em(80);
+        font-size: vw(42);
         color: rgba($primary, 0.9);
+        letter-spacing: -0.5px;
+        
+        @include media-breakpoint-up(sm) {
+          font-size: em(60);
+        }
+  
+        @include media-breakpoint-up(lg) {
+          font-size: em(80);
+        }
         
         .guide {
           position: absolute;
@@ -1001,8 +1017,13 @@
     }
     
     .intro-thumb {
-      flex: 0 0 percentage(480/1200);
-      width: percentage(480/1200);
+      padding-bottom: em(30);
+      
+      @include media-breakpoint-up(lg) {
+        flex: 0 0 percentage(480/1200);
+        width: percentage(480/1200);
+        padding-bottom: 0;
+      }
       
       img {
         transform-origin: center;

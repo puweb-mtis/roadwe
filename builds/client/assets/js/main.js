@@ -1,3 +1,6 @@
+const $header = document.querySelector('.header');
+const $sections = document.querySelectorAll('.section'); // all sections
+
 function initFull() {
     $('.fp-main').fullpage({
         anchors: ['index', 'intro1', 'intro2', 'intro3', 'intro4', 'service1', 'service2', 'service3', 'service4', 'service5', 'advantage', 'cs', 'footer'],
@@ -10,9 +13,7 @@ function initFull() {
 
 $(document).ready(function () {
     if ($(window).outerWidth() < 1025) {
-        if ($('html').hasClass('fp-enabled')) {
-            $.fn.fullpage.destroy('all');
-        }
+        if ($('html').hasClass('fp-enabled')) $.fn.fullpage.destroy('all');
     } else {
         initFull();
     }
@@ -25,17 +26,35 @@ $(window).on('resize', function (e) {
         const width = $(this).outerWidth();
         
         if (width < 1025) {
-            $.fn.fullpage.destroy('all');
+            if ($('html').hasClass('fp-enabled')) $.fn.fullpage.destroy('all');
+            itemActive();
         } else {
             initFull();
         }
     }, 100);
 });
 
-// Mobile Scroll Active
-const $sections = document.querySelectorAll('.section');
+// ----------------------------- End jquery ------------------------------------------
 
-const scrollActive = () => {
+// Mobile header active with scrolling
+const mobileHeaderActive = () => {
+    if ( window.innerWidth <= 1024 ) { // Only Mobile
+        const scrollTop = document.documentElement.scrollTop;
+        
+        for (let i = 0; i < $sections.length; i++) {
+            if ( scrollTop >= $sections[i].offsetTop && scrollTop < $sections[i].offsetTop + $sections[i].clientHeight ) {
+                if ( i === 0 || i === 10 ) {
+                    $header.classList.add('header--white');
+                } else {
+                    $header.classList.remove('header--white');
+                }
+            }
+        }
+    }
+}
+
+// Scroll Active ( Only Mobile )
+const itemActive = () => {
     if ( window.innerWidth < 1025 ) {
         for (let i = 0; i < $sections.length; i++) {
             if ( $sections[i].offsetTop + $sections[i].clientHeight/3 < window.scrollY + window.innerHeight ) {
@@ -45,14 +64,13 @@ const scrollActive = () => {
     }
 }
 
-scrollActive();
+mobileHeaderActive();
+itemActive();
+
 
 document.addEventListener('scroll', e => {
-    scrollActive();
-});
-
-window.addEventListener('resize', e => {
-    scrollActive();
+    mobileHeaderActive();
+    itemActive();
 });
 
 
@@ -187,21 +205,41 @@ const serviceSwiper5 = new Swiper('.service-swiper--5 .swiper', {
     }
 });
 
+const introSwiper4 = new Swiper('.intro-swiper--4 .swiper', {});
+
 const advantageTextSwiper = new Swiper('.advantage-text-swiper .swiper', {
+    loop: true,
     autoHeight: true,
+    loopedSlides: 4,
     effect: 'fade',
     fadeEffect: {
         crossFade: true
-    },
-    loop: true,
-    loopedSlides: 4
+    }
 });
 
 const advantageSwiper = new Swiper('.advantage-swiper .swiper', {
+    autoplay: {
+        delay: 3000
+    },
+    speed: 700,
     loop: true,
     loopedSlides: 4,
-    slidesPerView: 2
+    slidesPerView: 1,
+    // effect: 'fade',
+    // fadeEffect: {
+    //     crossFade: true
+    // },
+    breakpoints: {
+        1024: {
+            slidesPerView: 2
+        }
+    }
 });
 
 advantageSwiper.controller.control = advantageTextSwiper;
 advantageTextSwiper.controller.control = advantageSwiper;
+
+const csSwiper = new Swiper('.cs-swiper .swiper', {
+    slidesPerView: 1.3,
+    spaceBetween: 20
+});
