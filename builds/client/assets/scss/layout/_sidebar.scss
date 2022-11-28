@@ -84,7 +84,10 @@
   }
   
   &__footer {
-    margin-top: em(64);
+    position: absolute;
+    bottom: em(50);
+    left: em(60);
+    max-width: calc(100% - #{em(120)});
     
     .link {
       display: inline-block;
@@ -102,7 +105,7 @@
     }
     
     .lang {
-      margin-top: 10%;
+      margin-top: em(48);
     }
   }
 }
