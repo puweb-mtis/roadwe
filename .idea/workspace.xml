@@ -4,32 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="499289ab-6742-4395-a664-410cde961a61" name="Changes" comment="feat: PC 메인 수정사항 반영">
-      <change afterPath="$PROJECT_DIR$/builds/client/_modules/partials/sidebar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/intro/intro4_img1_m.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/intro/intro4_img2_m.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/intro/intro4_img3_m.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/scss/layout/_sidebar.scss" afterDir="false" />
+    <list default="true" id="499289ab-6742-4395-a664-410cde961a61" name="Changes" comment="feat: 메인 수정사항 반영 및 모바일 반응형 작업 완료">
+      <change afterPath="$PROJECT_DIR$/builds/client/_modules/layout/sub_header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/builds/client/cs/faq.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/builds/client/cs/inquiry.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/_modules/layout/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/_modules/layout/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/_modules/partials/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/_modules/partials/nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/_modules/partials/popup.html" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/_modules/partials/popup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/js/common.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/components/_popup.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/components/_popup.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/config/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/config/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/layout/_common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/layout/_common.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/layout/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/layout/_footer.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/layout/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/layout/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/layout/_sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/layout/_sidebar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/main/_advantage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/main/_advantage.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/main/_cs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/main/_cs.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/main/_intro.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/main/_intro.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/main/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +84,7 @@
       <workItem from="1669192596951" duration="8000" />
       <workItem from="1669192842981" duration="1076000" />
       <workItem from="1669244606921" duration="25722000" />
-      <workItem from="1669597179613" duration="11356000" />
+      <workItem from="1669597179613" duration="12947000" />
     </task>
     <task id="LOCAL-00001" summary="Copy">
       <created>1669005347184</created>
@@ -286,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669276448858</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="feat: 메인 수정사항 반영 및 모바일 반응형 작업 완료">
+      <created>1669611987452</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1669611987453</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,7 +339,8 @@
     <MESSAGE value="feat: 서비스 섹션 4 모바일 텍스트 수정" />
     <MESSAGE value="feat: 서비스장점 섹션 PC 이미지 깨지는 부분 및 모바일 작업" />
     <MESSAGE value="feat: PC 메인 수정사항 반영" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: PC 메인 수정사항 반영" />
+    <MESSAGE value="feat: 메인 수정사항 반영 및 모바일 반응형 작업 완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 메인 수정사항 반영 및 모바일 반응형 작업 완료" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

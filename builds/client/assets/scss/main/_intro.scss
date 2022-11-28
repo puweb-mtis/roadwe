@@ -14,7 +14,7 @@
   .intro-wrap {
     .intro-content {
       text-align: center;
-  
+      
       @include media-breakpoint-up(lg) {
         text-align: left;
       }
@@ -105,11 +105,11 @@
       display: flex;
       align-items: center;
       gap: 10px;
-  
+      
       .intro-content {
         flex: 1 1 auto;
       }
-  
+      
       .intro-thumb {
         flex: 0 0 percentage(520/1200);
         width: percentage(520/1200);
@@ -457,12 +457,12 @@
       display: flex;
       align-items: center;
       flex-direction: row-reverse;
-  
+      
       .intro-content {
         flex: 1 1 auto;
         padding-left: em(60);
       }
-  
+      
       .intro-thumb {
         flex: 0 0 50%;
         width: 50%;
@@ -822,11 +822,11 @@
           .circle--1 {
             animation: intro3CircleLeftIn 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) .6s 1 alternate both;
           }
-  
+          
           .circle--2 {
             animation: intro3CircleLeftIn 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) .4s 1 alternate both;
           }
-  
+          
           .circle--3 {
             animation: intro3CircleLeftIn 1.4s cubic-bezier(0.215, 0.610, 0.355, 1.000) .2s 1 alternate both;
           }
@@ -835,11 +835,11 @@
             .circle--1 {
               animation: intro3CircleLeftIn 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) .6s 1 alternate both;
             }
-  
+            
             .circle--2 {
               animation: intro3CircleLeftIn 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) .4s 1 alternate both;
             }
-  
+            
             .circle--3 {
               animation: intro3CircleLeftIn 1.4s cubic-bezier(0.215, 0.610, 0.355, 1.000) .2s 1 alternate both;
             }
@@ -982,7 +982,7 @@
         @include media-breakpoint-up(sm) {
           font-size: em(60);
         }
-  
+        
         @include media-breakpoint-up(lg) {
           font-size: em(80);
         }

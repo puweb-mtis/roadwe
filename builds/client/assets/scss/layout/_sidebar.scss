@@ -58,13 +58,13 @@
   }
   
   .nav {
-    margin-top: em(92);
+    margin-top: em(52);
   }
   
   .nav-list {
     &__item {
       & + .nav-list__item {
-        margin-top: em(50);
+        margin-top: em(32);
       }
       
       &.lang {
@@ -84,7 +84,7 @@
   }
   
   &__footer {
-    margin-top: em(120);
+    margin-top: em(64);
     
     .link {
       display: inline-block;

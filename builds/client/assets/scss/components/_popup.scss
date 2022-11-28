@@ -305,7 +305,11 @@
   }
   
   &.active {
-    animation: popupShow 1s linear 0s 1 alternate both;
+    animation: popupShow .5s linear 0s 1 alternate both;
+    
+    @include media-breakpoint-up(lg) {
+      animation: popupShow 1s linear 0s 1 alternate both;
+    }
     
     @keyframes popupCloseShow {
       0% {

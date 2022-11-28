@@ -240,6 +240,9 @@ advantageSwiper.controller.control = advantageTextSwiper;
 advantageTextSwiper.controller.control = advantageSwiper;
 
 const csSwiper = new Swiper('.cs-swiper .swiper', {
+    autoplay: {
+      delay: 3000
+    },
     slidesPerView: 1.3,
     spaceBetween: 20
 });

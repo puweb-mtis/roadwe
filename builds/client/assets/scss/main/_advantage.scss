@@ -1,6 +1,5 @@
 .section--advantage {
-  padding-top: em(120);
-  padding-bottom: em(36);
+  padding: em(120) 0 em(36);
   background-color: $primary;
   color: #fff;
   overflow: hidden;
@@ -42,13 +41,13 @@
   @include media-breakpoint-up(lg) {
     display: flex;
     align-items: center;
-  
+    
     .advantage-content,
     .advantage-swiper {
       flex: 1 0 50%;
       max-width: 50%;
     }
-  
+    
     .advantage-content {
       text-align: left;
     }

@@ -46,17 +46,17 @@
           width: em(250);
         }
       }
-  
+      
       @keyframes titleBoxAfterMobile {
         0% {
           height: 0;
         }
-    
+        
         100% {
           height: em(40);
         }
       }
-  
+      
       .title-box::after {
         animation: titleBoxAfterMobile 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1.5s 1 alternate both;
       }
@@ -121,13 +121,13 @@
     width: 100%;
     padding-left: em(27);
     padding-right: em(27);
-  
+    
     @include media-breakpoint-up(xl) {
       position: static;
       padding-left: 0;
       padding-right: 0;
     }
-  
+    
     .title-box {
       &::after {
         content: '';
@@ -143,14 +143,14 @@
         display: flex;
         align-items: flex-end;
         gap: em(24);
-  
+        
         .title {
           flex: 0 0 auto;
         }
-  
+        
         &::after {
           content: '';
-          display:block;
+          display: block;
           flex: 0 0 auto;
           width: 0;
           height: em(16);
@@ -166,7 +166,7 @@
       font-size: vw(50);
       line-height: (100/110);
       font-weight: 900;
-  
+      
       @include media-breakpoint-up(sm) {
         font-size: em(75);
       }
@@ -283,7 +283,7 @@
           }
         } @else if ($i == 2) {
           left: percentage(30/360);
-  
+          
           @include media-breakpoint-up(lg) {
             left: percentage(63/1920);
           }

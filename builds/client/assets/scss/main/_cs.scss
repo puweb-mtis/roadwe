@@ -150,8 +150,12 @@
     
     .thumb {
       display: block;
-      padding: em(50) em(20) em(44) em(20);
+      padding: em(40) em(20) em(34);
       background-color: #fff;
+      
+      @include media-breakpoint-up(lg) {
+        padding: em(50) em(20) em(44);
+      }
     }
     
     .title {
@@ -161,7 +165,11 @@
       font-weight: 800;
       line-height: (34/24);
       letter-spacing: -0.5px;
-      margin-top: em(50, 24);
+      margin-top: em(30, 24);
+      
+      @include media-breakpoint-up(lg) {
+        margin-top: em(50, 24);
+      }
     }
     
     .text {
