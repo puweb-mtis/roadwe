@@ -175,10 +175,15 @@
     .text {
       display: block;
       color: #ccc;
-      font-size: em(14);
+      font-size: vw(14);
       font-weight: 700;
       line-height: (18/14);
       margin-top: em(16, 14);
+      letter-spacing: -0.5px;
+      
+      @include media-breakpoint-up(sm) {
+        font-size: em(14);
+      }
     }
     
     .desc {

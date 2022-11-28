@@ -1,3 +1,22 @@
+.btn {
+  display: block;
+  width: 100%;
+  font-size: em(18);
+  font-weight: 800;
+  line-height: 1;
+  padding: em(21, 18);
+  text-align: center;
+  border-radius: em(10, 18);
+  
+  @each $color, $value in $theme-colors {
+    &.btn-#{$color} {
+      color: #fff;
+      background-color: $value;
+    }
+  }
+}
+
+
 .btn-app {
   display: flex;
   align-items: center;

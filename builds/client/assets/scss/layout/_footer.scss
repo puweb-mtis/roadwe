@@ -96,6 +96,7 @@
     @include media-breakpoint-up(lg) {
       margin-top: 0;
       justify-content: flex-start;
+      gap: em(100, 11);
     }
   }
   
@@ -138,6 +139,11 @@
     transform: translateX(-50%);
     display: flex;
     gap: em(10, 11);
+    
+    @include media-breakpoint-up(lg) {
+      position: static;
+      transform: none;
+    }
     
     .link {
       display: block;

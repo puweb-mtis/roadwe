@@ -3,7 +3,11 @@
   color: #fff;
   background-color: $primary;
   overflow: hidden;
-  height: 100vh;
+  height: calc(100vh - 100px);
+  
+  @include media-breakpoint-up(lg) {
+    height: 100vh;
+  }
   
   &::after {
     content: '';

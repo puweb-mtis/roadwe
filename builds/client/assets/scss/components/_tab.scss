@@ -1,0 +1,35 @@
+.tab {
+  margin-top: em(40);
+  max-width: 100%;
+  overflow-x: auto;
+  
+  .tab-header {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: em(8);
+    
+    @include media-breakpoint-up(lg) {
+      justify-content: center;
+    }
+    
+    .tab-item {
+      .link {
+        display: block;
+        font-size: em(14);
+        font-weight: 700;
+        line-height: 1;
+        padding: em(13, 14) em(15, 14);
+        border-radius: em(40, 14);
+        border: 1px solid #ddd;
+        color: #ccc;
+        white-space: nowrap;
+        
+        &.active {
+          background-color: #fff;
+          border-color: #333;
+          color: #333;
+        }
+      }
+    }
+  }
+}

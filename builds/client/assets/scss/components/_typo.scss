@@ -1,0 +1,15 @@
+.page-title {
+  color: #333;
+  font-size: vw(28);
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: em(47, 44);
+  
+  @include media-breakpoint-up(sm) {
+    font-size: em(40);
+  }
+  
+  @include media-breakpoint-up(lg) {
+    font-size: em(44);
+  }
+}

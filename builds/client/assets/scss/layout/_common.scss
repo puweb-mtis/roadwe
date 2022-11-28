@@ -17,3 +17,13 @@ body {
 .section {
   position: relative;
 }
+
+.sub-main {
+  padding-top: em(144);
+  padding-bottom: em(132);
+  min-height: calc(100vh - #{em(181.5)});
+  
+  .container {
+    max-width: 860px;
+  }
+}
