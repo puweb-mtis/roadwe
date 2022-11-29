@@ -32,6 +32,7 @@
         
         @include media-breakpoint-up(lg) {
           font-size: em(120);
+          margin-left: -6px;
         }
         
         .em {
@@ -162,7 +163,7 @@
         
         @for $i from 1 through 4 {
           &.icon--#{$i} {
-            background-image: url(/builds/client/assets/images/intro/icon1_1.svg);
+            background-image: url(/builds/client/assets/images/intro/icon1_#{$i}.svg);
           }
         }
       }
@@ -305,6 +306,12 @@
       z-index: 2;
       
       .symbol {
+        width: em(40);
+        
+        @include media-breakpoint-up(lg) {
+          width: em(56);
+        }
+        
         path:first-child {
           opacity: 0;
           transform: rotate(30deg);
@@ -489,6 +496,11 @@
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 2;
+      width: em(36);
+      
+      @include media-breakpoint-up(lg) {
+        width: em(56);
+      }
     }
     
     .circle {
@@ -723,6 +735,7 @@
       .title {
         font-size: vw(50);
         letter-spacing: -1px;
+        margin-left: 0;
         
         @include media-breakpoint-up(sm) {
           font-size: em(75);
@@ -860,6 +873,14 @@
       
       .circle {
         background-color: rgba(#f4f4f4, 1);
+      }
+      
+      .symbol {
+        width: em(40);
+        
+        @include media-breakpoint-up(lg) {
+          width: em(56);
+        }
       }
     }
     

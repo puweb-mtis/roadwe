@@ -41,6 +41,8 @@
     }
     
     .text-box {
+      z-index: 3;
+      
       @keyframes titleBoxAfter {
         0% {
           width: 0;

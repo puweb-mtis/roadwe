@@ -3953,6 +3953,7 @@ body.nav-opened {
   width: 100%;
   z-index: 4;
   padding: 1.875em 0;
+  transition: all 0.4s ease-in-out;
 }
 @media (min-width: 1024px) {
   .header {
@@ -3963,54 +3964,6 @@ body.nav-opened {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.header.sub-header .container {
-  max-width: 860px;
-}
-.header.sub-header .sub-nav-list {
-  display: flex;
-  align-items: center;
-}
-.header.sub-header .sub-nav-list__item {
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding-left: 0.9375em;
-  padding-right: 0.9375em;
-}
-.header.sub-header .sub-nav-list__item + .sub-nav-list__item::before {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  content: "";
-  display: block;
-  width: 3px;
-  height: 0.625em;
-  background-image: url("data:image/svg+xml,%3Csvg width='3' height='10' viewBox='0 0 3 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1.5' cy='1.5' r='1.5' fill='%23AAAAAA'/%3E%3Ccircle cx='1.5' cy='8.5' r='1.5' fill='%23AAAAAA'/%3E%3C/svg%3E%0A");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.header.sub-header .sub-nav-list .link {
-  position: relative;
-  display: block;
-  font-size: 0.875em;
-  font-weight: 900;
-  color: #aaa;
-}
-.header.sub-header .sub-nav-list .link.active {
-  color: #333;
-}
-.header.sub-header .sub-nav-list .link.active::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #333;
 }
 .fp-viewing-advantage .header .logo svg path:last-child,
 .fp-viewing-index .header .logo svg path:last-child {
@@ -4108,6 +4061,60 @@ body.nav-opened {
 .header .btn-mo-nav span:nth-child(3) {
   bottom: 0;
   left: 0;
+}
+.header.sub-header .container {
+  max-width: 860px;
+}
+.header.sub-header .sub-nav-list {
+  display: flex;
+  align-items: center;
+}
+.header.sub-header .sub-nav-list__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+}
+.header.sub-header .sub-nav-list__item + .sub-nav-list__item::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  content: "";
+  display: block;
+  width: 3px;
+  height: 0.625em;
+  background-image: url("data:image/svg+xml,%3Csvg width='3' height='10' viewBox='0 0 3 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1.5' cy='1.5' r='1.5' fill='%23AAAAAA'/%3E%3Ccircle cx='1.5' cy='8.5' r='1.5' fill='%23AAAAAA'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.header.sub-header .sub-nav-list .link {
+  position: relative;
+  display: block;
+  font-size: 0.875em;
+  font-weight: 900;
+  color: #aaa;
+}
+.header.sub-header .sub-nav-list .link.active {
+  color: #333;
+}
+.header.sub-header .sub-nav-list .link.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+}
+.header.scrolled {
+  padding: 0.9375em 0;
+}
+.header.scrolled:not(.header--white) {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .footer {
@@ -4551,8 +4558,13 @@ body.nav-opened {
   position: relative;
 }
 .form-control-search .form-control {
-  padding: 1.75em 2.75em 1.75em 1.25em;
+  padding: 1.25em 2.75em 1.25em 1.25em;
   appearance: none;
+}
+@media (min-width: 1024px) {
+  .form-control-search .form-control {
+    padding: 1.75em 2.75em 1.75em 1.25em;
+  }
 }
 .form-control-search .btn-search {
   position: absolute;
@@ -4671,7 +4683,7 @@ body.nav-opened {
   display: inline-block;
   transform: translateY(100%);
   line-height: 1.15;
-  padding-bottom: 0.16em;
+  padding-bottom: 0.1em;
 }
 
 .popup-dimmed {
@@ -5073,6 +5085,9 @@ body.nav-opened {
 }
 .section--index.active.fp-completely .cloud-3 {
   animation: cloudDisplay 0.5s linear 0s 1 alternate both;
+}
+.section--index.active.fp-completely .text-box {
+  z-index: 3;
 }
 @keyframes titleBoxAfter {
   0% {
@@ -5593,6 +5608,7 @@ body.nav-opened {
 @media (min-width: 1024px) {
   .section--intro .intro-wrap .intro-content .title {
     font-size: 7.5em;
+    margin-left: -6px;
   }
 }
 .section--intro .intro-wrap .intro-content .title .em {
@@ -5794,13 +5810,13 @@ body.nav-opened {
   background-image: url(/builds/client/assets/images/intro/icon1_1.svg);
 }
 .section--intro--1 .circle-wrap .circle .icon.icon--2 {
-  background-image: url(/builds/client/assets/images/intro/icon1_1.svg);
+  background-image: url(/builds/client/assets/images/intro/icon1_2.svg);
 }
 .section--intro--1 .circle-wrap .circle .icon.icon--3 {
-  background-image: url(/builds/client/assets/images/intro/icon1_1.svg);
+  background-image: url(/builds/client/assets/images/intro/icon1_3.svg);
 }
 .section--intro--1 .circle-wrap .circle .icon.icon--4 {
-  background-image: url(/builds/client/assets/images/intro/icon1_1.svg);
+  background-image: url(/builds/client/assets/images/intro/icon1_4.svg);
 }
 .section--intro--1 .circle-wrap .circle .bar {
   width: 2px;
@@ -5910,6 +5926,14 @@ body.nav-opened {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+}
+.section--intro--1 .circle-wrap .center .symbol {
+  width: 2.5em;
+}
+@media (min-width: 1024px) {
+  .section--intro--1 .circle-wrap .center .symbol {
+    width: 3.5em;
+  }
 }
 .section--intro--1 .circle-wrap .center .symbol path:first-child {
   opacity: 0;
@@ -6055,6 +6079,12 @@ body.nav-opened {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+  width: 2.25em;
+}
+@media (min-width: 1024px) {
+  .section--intro--2 .circle-wrap .symbol {
+    width: 3.5em;
+  }
 }
 .section--intro--2 .circle-wrap .circle {
   width: 60.6666666667%;
@@ -6262,6 +6292,7 @@ body.nav-opened {
 .section--intro--3 .intro-wrap .intro-content .title {
   font-size: 13.8888888889vw;
   letter-spacing: -1px;
+  margin-left: 0;
 }
 @media (min-width: 576px) {
   .section--intro--3 .intro-wrap .intro-content .title {
@@ -6384,6 +6415,14 @@ body.nav-opened {
 }
 .section--intro--3 .circle-wrap .circle-center .circle {
   background-color: #f4f4f4;
+}
+.section--intro--3 .circle-wrap .circle-center .symbol {
+  width: 2.5em;
+}
+@media (min-width: 1024px) {
+  .section--intro--3 .circle-wrap .circle-center .symbol {
+    width: 3.5em;
+  }
 }
 .section--intro--3 .circle-wrap .circle-right {
   opacity: 0;
@@ -6820,7 +6859,7 @@ body.nav-opened {
 .service-wrap .service-content .text {
   color: #aaa;
   font-size: 3.8888888889vw;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.4166666667;
   letter-spacing: -0.5px;
   margin-top: 1.1428571429em;

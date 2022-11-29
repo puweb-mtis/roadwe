@@ -41,6 +41,12 @@ const mobileHeaderActive = () => {
     if ( window.innerWidth <= 1024 ) { // Only Mobile
         const scrollTop = document.documentElement.scrollTop;
         
+        if ( scrollTop > 0 ) {
+            $header.classList.add('scrolled');
+        } else {
+            $header.classList.remove('scrolled');
+        }
+        
         for (let i = 0; i < $sections.length; i++) {
             if ( scrollTop >= $sections[i].offsetTop && scrollTop < $sections[i].offsetTop + $sections[i].clientHeight ) {
                 if ( i === 0 || i === 10 ) {
@@ -205,7 +211,12 @@ const serviceSwiper5 = new Swiper('.service-swiper--5 .swiper', {
     }
 });
 
-const introSwiper4 = new Swiper('.intro-swiper--4 .swiper', {});
+const introSwiper4 = new Swiper('.intro-swiper--4 .swiper', {
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+    }
+});
 
 const advantageTextSwiper = new Swiper('.advantage-text-swiper .swiper', {
     loop: true,

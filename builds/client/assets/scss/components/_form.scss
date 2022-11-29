@@ -12,8 +12,12 @@
   position: relative;
   
   .form-control {
-    padding: em(28) em(44) em(28) em(20);
+    padding: em(20) em(44) em(20) em(20);
     appearance: none;
+    
+    @include media-breakpoint-up(lg) {
+      padding: em(28) em(44) em(28) em(20);
+    }
   }
   
   .btn-search {

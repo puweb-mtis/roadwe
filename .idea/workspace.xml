@@ -4,10 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="499289ab-6742-4395-a664-410cde961a61" name="Changes" comment="feat: 모바일 사이드바 스타일 수정">
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/favicon.svg" afterDir="false" />
+    <list default="true" id="499289ab-6742-4395-a664-410cde961a61" name="Changes" comment="feat: 파비콘 적용">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/_modules/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/_modules/common/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/components/_form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/components/_form.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/components/_letter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/components/_letter.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/layout/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/layout/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/main/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/main/_index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/main/_intro.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/main/_intro.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/main/_service.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/main/_service.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/main/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,21 +43,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/roadwe/builds/client/assets/images",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "editing.templates",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\roadwe\builds\client\assets\images" />
@@ -75,7 +85,10 @@
       <workItem from="1669192842981" duration="1076000" />
       <workItem from="1669244606921" duration="25722000" />
       <workItem from="1669597179613" duration="20483000" />
-      <workItem from="1669624107714" duration="69000" />
+      <workItem from="1669624107714" duration="96000" />
+      <workItem from="1669688333981" duration="82000" />
+      <workItem from="1669689132610" duration="2457000" />
+      <workItem from="1669696399137" duration="760000" />
     </task>
     <task id="LOCAL-00001" summary="Copy">
       <created>1669005347184</created>
@@ -294,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669621854995</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="feat: 파비콘 적용">
+      <created>1669624189877</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1669624189877</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +347,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: 이미지파일 제거" />
     <MESSAGE value="feat: Boostrap _reboot.scss 적용" />
     <MESSAGE value="feat: Boostrap ./config/_variables.scss 적용 가능하도록 수정" />
     <MESSAGE value="feat: 메인 작업 1차 일괄 커밋&#10;&#10;- PC 작업 일부 완료&#10;- 헤더 및 로드위 메뉴 클릭 시 팝업 작업 예정&#10;- 모바일 반응형 작업 예정" />
@@ -352,7 +371,8 @@
     <MESSAGE value="feat: 모바일 메인 수정사항 반영 및 scss 파일 정렬" />
     <MESSAGE value="feat: 모바일 반응형 작업 완료" />
     <MESSAGE value="feat: 모바일 사이드바 스타일 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 모바일 사이드바 스타일 수정" />
+    <MESSAGE value="feat: 파비콘 적용" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 파비콘 적용" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
