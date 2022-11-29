@@ -1,7 +1,11 @@
 <nav class="nav">
   <ul class="nav-list">
     <li class="nav-list__item">
+      { ? isset(_GET.lang) && _GET.lang == 'en' }
+      <a href="/#intro1">Introduce</a>
+      { : }
       <a href="/#intro1">동행소개</a>
+      { / }
     </li>
     <li class="nav-list__item">
       <a href="/#service1">주요기능</a>
