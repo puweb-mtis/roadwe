@@ -244,7 +244,14 @@ class MY_Loader extends CI_Loader
         if (isset($this->modules)) {
             $this->CI->siteinit->template_->define($this->modules);
         }
-        $this->CI->siteinit->template_->define('tpl', $this->CI->siteinit->_view_file_path);
+        if (isset($_GET['lang'])) {
+            $site_lang = $_GET['lang'];
+        }
+        if (!empty($site_lang)) {
+            $this->CI->siteinit->template_->define('tpl', $site_lang . DIRECTORY_SEPARATOR . $this->CI->siteinit->_view_file_path);
+        } else {
+            $this->CI->siteinit->template_->define('tpl', $this->CI->siteinit->_view_file_path);
+        }
         $this->CI->siteinit->template_->assign($this->vars);
         $this->CI->siteinit->template_->assign($this->CI->load->get_vars());
         if ($this->CI->siteinit->_debug === TRUE) {
