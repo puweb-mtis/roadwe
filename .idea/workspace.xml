@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="499289ab-6742-4395-a664-410cde961a61" name="Changes" comment="feat: 수정사항 반영">
-      <change afterPath="$PROJECT_DIR$/builds/client/en/cs/faq.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/en/cs/inquiry.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/en/main/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/_modules/partials/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/_modules/partials/nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/core/MY_Loader.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/core/MY_Loader.php" afterDir="false" />
-    </list>
+    <list default="true" id="499289ab-6742-4395-a664-410cde961a61" name="Changes" comment="feat: 게시판 작업 완료" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,7 +76,7 @@
       <workItem from="1669689132610" duration="2457000" />
       <workItem from="1669696399137" duration="797000" />
       <workItem from="1669698371716" duration="7000" />
-      <workItem from="1669698739726" duration="962000" />
+      <workItem from="1669698739726" duration="1037000" />
     </task>
     <task id="LOCAL-00001" summary="Copy">
       <created>1669005347184</created>
@@ -316,7 +309,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669698322719</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="feat: 다국어 작업을 위한 core 수정">
+      <created>1669699741253</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1669699741253</updated>
+    </task>
+    <task id="LOCAL-00035" summary="feat: 다국어 작업 정상출력 테스트">
+      <created>1669699753369</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1669699753369</updated>
+    </task>
+    <task id="LOCAL-00036" summary="feat: 게시판 작업 완료">
+      <created>1669699778819</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1669699778819</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,9 +363,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: Boostrap ./config/_variables.scss 적용 가능하도록 수정" />
-    <MESSAGE value="feat: 메인 작업 1차 일괄 커밋&#10;&#10;- PC 작업 일부 완료&#10;- 헤더 및 로드위 메뉴 클릭 시 팝업 작업 예정&#10;- 모바일 반응형 작업 예정" />
-    <MESSAGE value="feat: .gitignore 에 .idea 폴더 추가" />
     <MESSAGE value="feat: 모바일 디바이스를 위해 hidden 처리" />
     <MESSAGE value="feat: 주요기능 섹션 이미지 추가" />
     <MESSAGE value="feat: 주요기능 swiper 슬라이드 간격 수정" />
@@ -374,7 +385,10 @@
     <MESSAGE value="feat: 모바일 사이드바 스타일 수정" />
     <MESSAGE value="feat: 파비콘 적용" />
     <MESSAGE value="feat: 수정사항 반영" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 수정사항 반영" />
+    <MESSAGE value="feat: 다국어 작업을 위한 core 수정" />
+    <MESSAGE value="feat: 다국어 작업 정상출력 테스트" />
+    <MESSAGE value="feat: 게시판 작업 완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 게시판 작업 완료" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
