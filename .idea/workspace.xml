@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="499289ab-6742-4395-a664-410cde961a61" name="Changes" comment="feat: 게시판 작업 완료" />
+    <list default="true" id="499289ab-6742-4395-a664-410cde961a61" name="Changes" comment="feat: 어드민 관련 파일 삭제">
+      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/advantage/img1_m.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/advantage/img2_m.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/advantage/img3_m.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/advantage/img4_m.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/advantage/img5_m.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/main/_advantage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/main/_advantage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/main/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,8 +48,13 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/roadwe/builds/client",
+    "WebServerToolWindowFactoryState": "true",
+    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
+    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
+    "WebServerToolWindowPanel.toolwindow.show.date": "false",
+    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
+    "WebServerToolWindowPanel.toolwindow.show.size": "false",
+    "last_opened_file_path": "C:/roadwe",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -77,6 +96,7 @@
       <workItem from="1669696399137" duration="797000" />
       <workItem from="1669698371716" duration="7000" />
       <workItem from="1669698739726" duration="1037000" />
+      <workItem from="1669768293627" duration="4848000" />
     </task>
     <task id="LOCAL-00001" summary="Copy">
       <created>1669005347184</created>
@@ -330,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669699778819</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="feat: 어드민 관련 파일 삭제">
+      <created>1669768470928</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1669768470928</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,7 +390,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: 모바일 디바이스를 위해 hidden 처리" />
     <MESSAGE value="feat: 주요기능 섹션 이미지 추가" />
     <MESSAGE value="feat: 주요기능 swiper 슬라이드 간격 수정" />
     <MESSAGE value="feat: 메인 작업 완료 커밋" />
@@ -388,7 +414,8 @@
     <MESSAGE value="feat: 다국어 작업을 위한 core 수정" />
     <MESSAGE value="feat: 다국어 작업 정상출력 테스트" />
     <MESSAGE value="feat: 게시판 작업 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 게시판 작업 완료" />
+    <MESSAGE value="feat: 어드민 관련 파일 삭제" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 어드민 관련 파일 삭제" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -7236,6 +7236,7 @@ body.nav-opened {
   .advantage-swiper .swiper-slide--1::after {
     position: absolute;
     top: 50%;
+    left: inherit;
     right: -12.5em;
     transform: translate(50%, -40%);
   }
@@ -7260,6 +7261,7 @@ body.nav-opened {
   .advantage-swiper .swiper-slide--2::after {
     position: absolute;
     top: 50%;
+    left: inherit;
     right: -12.5em;
     transform: translate(50%, -40%);
   }
@@ -7284,6 +7286,7 @@ body.nav-opened {
   .advantage-swiper .swiper-slide--3::after {
     position: absolute;
     top: 50%;
+    left: inherit;
     right: -12.5em;
     transform: translate(50%, -40%);
   }
@@ -7308,6 +7311,7 @@ body.nav-opened {
   .advantage-swiper .swiper-slide--4::after {
     position: absolute;
     top: 50%;
+    left: inherit;
     right: -12.5em;
     transform: translate(50%, -40%);
   }
@@ -7332,6 +7336,7 @@ body.nav-opened {
   .advantage-swiper .swiper-slide--5::after {
     position: absolute;
     top: 50%;
+    left: inherit;
     right: -12.5em;
     transform: translate(50%, -40%);
   }

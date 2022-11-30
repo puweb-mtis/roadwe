@@ -190,6 +190,7 @@
         @include media-breakpoint-up(lg) {
           position: absolute;
           top: 50%;
+          left: inherit;
           right: em(-200);
           transform: translate(50%, -40%);
         }

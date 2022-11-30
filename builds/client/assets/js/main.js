@@ -63,7 +63,7 @@ const mobileHeaderActive = () => {
 const itemActive = () => {
     if ( window.innerWidth < 1025 ) {
         for (let i = 0; i < $sections.length; i++) {
-            if ( $sections[i].offsetTop + $sections[i].clientHeight/3 < window.scrollY + window.innerHeight ) {
+            if ( $sections[i].offsetTop + $sections[i].clientHeight/2 < window.scrollY + window.innerHeight ) {
                 $sections[i].classList.add('active', 'fp-completely');
             }
         }
@@ -230,7 +230,8 @@ const advantageTextSwiper = new Swiper('.advantage-text-swiper .swiper', {
 
 const advantageSwiper = new Swiper('.advantage-swiper .swiper', {
     autoplay: {
-        delay: 3000
+        delay: 3000,
+        disableOnInteraction: false
     },
     speed: 700,
     loop: true,
