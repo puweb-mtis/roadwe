@@ -138,7 +138,7 @@ const serviceSwiper1 = new Swiper('.service-swiper--1 .swiper', {
 const serviceSwiper2 = new Swiper('.service-swiper--2 .swiper', {
     speed: 700,
     loop: true,
-    allowTouchMove: false,
+    allowTouchMove: true,
     slidesPerView: 1,
     spaceBetween: 25,
     navigation: {
@@ -157,7 +157,7 @@ const serviceSwiper2 = new Swiper('.service-swiper--2 .swiper', {
 const serviceSwiper3 = new Swiper('.service-swiper--3 .swiper', {
     speed: 700,
     loop: true,
-    allowTouchMove: false,
+    allowTouchMove: true,
     slidesPerView: 1,
     spaceBetween: 25,
     navigation: {
@@ -176,7 +176,7 @@ const serviceSwiper3 = new Swiper('.service-swiper--3 .swiper', {
 const serviceSwiper4 = new Swiper('.service-swiper--4 .swiper', {
     speed: 700,
     loop: true,
-    allowTouchMove: false,
+    allowTouchMove: true,
     slidesPerView: 1,
     spaceBetween: 25,
     navigation: {
@@ -195,7 +195,7 @@ const serviceSwiper4 = new Swiper('.service-swiper--4 .swiper', {
 const serviceSwiper5 = new Swiper('.service-swiper--5 .swiper', {
     speed: 700,
     loop: true,
-    allowTouchMove: false,
+    allowTouchMove: true,
     slidesPerView: 1,
     spaceBetween: 25,
     navigation: {
