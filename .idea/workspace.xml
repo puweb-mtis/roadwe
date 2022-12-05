@@ -4,19 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="499289ab-6742-4395-a664-410cde961a61" name="Changes" comment="feat: 어드민 관련 파일 삭제">
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/advantage/img1_m.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/advantage/img2_m.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/advantage/img3_m.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/advantage/img4_m.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds/client/assets/images/advantage/img5_m.png" afterDir="false" />
+    <list default="true" id="499289ab-6742-4395-a664-410cde961a61" name="Changes" comment="feat: 모바일 수정사항 반영">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/images/service/service1_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service1_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/images/service/service1_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service1_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/images/service/service1_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service1_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/images/service/service2_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service2_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/images/service/service2_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service2_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/images/service/service2_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/images/service/service2_3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/main/_advantage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/main/_advantage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/components/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/components/_buttons.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/main/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,26 +42,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
-    "WebServerToolWindowPanel.toolwindow.show.date": "false",
-    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
-    "WebServerToolWindowPanel.toolwindow.show.size": "false",
-    "last_opened_file_path": "C:/roadwe",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "editing.templates",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/roadwe&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\roadwe\builds\client" />
@@ -96,7 +95,11 @@
       <workItem from="1669696399137" duration="797000" />
       <workItem from="1669698371716" duration="7000" />
       <workItem from="1669698739726" duration="1037000" />
-      <workItem from="1669768293627" duration="4848000" />
+      <workItem from="1669768293627" duration="5479000" />
+      <workItem from="1669791088672" duration="226000" />
+      <workItem from="1669950190334" duration="1131000" />
+      <workItem from="1670202200641" duration="125000" />
+      <workItem from="1670202446614" duration="125000" />
     </task>
     <task id="LOCAL-00001" summary="Copy">
       <created>1669005347184</created>
@@ -357,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669768470928</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="feat: 모바일 수정사항 반영">
+      <created>1669782856652</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1669782856652</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,7 +400,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: 주요기능 섹션 이미지 추가" />
     <MESSAGE value="feat: 주요기능 swiper 슬라이드 간격 수정" />
     <MESSAGE value="feat: 메인 작업 완료 커밋" />
     <MESSAGE value="feat: workspace.xml" />
@@ -415,7 +424,8 @@
     <MESSAGE value="feat: 다국어 작업 정상출력 테스트" />
     <MESSAGE value="feat: 게시판 작업 완료" />
     <MESSAGE value="feat: 어드민 관련 파일 삭제" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 어드민 관련 파일 삭제" />
+    <MESSAGE value="feat: 모바일 수정사항 반영" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 모바일 수정사항 반영" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
