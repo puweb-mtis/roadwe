@@ -4117,6 +4117,12 @@ body.nav-opened {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
+@media (max-width: 1023.98px) {
+  footer.section {
+    display: none;
+  }
+}
+
 .footer {
   position: relative;
   background-color: #333;

@@ -117,6 +117,10 @@ $bubbles.forEach($bubble => {
 
 // Swiper
 const serviceSwiper1 = new Swiper('.service-swiper--1 .swiper', {
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+    },
     speed: 700,
     loop: true,
     allowTouchMove: true,
@@ -136,6 +140,10 @@ const serviceSwiper1 = new Swiper('.service-swiper--1 .swiper', {
 });
 
 const serviceSwiper2 = new Swiper('.service-swiper--2 .swiper', {
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+    },
     speed: 700,
     loop: true,
     allowTouchMove: true,
@@ -155,6 +163,10 @@ const serviceSwiper2 = new Swiper('.service-swiper--2 .swiper', {
 });
 
 const serviceSwiper3 = new Swiper('.service-swiper--3 .swiper', {
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+    },
     speed: 700,
     loop: true,
     allowTouchMove: true,
@@ -174,6 +186,10 @@ const serviceSwiper3 = new Swiper('.service-swiper--3 .swiper', {
 });
 
 const serviceSwiper4 = new Swiper('.service-swiper--4 .swiper', {
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+    },
     speed: 700,
     loop: true,
     allowTouchMove: true,
@@ -193,6 +209,10 @@ const serviceSwiper4 = new Swiper('.service-swiper--4 .swiper', {
 });
 
 const serviceSwiper5 = new Swiper('.service-swiper--5 .swiper', {
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+    },
     speed: 700,
     loop: true,
     allowTouchMove: true,

@@ -1,3 +1,9 @@
+footer.section {
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
+}
+
 .footer {
   position: relative;
   background-color: #333;
