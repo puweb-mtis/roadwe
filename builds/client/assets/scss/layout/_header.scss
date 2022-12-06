@@ -200,8 +200,10 @@
   &.scrolled {
     padding: em(15) 0;
     
-    &:not(.header--white) {
-      background-color: rgba(#fff, 0.5);
+    @include media-breakpoint-down(lg) {
+      &:not(.header--white) {
+        background-color: rgba(#fff, 0.5);
+      }
     }
   }
 }

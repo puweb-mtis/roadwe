@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="499289ab-6742-4395-a664-410cde961a61" name="Changes" comment="feat: workspace.xml">
+    <list default="true" id="499289ab-6742-4395-a664-410cde961a61" name="Changes" comment="feat: 샘플 이미지 업로드">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/css/style.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/css/style.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds/client/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/layout/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/layout/_footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/layout/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/layout/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/client/assets/scss/main/_cs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/assets/scss/main/_cs.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/builds/client/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/builds/client/main/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +98,8 @@
       <workItem from="1670202200641" duration="125000" />
       <workItem from="1670202446614" duration="291000" />
       <workItem from="1670205100684" duration="188000" />
-      <workItem from="1670205577206" duration="408000" />
+      <workItem from="1670205577206" duration="510000" />
+      <workItem from="1670304770752" duration="877000" />
     </task>
     <task id="LOCAL-00001" summary="Copy">
       <created>1669005347184</created>
@@ -393,7 +395,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670202727114</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="feat: 모바일 수정사항 반영">
+      <created>1670206065737</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1670206065737</updated>
+    </task>
+    <task id="LOCAL-00044" summary="feat: 샘플 이미지 업로드">
+      <created>1670206073003</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1670206073003</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -426,7 +442,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: 모바일 메인 서비스 섹션 작업중" />
     <MESSAGE value="feat: .gitignore 수정" />
     <MESSAGE value="feat: PC 수정사항 반영" />
     <MESSAGE value="feat: 인트로 및 서비스 섹션 모바일 작업 완료" />
@@ -446,12 +461,13 @@
     <MESSAGE value="feat: 다국어 작업 정상출력 테스트" />
     <MESSAGE value="feat: 게시판 작업 완료" />
     <MESSAGE value="feat: 어드민 관련 파일 삭제" />
-    <MESSAGE value="feat: 모바일 수정사항 반영" />
     <MESSAGE value="feat: 서비스 섹션 이미지 변경" />
     <MESSAGE value="feat: 메인 모바일 수정 사항 반영" />
     <MESSAGE value="feat: 모바일 서비스 섹션 슬라이드 수정" />
     <MESSAGE value="feat: workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: workspace.xml" />
+    <MESSAGE value="feat: 모바일 수정사항 반영" />
+    <MESSAGE value="feat: 샘플 이미지 업로드" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 샘플 이미지 업로드" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
